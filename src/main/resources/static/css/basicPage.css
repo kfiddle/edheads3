@@ -1,0 +1,60 @@
+#basicPageContainer{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.basicPageContentContainer{
+    /*background-color: #ccc;*/
+    width: 80%;
+    height: 80vh;
+    margin: 3rem 3rem 3rem 0rem;
+    padding: 1rem;
+    border: .5rem solid #cbd543;
+    border-radius: 1.5rem;
+
+}
+
+.basicPageContent{
+    line-height: 1.75rem;
+    letter-spacing: .0125rem;
+    overflow: scroll;
+    height: 75vh;
+    padding: 1.5rem 1.5rem 0rem 1.5rem;
+    /*margin: 1rem;*/
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+
+}
+
+.basicPageContent::-webkit-scrollbar {
+    width: .5rem;
+}
+
+.basicPageContent::-webkit-scrollbar-track {
+    background: none;
+}
+
+.basicPageContent::-webkit-scrollbar-thumb {
+    background: #cbd543;
+}
+
+.basicPageContent::-webkit-scrollbar-thumb:hover {
+    background: #cbd543;
+}
+
+.sideBar {
+    width: 300px;
+    background-color: #cbd543;
+    /*height: 75vh;*/
+    padding: 3rem 0;
+}
+
+.sideBarText{
+    padding: .75rem;
+}
+
+.sideBarAd{
+    height: 250px;
+    margin-bottom: 2rem;
+    width: 300px;
+}
