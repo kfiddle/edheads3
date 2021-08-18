@@ -44,6 +44,12 @@ public class BasicsController {
         return "redirect:register_success";
     }
 
+    @RequestMapping("/about-us")
+    public String displayAboutUsPage() {
+
+        return "aboutUs";
+    }
+
 
 
 

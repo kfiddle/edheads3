@@ -1,7 +1,7 @@
 /*BEGIN HEADER STYLING*/
 #header {
     background-color: #2cccd3;
-    background-image: url("/assets/headerClouds.png");
+    background-image: url("/static/assets/headerClouds.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
