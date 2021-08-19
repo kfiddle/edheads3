@@ -2,12 +2,14 @@ let chosenState = '';
 const stateDropDiv = document.getElementById('stateDropDown');
 
 let tokenInput = document.getElementById('tokenInput').value;
-console.log("TOKEN1: "+tokenInput);
+console.log(tokenInput);
 
-let testMeta = document.querySelector('meta[name="_csrf"]').content;
-let header = document.querySelector('meta[name="_csrf_header"]').content;
 
-console.log("TOKEN2: "+testMeta);
+
+
+let testMeta = document.querySelector('meta[name="_csrf"]').content
+
+console.log(testMeta);
 
 async function getListOfStates() {
     let dataFromBackend = await fetch("/fetch-all-USAStates");
@@ -40,16 +42,16 @@ submitButton.addEventListener('click', ()=> {
     let newUserData = {
         email: document.getElementById('email').value,
         firstName: document.getElementById('firstName').value,
-        lastName: document.getElementById('lastName').value
+        lastName: document.getElementById('lastName').value,
         // usaState: chosenState,
         // dateCreated: new Date()
     }
     console.log(newUserData);
 
-    fetch("/add-user", {
+    fetch("http://localhost:8080/add-user", {
         method: "POST",
         headers: {"Content-Type": "application/json",
-            "X-CSRF-TOKEN": tokenInput,
+            "X-CSRFToken": tokenInput,
 
         },
         body: JSON.stringify(newUserData),

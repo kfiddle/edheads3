@@ -1,7 +1,7 @@
 /*BEGIN HEADER STYLING*/
 #header {
     background-color: #2cccd3;
-    background-image: url("/static/assets/headerClouds.png");
+    background-image: url("/assets/headerClouds.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -45,56 +45,84 @@
     border-top-right-radius: .75rem;
     height: 50px;
     margin-left: .75rem;
-    padding: .75rem 1rem;
+    padding: .75rem 2rem;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .mainNavItem a{
-    color: #ffffff;
+    color: #474747;
     text-decoration: none;
 }
 
+.mainNavItem a:hover{
+    font-weight: 900;
+}
+
+.activeNav {
+    font-weight: 900;
+}
+
 .weatherGirlContainer{
-    align-items: flex-end;
+    /* align-items: flex-end; */
     display: flex;
-    transform: translate(-18%, 7%);
+    transform: translate(-17%, 10%);
 }
 
 .weatherGirl{
-    /*transform: translate(-22%, 12%);*/
+    /*background-color: #ccc;*/
 }
 
 .weatherGirlImg{
     width: 450px;
 }
 
+.bannerText {
+    margin: 1.25rem 0rem 0rem 16.5rem;
+    position: absolute;
+}
+
+
+
 /*END HEADER STYLING*/
 
 /*BEGIN SECONDARY NAV STYLING*/
 
-.aboutUsNavContainer{
-    justify-content: center;
-    display: flex;
+.secondaryNavContainer{
     background-color: #cbd543;
+    width: 100vw;
 
 }
 
-.aboutUsNav{
+.secondaryNav{
     display: flex;
     list-style-type: none;
+    margin: auto;
+    width: 80%;
 }
 
 
-.aboutUsNavItem{
-    padding: 1rem 2rem .75rem;
+.secondaryNavItem{
     font-size: 1rem;
+    padding: 1rem 2rem .75rem;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
-.aboutUsNavItem a{
-    color: #ffffff;
+.secondaryNavItem a{
+    color: #474747;
     text-decoration: none;
 }
 
-.aboutUsNav a:active{
+.secondaryNavItem a:hover{
+    border-bottom: solid .125rem;
+}
+
+.activeSubNav {
+    border-bottom: solid .125rem;
+}
+
+.secondaryNavItem a:active{
     border-bottom: solid .125rem;
 }
 
@@ -104,9 +132,9 @@
 
 #footer {
     background-color: #474747;
-    width: 100vw;
     display: flex;
     justify-content: space-around;
+    width: 100vw;
 }
 
 .footerText{
@@ -122,8 +150,8 @@
 }
 
 .socialIcon{
-    max-height: 50px;
     margin-right: .5rem;
+    max-height: 50px;
 }
 
 .footerButton{

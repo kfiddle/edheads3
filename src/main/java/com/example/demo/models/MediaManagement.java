@@ -1,5 +1,6 @@
 package com.example.demo.models;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -24,28 +25,12 @@ public class MediaManagement {
     public MediaManagement() {
     }
 
-    public MediaManagement(String adTagUrl, String pageTitle) {
-        this.adTagUrl = adTagUrl;
-        this.pageTitle = pageTitle;
-    }
-
     public MediaManagement(String adTagUrl, String pageTitle, String columnPositionA, String columnPositionB, String columnPositionC) {
         this.adTagUrl = adTagUrl;
-        this.pageTitle = pageTitle;
         this.columnPositionA = columnPositionA;
         this.columnPositionB = columnPositionB;
         this.columnPositionC = columnPositionC;
     }
-
-    public void updateFrom(MediaManagement incomingMedia) {
-        this.adTagUrl = incomingMedia.getAdTagUrl();
-        this.imageUrl = incomingMedia.getImageUrl();
-        this.pageTitle = incomingMedia.getPageTitle();
-        this.columnPositionA = incomingMedia.columnPositionA;
-        this.columnPositionB = incomingMedia.columnPositionB;
-        this.columnPositionC = incomingMedia.columnPositionC;
-    }
-
 
 
     public Long getId() {

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
+    <title>User Entry Form</title>
+    <script src="/submitUser.js" defer></script>
+</head>
+<body style="margin-top: 10vh">
+
+
+
+<input type="text" placeholder="First Name" id="firstName">
+<input type="text" placeholder="Last Name" id="lastName">
+<input type="text" placeholder="Email" id="email">
+<input type="hidden" id="tokenInput" name="_csrf">
+
+
+<h2>If in the USA, which state? (The world's clunkiest dropdown menu of all time)</h2>
+
+<div id="stateDropDown"><h2 style="color: darkblue; cursor: pointer">State</h2>
+</div>
+
+
+<h2>If not, which country, commonwealth, territory, etc...?</h2>
+
+<input type="text" placeholder="country">
+
+<button id="submitToDatabase"><h2 style="background-color: aqua">Submit</h2></button>
+<button id="getUsersButton"><h2>Get All Users Button</h2></button>
+
+
+
+
+
+
+
+</body>
+</html>

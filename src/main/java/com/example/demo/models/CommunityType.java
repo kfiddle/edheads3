@@ -1,4 +1,4 @@
-package com.example.demo.models.enums;
+package com.example.demo.models;
 
 public enum CommunityType {
     URBAN("urban"),
@@ -19,3 +19,10 @@ public enum CommunityType {
 
 
 }
+
+
+
+
+
+
+

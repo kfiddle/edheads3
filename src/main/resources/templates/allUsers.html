@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>All Users of all types</title>
+</head>
+<body>
+
+<h1>Nothing much here just yet</h1>
+
+<ul th:each = "user: ${allUsersList}">
+    <li th:text="${user.firstName}"></li>
+    <li th:text="${user.lastName}"></li>
+
+</ul>
+
+
+
+
+</body>
+</html>

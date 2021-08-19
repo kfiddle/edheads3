@@ -1,6 +1,5 @@
 package com.example.demo.models;
 
-import com.example.demo.models.enums.GradeRange;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

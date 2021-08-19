@@ -1,4 +1,5 @@
-package com.example.demo.models.enums;
+package com.example.demo.models;
+
 
 public enum GradeRange {
     K_3("K-3"),

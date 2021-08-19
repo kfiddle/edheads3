@@ -1,4 +1,4 @@
-package com.example.demo.models.enums;
+package com.example.demo.models;
 
 public enum StudentCount {
     UNDER250("0-250"),

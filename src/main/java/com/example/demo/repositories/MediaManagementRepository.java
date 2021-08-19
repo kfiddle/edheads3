@@ -4,7 +4,10 @@ import com.example.demo.models.MediaManagement;
 import org.springframework.data.repository.CrudRepository;
 
 public interface MediaManagementRepository extends CrudRepository<MediaManagement, Long> {
+//    boolean existsByAdTagUrl();
 
-    boolean existsByAdTagUrl(String adTagUrl);
+//    boolean existsByPageTitle();
+
+
 
 }

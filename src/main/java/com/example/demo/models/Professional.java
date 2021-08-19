@@ -1,9 +1,5 @@
 package com.example.demo.models;
 
-import com.example.demo.models.enums.AccountType;
-import com.example.demo.models.enums.GradeRange;
-import com.example.demo.models.enums.USAState;
-
 import javax.persistence.Entity;
 import java.time.LocalDate;
 
@@ -18,8 +14,6 @@ public class Professional extends User {
     private String jobWorstDescription;
     private String pastChangeDesc;
     private String futureChangeDesc;
-    private String careerPathChallenge;
-
     private AccountType accountType;
     private String company;
     private String university;
@@ -37,7 +31,7 @@ public class Professional extends User {
         super(email, firstName, lastName, usaState, dateCreated);
     }
 
-    public Professional(String email, String firstName, String lastName, USAState usaState, LocalDate dateCreated, boolean approvedByAdmin, String careerTitle, String careerDescription, String educationDescription, String jobBestDescription, String jobWorstDescription, String pastChangeDesc, String careerPathChallenge, String futureChangeDesc, AccountType accountType, String company, String university, boolean gameHelpInd, boolean gameFundingInd, boolean socialMediaInd, boolean volunteerInd) {
+    public Professional(String email, String firstName, String lastName, USAState usaState, LocalDate dateCreated, boolean approvedByAdmin, String careerTitle, String careerDescription, String educationDescription, String jobBestDescription, String jobWorstDescription, String pastChangeDesc, String futureChangeDesc, AccountType accountType, String company, String university, boolean gameHelpInd, boolean gameFundingInd, boolean socialMediaInd, boolean volunteerInd) {
         super(email, firstName, lastName, usaState, dateCreated);
         this.approvedByAdmin = approvedByAdmin;
         this.careerTitle = careerTitle;
@@ -46,7 +40,6 @@ public class Professional extends User {
         this.jobBestDescription = jobBestDescription;
         this.jobWorstDescription = jobWorstDescription;
         this.pastChangeDesc = pastChangeDesc;
-        this.careerPathChallenge = careerPathChallenge;
         this.futureChangeDesc = futureChangeDesc;
         this.accountType = accountType;
         this.company = company;
@@ -84,10 +77,6 @@ public class Professional extends User {
 
     public String getPastChangeDesc() {
         return pastChangeDesc;
-    }
-
-    public String getCareerPathChallenge() {
-        return careerPathChallenge;
     }
 
     public String getFutureChangeDesc() {

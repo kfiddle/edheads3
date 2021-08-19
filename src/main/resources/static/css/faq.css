@@ -1,0 +1,41 @@
+#faqContainer{
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
+
+.faqContentContainer{
+    height: 80vh;
+    margin: 3rem 3rem 3rem 0rem;
+    width: 80%;
+}
+
+.accordion {
+    background-color: #cbd543;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    transition: 0.4s;
+}
+
+/*.active, .accordion:hover {*/
+/*    background-color: #ccc;*/
+/*}*/
+
+.accordionContent {
+    display: none;
+    font-size: 1rem;
+    overflow: hidden;
+    padding: 0rem 2rem 2rem;
+}
+
+.accordion:after {
+    content: '\02795';
+    float: right;
+    font-size: 1rem;
+}
+
+.active:after {
+    content: "\2796";
+}
