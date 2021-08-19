@@ -34,8 +34,8 @@ public class BasicsController {
     }
 
     @PostMapping("/process_register")
-    public String processRegister(@ModelAttribute User user) {
-
+    public String processRegister(@ModelAttribute("user") User user) {
+        System.out.println("Log process_register step: " + user.getFirstName());
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
