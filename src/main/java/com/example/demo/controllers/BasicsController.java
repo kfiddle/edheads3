@@ -17,6 +17,11 @@ public class BasicsController {
     @Resource
     UserRepository userRepo;
 
+    @RequestMapping("/")
+    public String displayRoot() {
+        return "welcome";
+    }
+
     @RequestMapping("/welcome")
     public String displayWelcomePage() {
         return "welcome";

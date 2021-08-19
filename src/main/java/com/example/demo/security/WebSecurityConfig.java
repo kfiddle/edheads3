@@ -2,7 +2,7 @@ package com.example.demo.security;
 
 import javax.sql.DataSource;
 
-//import com.example.demo.CustomUserDetailsService;
+import com.example.demo.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,10 +20,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
-//    @Bean
-//    public UserDetailsService userDetailsService() {
-//        return new CustomUserDetailsService();
-//    }
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return new CustomUserDetailsService();
+    }
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
