@@ -5,6 +5,13 @@ h1{
     margin: 1.5rem;
 }
 
+/*h2{*/
+/*    color: #cbd543;*/
+/*    font-size: 2rem;*/
+/*    font-weight: 900;*/
+/*    margin: 1.5rem;*/
+/*}*/
+
 #basicPageContainer{
     display: flex;
     margin: auto;
