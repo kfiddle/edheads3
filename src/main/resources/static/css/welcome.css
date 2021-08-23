@@ -30,14 +30,9 @@ h3{
     text-decoration: none;
 }
 
-/*END WELCOME GLOBAL STYLING*/
 
-
-/*BEGIN ABOUT US SECTION*/
-
-#aboutUs{
+.contentPanel{
     align-items: center;
-    background-image: url("/assets/welcomeBackground.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,6 +41,16 @@ h3{
     justify-content: center;
     min-width: 100vw;
     position: relative;
+}
+
+/*END WELCOME GLOBAL STYLING*/
+
+
+/*BEGIN ABOUT US SECTION*/
+
+
+#aboutUs{
+    background-image: url("/assets/welcomeBackground.jpg");
 }
 
 .contentContainerTextLeft{
@@ -131,16 +136,7 @@ h3{
 /*BEGIN SIGN UP SECTION*/
 
 #signUp{
-    align-items: center;
     background-image: url("/assets/signUpBackground.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    height: 700px;
-    justify-content: center;
-    min-width: 100vw;
-    position: relative;
 }
 
 .contentContainerTextRight{
@@ -196,16 +192,7 @@ h3{
 /*BEGIN DONATE SECTION*/
 
 #donate{
-    align-items: center;
     background-image: url("/assets/donateBackground.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    height: 700px;
-    min-width: 100vw;
-    justify-content: center;
-    position: relative;
 }
 
 .donateCharacter{

@@ -5,7 +5,7 @@
     <title>Welcome to Edheads!</title>
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/headerFooter.css">
+    <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/welcome.css">
 
 
@@ -15,19 +15,19 @@
 <section id="header">
 
     <div class="logoContainer">
-        <div class="logo">
-            <img src="/ed_logo.png" alt="" class="logoImg">
-        </div>
+    <div class="logo">
+        <img src="/assets/ed_logo.png" alt="" class="logoImg">
+    </div>
     </div>
 
 
     <div class="mainNavContainer">
         <ul class="mainNav">
+            <li class="mainNavItem activeNav"><a href="/welcome">Welcome</a></li>
             <li class="mainNavItem"><a href="/about-us">About Us</a></li>
-            <li class="mainNavItem"><a href="#">link 2</a></li>
-            <li class="mainNavItem"><a href="#">link 3</a></li>
-            <li class="mainNavItem"><a href="#">link 4</a></li>
-            <li class="mainNavItem"><a href="#">link 5</a></li>
+            <li class="mainNavItem"><a href="/our-games">Our Games</a></li>
+            <!--            <li class="mainNavItem"><a href="#">link 4</a></li>-->
+            <!--            <li class="mainNavItem"><a href="#">link 5</a></li>-->
         </ul>
     </div>
 
@@ -35,59 +35,61 @@
         <div class="weatherGirl">
             <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
         </div>
+        <div class="bannerText">Log In or Sign Up!</div>
+
     </div>
 </section>
 
-<section id="aboutUs">
+<section id="aboutUs" class="contentPanel">
     <div class="contentContainerTextLeft">
-        <div class="textBoxLeft">
-            <h2>About Us</h2>
-            <h3>Title of Section</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Cras congue ultricies justo vitae rhoncus. Pellentesque et justo quam.
-                Donec in aliquet dolor, et luctus metus. Nulla quis auctor orci.
-                In molestie neque ut arcu ultrices, ac tempor lorem dignissim.
-                Praesent luctus ante sed scelerisque pharetra. Nam purus odio, venenatis maximus.
-            </p>
-            <button class="textBoxButton"> <a href="#">link text</a> </button>
-        </div>
+    <div class="textBoxLeft">
+        <h2>About Us</h2>
+        <h3>Title of Section</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Cras congue ultricies justo vitae rhoncus. Pellentesque et justo quam.
+            Donec in aliquet dolor, et luctus metus. Nulla quis auctor orci.
+            In molestie neque ut arcu ultrices, ac tempor lorem dignissim.
+            Praesent luctus ante sed scelerisque pharetra. Nam purus odio, venenatis maximus.
+        </p>
+        <button class="textBoxButton"> <a href="#">link text</a> </button>
+    </div>
 
-        <div class="aboutUsCharacter">
-            <img src="/assets/robot.png" alt="" class="robot">
-        </div>
+    <div class="aboutUsCharacter">
+        <img src="/assets/robot.png" alt="" class="robot">
+    </div>
     </div>
 </section>
 
 <section class="adPanel">
     <div class="contentContainerAd">
-        <div >
-            <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adLeft">
-        </div>
+    <div >
+        <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adLeft">
+    </div>
 
-        <div >
-            <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adRight">
-        </div>
+    <div >
+        <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adRight">
+    </div>
     </div>
 </section>
 
 
 
-<section id="signUp">
+<section id="signUp" class="contentPanel">
     <div class="contentContainerTextRight">
         <div class="signUpCharacter">
             <img src="/assets/robot.png" alt="" class="robot">
         </div>
-        <div class="textBoxRight">
-            <h2>Sign Up</h2>
-            <h3>Title of Section</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Cras congue ultricies justo vitae rhoncus. Pellentesque et justo quam.
-                Donec in aliquet dolor, et luctus metus. Nulla quis auctor orci.
-                In molestie neque ut arcu ultrices, ac tempor lorem dignissim.
-                Praesent luctus ante sed scelerisque pharetra. Nam purus odio, venenatis maximus.
-            </p>
-            <button class="textBoxButton"> <a href="#">link text</a> </button>
-        </div>
+    <div class="textBoxRight">
+        <h2>Sign Up</h2>
+        <h3>Title of Section</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Cras congue ultricies justo vitae rhoncus. Pellentesque et justo quam.
+            Donec in aliquet dolor, et luctus metus. Nulla quis auctor orci.
+            In molestie neque ut arcu ultrices, ac tempor lorem dignissim.
+            Praesent luctus ante sed scelerisque pharetra. Nam purus odio, venenatis maximus.
+        </p>
+        <button class="textBoxButton"> <a href="#">link text</a> </button>
+    </div>
     </div>
 
 
@@ -106,23 +108,23 @@
     </div>
 </section>
 
-<section id="donate">
+<section id="donate" class="contentPanel">
     <div class="contentContainerTextLeft">
-        <div class="textBoxLeft">
-            <h2>Donate</h2>
-            <h3>Title of Section</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Cras congue ultricies justo vitae rhoncus. Pellentesque et justo quam.
-                Donec in aliquet dolor, et luctus metus. Nulla quis auctor orci.
-                In molestie neque ut arcu ultrices, ac tempor lorem dignissim.
-                Praesent luctus ante sed scelerisque pharetra. Nam purus odio, venenatis maximus.
-            </p>
-            <button class="textBoxButton"> <a href="#">link text</a> </button>
-        </div>
+    <div class="textBoxLeft">
+        <h2>Donate</h2>
+        <h3>Title of Section</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Cras congue ultricies justo vitae rhoncus. Pellentesque et justo quam.
+            Donec in aliquet dolor, et luctus metus. Nulla quis auctor orci.
+            In molestie neque ut arcu ultrices, ac tempor lorem dignissim.
+            Praesent luctus ante sed scelerisque pharetra. Nam purus odio, venenatis maximus.
+        </p>
+        <button class="textBoxButton"> <a href="#">link text</a> </button>
+    </div>
 
-        <div class="donateCharacter">
-            <img src="/assets/robot.png" alt="" class="robot">
-        </div>
+    <div class="donateCharacter">
+        <img src="/assets/robot.png" alt="" class="robot">
+    </div>
     </div>
 </section>
 
