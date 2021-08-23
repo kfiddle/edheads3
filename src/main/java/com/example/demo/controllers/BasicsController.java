@@ -55,7 +55,11 @@ public class BasicsController {
         return "aboutUs";
     }
 
+    @RequestMapping("/login")
+    public String displayLoginPage() {
 
+        return "login";
+    }
 
 
 }
