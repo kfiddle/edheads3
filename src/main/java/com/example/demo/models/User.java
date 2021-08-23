@@ -2,11 +2,13 @@ package com.example.demo.models;
 
 
 import com.example.demo.models.enums.USAState;
+import org.springframework.context.annotation.Bean;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.*;
 import java.time.LocalDate;
+
 
 @Entity
 public class User {
@@ -30,6 +32,10 @@ public class User {
     private boolean subscribeToNewsInd;
 
     public User() {
+    }
+
+    public User(String email) {
+        this.email = email;
     }
 
     public User(String email, String firstName, String lastName, USAState usaState, LocalDate dateCreated) {
