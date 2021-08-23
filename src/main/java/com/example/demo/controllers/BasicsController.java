@@ -63,5 +63,61 @@ public class BasicsController {
         return "login";
     }
 
+    @RequestMapping("/faq")
+    public String displayFaqPage() {
+
+        return "faq";
+    }
+
+    @RequestMapping("/awards")
+    public String displayAwardsPage() {
+
+        return "awards";
+    }
+
+    @RequestMapping("/privacy")
+    public String displayPrivacyPage() {
+
+        return "privacy";
+    }
+
+    @RequestMapping("/terms-of-use")
+    public String displayTermsOfUsePage() {
+
+        return "termsOfUse";
+    }
+
+    @RequestMapping("/activity-help")
+    public String displayActivityHelpPage() {
+
+        return "activityHelp";
+    }
+
+
+    @RequestMapping("/our-games")
+    public String displayOurGamesPage() {
+
+        return "allGamesView";
+    }
+
+    @RequestMapping("/nano-start-up")
+    public String displayNanoStartUpGamePage() {
+
+        return "nanoStartUp";
+    }
+
+    @RequestMapping("/manufacturing-technician")
+    public String displayManufacturingTechnicianGamePage() {
+
+        return "manufacturingTechnician";
+    }
+
+    @RequestMapping("/simple-machines")
+    public String displaySimpleMachinesGamePage() {
+
+        return "simpleMachines";
+    }
+
+
 
 }
