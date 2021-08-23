@@ -45,6 +45,8 @@ public class BasicsController {
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
 
+        System.out.println(user.getFirstName() + "  " + user.getEmail() + "    " + user.getPassword());
+
         userRepo.save(user);
         return "redirect:register_success";
     }
