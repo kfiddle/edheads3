@@ -27,7 +27,7 @@ public class BasicsController {
         return "welcome";
     }
 
-    @RequestMapping("/register")
+    @RequestMapping("/sign-up")
     public String showRegistrationForm(Model model) {
         model.addAttribute("user", new User());
         return "signup_form";
@@ -116,6 +116,12 @@ public class BasicsController {
     public String displaySimpleMachinesGamePage() {
 
         return "simpleMachines";
+    }
+
+    @RequestMapping("/get-involved")
+    public String displayGetInvolvedPage() {
+
+        return "getInvolved";
     }
 
 

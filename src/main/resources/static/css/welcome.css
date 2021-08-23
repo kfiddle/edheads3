@@ -10,7 +10,13 @@ h3{
     color: #cbd543;
     font-size: 2rem;
     font-weight: 900;
+    line-height: 2.25rem;
     padding: 0 0 .75rem 0;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
 }
 
 .textBoxButton{
