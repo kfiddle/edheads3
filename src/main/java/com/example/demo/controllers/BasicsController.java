@@ -38,16 +38,34 @@ public class BasicsController {
         return "register_success";
     }
 
+//    @PostMapping("/process_register")
+//    public String processRegister(@ModelAttribute("user") User user) {
+//        System.out.println("Log process_register step: " + user.getFirstName());
+//        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+//        String encodedPassword = passwordEncoder.encode(user.getPassword());
+//        user.setPassword(encodedPassword);
+//
+//        System.out.println(user.getFirstName() + "  " + user.getEmail() + "    " + user.getPassword());
+//
+//        userRepo.save(user);
+//        return "redirect:register_success";
+//    }
+
     @PostMapping("/process_register")
-    public String processRegister(@ModelAttribute("user") User user) {
-        System.out.println("Log process_register step: " + user.getFirstName());
+    public String processRegister(@ModelAttribute User incomingUser) {
+
+        User userToAdd = new User(incomingUser.getEmail());
+        userToAdd.setFirstName(incomingUser.getFirstName());
+
+        System.out.println("incoming email is: " + userToAdd.getEmail());
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String encodedPassword = passwordEncoder.encode(user.getPassword());
-        user.setPassword(encodedPassword);
+        String encodedPassword = passwordEncoder.encode(incomingUser.getPassword());
+        userToAdd.setPassword(encodedPassword);
 
-        System.out.println(user.getFirstName() + "  " + user.getEmail() + "    " + user.getPassword());
+//        System.out.println(userToAdd.getFirstName() + "  " + userToAdd.getEmail() + "    " + incomingUser.getPassword());
 
-        userRepo.save(user);
+        userRepo.save(userToAdd);
+        System.out.println("we have a saved user at   " +   userRepo.findByEmail(userToAdd.getEmail()).getFirstName());
         return "redirect:register_success";
     }
 
@@ -57,7 +75,7 @@ public class BasicsController {
         return "aboutUs";
     }
 
-    @RequestMapping("/login")
+    @GetMapping("/login")
     public String displayLoginPage() {
 
         return "login";
