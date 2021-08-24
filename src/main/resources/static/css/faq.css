@@ -14,6 +14,8 @@
     background-color: #cbd543;
     border-radius: 1rem;
     cursor: pointer;
+    font-size: 1.125rem;
+    font-weight: 500;
     margin-bottom: 1rem;
     padding: 1rem 2rem;
     transition: 0.4s;
@@ -38,4 +40,19 @@
 
 .active:after {
     content: "\2796";
+}
+
+a{
+    color: #4a86c2;
+    text-decoration: none;
+}
+
+.gameTitle{
+    font-size: 1.125rem;
+    font-weight: 900;
+    margin-bottom: .125rem;
+}
+
+.gameInfo{
+    margin-bottom: 1rem;
 }
