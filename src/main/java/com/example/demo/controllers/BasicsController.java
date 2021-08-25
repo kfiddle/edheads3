@@ -124,6 +124,12 @@ public class BasicsController {
         return "getInvolved";
     }
 
+    @RequestMapping("/basic-page")
+    public String displayBasicPage() {
+
+        return "basicPage";
+    }
+
 
 
 }
