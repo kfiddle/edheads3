@@ -4,6 +4,8 @@ let navRow= document.getElementById("mainNavLeft");
 
 let height = navRow.offsetHeight;
 
-navRow.style.transform = `translateY(-${height}px)`;
+let heightToInsert = height - (height * 0.15);
+
+navRow.style.transform = `translateY(-${heightToInsert}px)`;
 
 
