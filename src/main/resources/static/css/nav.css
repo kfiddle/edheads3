@@ -38,7 +38,7 @@
 .mainNavLeft{
     display: flex;
     list-style-type: none;
-    transform: translateY(-5vh);
+    /*transform: translateY(-5vh);*/
 }
 
 .mainNavRight{
