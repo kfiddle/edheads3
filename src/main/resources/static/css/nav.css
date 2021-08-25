@@ -82,6 +82,15 @@
     position: absolute;
 }
 
+.bannerText a{
+    color: #474747;
+    text-decoration: none;
+}
+
+.bannerText a:hover{
+    font-weight: 900;
+}
+
 
 
 /*END HEADER STYLING*/
