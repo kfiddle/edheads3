@@ -8,7 +8,7 @@
     border-bottom: .5rem solid #cbd543;
     display: flex;
     height: 200px;
-    justify-content: space-between;
+    justify-content: space-around;
     position: relative;
     width: 100vw;
 }
@@ -32,12 +32,13 @@
 .mainNavContainer{
     align-items: flex-end;
     display: flex;
+    flex-direction: column;
 }
 
 .mainNavLeft{
     display: flex;
     list-style-type: none;
-    /*transform: translateX(5vw);*/
+    transform: translateY(-5vh);
 }
 
 .mainNavRight{
@@ -98,7 +99,9 @@
 .weatherGirlContainer {
     display: flex;
     position: relative;
-    transform: translate(-3vw, 2vh);}
+    transform: translate(-3vw, 2vh);
+}
+
 .weatherGirl{
     /*background-color: #ccc;*/
 }
