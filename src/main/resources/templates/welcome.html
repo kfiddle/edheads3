@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/welcome.css">
 
+    <script src="js/navHeightMaker.js" defer></script>
 
 </head>
 <body>
@@ -20,23 +21,57 @@
     </div>
     </div>
 
-
+<!--<div class="navWithWeathergirl">-->
     <div class="mainNavContainer">
-        <ul class="mainNav">
+
+        <div class="weatherGirlContainer">
+            <div class="weatherGirl">
+                <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
+            </div>
+            <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>
+        </div>
+        <ul class="mainNavLeft" id="mainNavLeft">
             <li class="mainNavItem activeNav"><a href="/welcome">Welcome</a></li>
             <li class="mainNavItem"><a href="/about-us">About Us</a></li>
-            <li class="mainNavItem"><a href="/our-games">Our Games</a></li>
-            <!--            <li class="mainNavItem"><a href="#">link 4</a></li>-->
-            <!--            <li class="mainNavItem"><a href="#">link 5</a></li>-->
+            <li class="mainNavItem" style="margin-right: 5rem"><a href="/our-games">Our Games</a></li>
+            <li class="mainNavItem" style="margin-left: 5rem"><a href="/get-involved">Get Involved</a></li>
+            <li class="mainNavItem"><a href="#">Donate</a></li>
         </ul>
+
+<!--        <ul class="mainNavRight">-->
+<!--            <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>-->
+<!--            <li class="mainNavItem"><a href="#">Donate</a></li>-->
+<!--        </ul>-->
+
+<!--        <div class="weatherGirlContainer">-->
+<!--            <div class="weatherGirl">-->
+<!--                <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">-->
+<!--            </div>-->
+<!--            <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>-->
+<!--        </div>-->
+
+<!--        <ul class="mainNavRight">-->
+<!--            <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>-->
+<!--            <li class="mainNavItem"><a href="#">Donate</a></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+<!--    <div class="weatherGirlContainer">-->
+<!--        <div class="weatherGirl">-->
+<!--            <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">-->
+<!--        </div>-->
+<!--        <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>-->
+<!--    </div>-->
     </div>
+<!--</div>-->
 
-    <div class="weatherGirlContainer">
-        <div class="weatherGirl">
-            <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
-        </div>
-        <div class="bannerText">Log In or Sign Up!</div>
+</section>
 
+<section class="titlePanel">
+    <div class="contentContainerTitle">
+        <h1 class="welcomeTitle">
+            Welcome to Edheads!
+        </h1>
     </div>
 </section>
 
@@ -44,14 +79,17 @@
     <div class="contentContainerTextLeft">
     <div class="textBoxLeft">
         <h2>About Us</h2>
-        <h3>Title of Section</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Cras congue ultricies justo vitae rhoncus. Pellentesque et justo quam.
-            Donec in aliquet dolor, et luctus metus. Nulla quis auctor orci.
-            In molestie neque ut arcu ultrices, ac tempor lorem dignissim.
-            Praesent luctus ante sed scelerisque pharetra. Nam purus odio, venenatis maximus.
+        <h3>We inspire K12 students to pursue STEM careers through games!
+        </h3>
+        <p>Edheads stands at the intersection of the STEM employee pipeline and equity.
+            We reach students from all walks of life, and support teachers by reinforcing
+            the educational foundations students need to succeed in life.
         </p>
-        <button class="textBoxButton"> <a href="#">link text</a> </button>
+        <div class="buttonContainer">
+        <button class="textBoxButton"> <a href="/about-us">Learn More</a> </button>
+        <button class="textBoxButton"> <a href="/our-games">Explore Our Games</a> </button>
+        </div>
+
     </div>
 
     <div class="aboutUsCharacter">
@@ -81,14 +119,13 @@
         </div>
     <div class="textBoxRight">
         <h2>Sign Up</h2>
-        <h3>Title of Section</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Cras congue ultricies justo vitae rhoncus. Pellentesque et justo quam.
-            Donec in aliquet dolor, et luctus metus. Nulla quis auctor orci.
-            In molestie neque ut arcu ultrices, ac tempor lorem dignissim.
-            Praesent luctus ante sed scelerisque pharetra. Nam purus odio, venenatis maximus.
+        <h3>Great teacher content, just for teachers!!
+        </h3>
+        <p>Teachers, we heard you.  Students shouldn’t access teacher content,
+            so we put it behind a log in. You will need to sign up and create
+            a log in to access all the teacher content we have to offer!
         </p>
-        <button class="textBoxButton"> <a href="#">link text</a> </button>
+        <button class="textBoxButton"> <a href="sign-up">Sign Up</a> </button>
     </div>
     </div>
 
@@ -111,15 +148,14 @@
 <section id="donate" class="contentPanel">
     <div class="contentContainerTextLeft">
     <div class="textBoxLeft">
-        <h2>Donate</h2>
-        <h3>Title of Section</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Cras congue ultricies justo vitae rhoncus. Pellentesque et justo quam.
-            Donec in aliquet dolor, et luctus metus. Nulla quis auctor orci.
-            In molestie neque ut arcu ultrices, ac tempor lorem dignissim.
-            Praesent luctus ante sed scelerisque pharetra. Nam purus odio, venenatis maximus.
+        <h2>Get Involved</h2>
+        <h3>Help Edheads change the lives of millions of students!
+        </h3>
+        <p><span style="font-weight: 900; color: #d1a10e">YOU</span>  can help us meet our mission.
+            You could donate, volunteer, introduce us to your company to sponsor a page or fund a new game,
+            or share your ideas of how to steer K12 students toward STEM careers.
         </p>
-        <button class="textBoxButton"> <a href="#">link text</a> </button>
+        <button class="textBoxButton"> <a href="/get-involved">Get Involved</a> </button>
     </div>
 
     <div class="donateCharacter">
@@ -130,18 +166,24 @@
 
 <section id="footer">
     <div class="footerText">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Cras congue ultricies justo vitae rhoncus. Pellentesque et justo quam.
+        <p>Edheads is a non-profit that creates unique,
+            free Web experiences to promote STEM education.
         </p>
     </div>
 
     <div class="footerLinks">
-        <img src="/assets/facebook.png" alt="" class="socialIcon">
-        <img src="/assets/twitter.png" alt="" class="socialIcon">
-        <img src="/assets/instagram.png" alt="" class="socialIcon">
-        <button class="footerButton"> <a href="#">link text</a> </button>
+        <a href="https://www.facebook.com/Edheads">
+            <img src="/assets/facebook.png" alt="" class="socialIcon"></a>
+        <a href="https://twitter.com/Edheadsdotorg">
+            <img src="/assets/twitter.png" alt="" class="socialIcon"></a>
+        <a href="https://www.linkedin.com/company/edheads">
+            <img src="/assets/instagram.png" alt="" class="socialIcon"></a>
+        <a href="https://www.pinterest.com/edheads/_created/">
+            <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
+        <a href="https://www.youtube.com/user/Edheadsorg">
+            <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
+        <button class="footerButton"><a href="#">Make a Donation</a></button>
     </div>
-
 </section>
 </body>
 </html>

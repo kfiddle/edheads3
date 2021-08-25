@@ -17,3 +17,8 @@ body{
 p{
     margin-bottom: 1rem;
 }
+
+a{
+    color: #4a86c2;
+    text-decoration: none;
+}

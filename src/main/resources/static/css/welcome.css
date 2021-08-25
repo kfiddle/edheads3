@@ -1,4 +1,3 @@
-/*BEGIN WELCOME GLOBAL STYLING*/
 h2{
     color: #d1a10e;
     font-size: 1rem;
@@ -10,7 +9,13 @@ h3{
     color: #cbd543;
     font-size: 2rem;
     font-weight: 900;
+    line-height: 2.25rem;
     padding: 0 0 .75rem 0;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
 }
 
 .textBoxButton{
@@ -30,6 +35,30 @@ h3{
     text-decoration: none;
 }
 
+.titlePanel{
+    background-color: #ffffff;
+    border-bottom: solid 7px #474747;
+    /*border-top: solid 7px #474747;*/
+    display: flex;
+    justify-content: center;
+    min-width: 100vw;
+    position: relative;
+}
+
+.contentContainerTitle{
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 80%;
+}
+
+.welcomeTitle{
+    color: #cbd543;
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 3rem 0;
+    text-shadow: 2px 2px 0px #474747;
+}
 
 .contentPanel{
     align-items: center;

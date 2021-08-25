@@ -8,7 +8,7 @@
     border-bottom: .5rem solid #cbd543;
     display: flex;
     height: 200px;
-    justify-content: space-between;
+    justify-content: space-around;
     position: relative;
     width: 100vw;
 }
@@ -16,26 +16,35 @@
 .logoContainer{
     align-items: flex-end;
     display: flex;
-    transform: translateX(15%);
+    /*transform: translateX(3vw);*/
 }
 
 .logo{
-    margin-bottom: .75rem;
-
+    margin-bottom: 1.25rem;
 }
 
 .logoImg{
-    width: 275px;
+    width:20vw;
 }
+
+
 
 .mainNavContainer{
     align-items: flex-end;
     display: flex;
+    flex-direction: column;
 }
 
-.mainNav{
+.mainNavLeft{
     display: flex;
     list-style-type: none;
+    /*transform: translateY(-5vh);*/
+}
+
+.mainNavRight{
+    display: flex;
+    list-style-type: none;
+    transform: translateX(-25vw)
 }
 
 
@@ -63,10 +72,34 @@
     font-weight: 900;
 }
 
-.weatherGirlContainer{
-    /* align-items: flex-end; */
+/*.mainNavItemGetInvolved{*/
+/*    background-color: #cbd543;*/
+/*    border-top-left-radius: .75rem;*/
+/*    border-top-right-radius: .75rem;*/
+/*    height: 50px;*/
+/*    margin-left: 7rem;*/
+/*    padding: .75rem 2rem;*/
+/*    text-transform: uppercase;*/
+/*    white-space: nowrap;*/
+/*}*/
+
+/*.mainNavItemGetInvolved a{*/
+/*    color: #474747;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.mainNavItemGetInvolved a:hover{*/
+/*    font-weight: 900;*/
+/*}*/
+
+/*.activeNav {*/
+/*    font-weight: 900;*/
+/*}*/
+
+.weatherGirlContainer {
     display: flex;
-    transform: translate(-17%, 10%);
+    position: relative;
+    transform: translate(-3vw, 2vh);
 }
 
 .weatherGirl{
@@ -80,6 +113,15 @@
 .bannerText {
     margin: 1.25rem 0rem 0rem 16.5rem;
     position: absolute;
+}
+
+.bannerText a{
+    color: #474747;
+    text-decoration: none;
+}
+
+.bannerText a:hover{
+    font-weight: 900;
 }
 
 
