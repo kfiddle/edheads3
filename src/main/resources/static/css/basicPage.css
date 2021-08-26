@@ -30,6 +30,13 @@ h1{
  border-bottom: none;
 }
 
+hr{
+    background-color: #ccc;
+    border: none;
+    height: .0125rem;
+    width: 50%;
+}
+
 .accordionList{
     padding-left: 2rem;
 }
@@ -143,7 +150,7 @@ h1{
 }
 
 .footNote{
-    border-top: .0125rem solid rgb(0,0,0,.2);
+    /*border-top: .0125rem solid rgb(0,0,0,.2);*/
     font-size: .9rem;
     line-height: 1.25rem;
     padding-top: 1rem;
