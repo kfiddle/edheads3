@@ -5,7 +5,7 @@
 }
 
 .singleGameContentContainer{
-    margin: 3rem 3rem 3rem 0rem;
+    margin: 1rem 3rem 3rem 0rem;
     width: 80%;
 }
 
@@ -47,5 +47,17 @@
 
 .sponsorTag a:hover{
     font-weight: 900;
+}
+
+.sponsorContainer{
+    border-bottom: #d1a10e .125rem solid;
+    border-top: #d1a10e .125rem solid;
+    margin: 0 auto 2rem;
+    width: 80%;
+}
+
+.sponsorContent{
+    padding: 3rem;
+     text-align: center;
 }
 

@@ -187,3 +187,18 @@
 }
 
 /*END FOOTER STYLING*/
+
+/*BEGIN BACK NAV STYLING*/
+
+.backNav{
+    font-size: .75rem;
+    font-weight: 300;
+    text-transform: lowercase;
+}
+
+.backNav a{
+    color: #d1a10e;
+    text-decoration: none;
+}
+
+/*END BACK NAV STYLING*/
