@@ -12,7 +12,13 @@
 .singleGameContent{
     line-height: 1.75rem;
     letter-spacing: .0125rem;
+    margin: 2rem 0;
     padding: 1.5rem 1.5rem 0rem 1.5rem;
+}
+
+.gameImageContainer{
+    position: relative;
+    z-index: 1;
 }
 
 .gameImg{
@@ -20,3 +26,26 @@
     border-radius: 1.5rem;
     width: 100%;
 }
+
+.sponsorTag{
+    background-color: #4a86c2;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    bottom: -40px;
+    color: #fff;
+    padding: .75rem 2rem;
+    position: absolute;
+    right: 2.5rem;
+    white-space: nowrap;
+    z-index: -2;
+}
+
+.sponsorTag a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.sponsorTag a:hover{
+    font-weight: 900;
+}
+
