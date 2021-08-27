@@ -6,52 +6,40 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/basicPage.css">
+    <link rel="stylesheet" href="/css/aboutUs.css">
+
+
+    <script src="js/navHeightMaker.js" defer></script>
     <script src="js/accordion.js" defer></script>
+
 
 </head>
 <body>
 
 <section id="header">
-
     <div class="logoContainer">
         <div class="logo">
             <img src="/assets/ed_logo.png" alt="" class="logoImg">
         </div>
     </div>
-
-    <!--<div class="navWithWeathergirl">-->
     <div class="mainNavContainer">
-        <ul class="mainNavLeft">
-            <li class="mainNavItem activeNav"><a href="/welcome">Welcome</a></li>
-            <li class="mainNavItem"><a href="/about-us">About Us</a></li>
-            <li class="mainNavItem"><a href="/our-games">Our Games</a></li>
-            <!--            <li class="mainNavItemGetInvolved"><a href="/get-involved">Get Involved</a></li>-->
-            <!--            <li class="mainNavItem"><a href="#">Donate</a></li>-->
-        </ul>
 
         <div class="weatherGirlContainer">
             <div class="weatherGirl">
                 <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
             </div>
-            <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>
+            <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>
         </div>
-
-        <ul class="mainNavRight">
-            <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
+        <ul class="mainNavLeft" id="mainNavLeft">
+            <li class="mainNavItem"><a href="/welcome">Welcome</a></li>
+            <li class="mainNavItem  activeNav"><a href="/about-us">About Us</a></li>
+            <li class="mainNavItem" style="margin-right: 5rem"><a href="/our-games">Our Games</a></li>
+            <li class="mainNavItem" style="margin-left: 5rem"><a href="/get-involved">Get Involved</a></li>
             <li class="mainNavItem"><a href="#">Donate</a></li>
         </ul>
-        <!--    </div>-->
-
-        <!--    <div class="weatherGirlContainer">-->
-        <!--        <div class="weatherGirl">-->
-        <!--            <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">-->
-        <!--        </div>-->
-        <!--        <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>-->
-        <!--    </div>-->
     </div>
-    <!--</div>-->
-
 </section>
+
 
 
 <div class="secondaryNavContainer">
@@ -115,16 +103,16 @@
         <div class="accordion">Our Values
         </div>
         <div class="accordionContent">
-           <ul>
-               <li>Relevance: Connecting science and math education standards to learning
-                   outcomes related to real-world careers.</li>
-               <li>Access: Giving educators a way to influence their students' future
-               career paths with online learning that is widely accessible.</li>
-               <li>Quality games: Helping teachers, parents, and students meet state and
-               national learning goals through highly interactive and engaging content.</li>
-               <li>Evidence: Evaluating the difference made in student STEM knowledge and
-               attitudes toward STEM careers.</li>
-           </ul>
+            <ul>
+                <li>Relevance: Connecting science and math education standards to learning
+                    outcomes related to real-world careers.</li>
+                <li>Access: Giving educators a way to influence their students' future
+                    career paths with online learning that is widely accessible.</li>
+                <li>Quality games: Helping teachers, parents, and students meet state and
+                    national learning goals through highly interactive and engaging content.</li>
+                <li>Evidence: Evaluating the difference made in student STEM knowledge and
+                    attitudes toward STEM careers.</li>
+            </ul>
         </div>
 
         <div class="accordion">Connection to Standards
@@ -139,7 +127,7 @@
         </div>
         <div class="accordionContent">
             <p>Gail Wheatley, Executive Director</p>
-                <p>Gail has a passion for fun and informal education and a
+            <p>Gail has a passion for fun and informal education and a
                 great deal of experience in informal learning institutions
                 and science education. She brainstorms ideas with Eric, e
                 stablishes partnerships with scientists, surgeons and people
@@ -149,7 +137,7 @@
                 for Edheads. She's always on the lookout for great new ideas and
                 people who have them. She lives with two monster Westies
                 (no, that is not an oxymoron) whose current science experiment is
-                    determining how many times they can dig up an apple tree before killing it.</p>
+                determining how many times they can dig up an apple tree before killing it.</p>
             </p>
         </div>
 
@@ -204,7 +192,7 @@
             <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
         <a href="https://www.youtube.com/user/Edheadsorg">
             <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
-        <button class="footerButton"><a href="#">Make a Donation</a></button>
+        <button class="footerButton"><a href="/donate">Make a Donation</a></button>
     </div>
 
 </section>

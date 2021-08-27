@@ -5,6 +5,47 @@ h1{
     margin: 1.5rem;
 }
 
+.pHead{
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.pText{
+    padding-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.pText:before {
+    content: "";
+    left: 0;
+    border-bottom: .25rem dotted #474747;
+    bottom: 0;
+    opacity: .5;
+    position: absolute;
+    width: 30%;
+}
+
+.pTextLast:before {
+    border-bottom: none;
+}
+
+hr{
+    background-color: #ccc;
+    border: none;
+    height: .0125rem;
+    margin: 1rem 0;
+    width: 50%;
+}
+
+.accordionList{
+    padding-left: 2rem;
+}
+
+.accordionListTitle{
+    margin-bottom: 0;
+}
+
 #basicPageContainer{
     display: flex;
     margin: auto;
@@ -12,18 +53,13 @@ h1{
 }
 
 .basicPageContentContainer{
-    /*border: .5rem solid #cbd543;*/
-    /*border-radius: 1.5rem;*/
-    /*height: 80vh;*/
     margin: 3rem 3rem 3rem 0rem;
-    /*padding: 1rem;*/
     width: 80%;
 }
 
 .basicPageMain{
     border: .5rem solid #cbd543;
     border-radius: 1.5rem;
-    /*height: 80vh;*/
     margin-bottom: 2rem;
     padding: 1rem;
 }
@@ -85,6 +121,41 @@ h1{
 
 .active:after {
     content: "\2796";
+}
+
+.accordionContentTwoColumn {
+    display: none;
+    font-size: 1rem;
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+.accordionColumns{
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.columnLeft{
+    text-align: center;
+    padding: 5rem 0 0 0;
+}
+
+.columnLeftBasic{
+    padding-left: 1rem;
+    text-align: left;
+}
+
+.columnRight{
+    border-left: solid .0125rem #d1a10e;
+    padding-left: 2rem;
+}
+
+.footNote{
+    /*border-top: .0125rem solid rgb(0,0,0,.2);*/
+    font-size: .9rem;
+    line-height: 1.25rem;
+    /*padding-top: 1rem;*/
 }
 
 .sideBar {

@@ -6,53 +6,37 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/nav.css">
   <link rel="stylesheet" href="/css/basicPage.css">
+
+  <script src="js/navHeightMaker.js" defer></script>
   <script src="js/accordion.js" defer></script>
+
 
 </head>
 <body>
 
 <section id="header">
-
   <div class="logoContainer">
     <div class="logo">
       <img src="/assets/ed_logo.png" alt="" class="logoImg">
     </div>
   </div>
-
-  <!--<div class="navWithWeathergirl">-->
   <div class="mainNavContainer">
-    <ul class="mainNavLeft">
-      <li class="mainNavItem activeNav"><a href="/welcome">Welcome</a></li>
-      <li class="mainNavItem"><a href="/about-us">About Us</a></li>
-      <li class="mainNavItem"><a href="/our-games">Our Games</a></li>
-      <!--            <li class="mainNavItemGetInvolved"><a href="/get-involved">Get Involved</a></li>-->
-      <!--            <li class="mainNavItem"><a href="#">Donate</a></li>-->
-    </ul>
 
     <div class="weatherGirlContainer">
       <div class="weatherGirl">
         <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
       </div>
-      <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>
+      <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>
     </div>
-
-    <ul class="mainNavRight">
-      <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
-      <li class="mainNavItem"><a href="#">Donate</a></li>
+    <ul class="mainNavLeft" id="mainNavLeft">
+      <li class="mainNavItem"><a href="/welcome">Welcome</a></li>
+      <li class="mainNavItem  activeNav"><a href="/about-us">About Us</a></li>
+      <li class="mainNavItem" style="margin-right: 5rem"><a href="/our-games">Our Games</a></li>
+      <li class="mainNavItem" style="margin-left: 5rem"><a href="/get-involved">Get Involved</a></li>
+      <li class="mainNavItem"><a href="/donate">Donate</a></li>
     </ul>
-    <!--    </div>-->
-
-    <!--    <div class="weatherGirlContainer">-->
-    <!--        <div class="weatherGirl">-->
-    <!--            <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">-->
-    <!--        </div>-->
-    <!--        <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>-->
-    <!--    </div>-->
   </div>
-  <!--</div>-->
-
 </section>
-
 
 <div class="secondaryNavContainer">
   <ul class="secondaryNav">
@@ -70,51 +54,51 @@
     <div class="basicPageMain">
       <h1>Awards</h1>
       <div class="basicPageContent">
-        <p>Jun 2003	</p>
-          <p>Edheads won the first annual CMYK Magazine Interactive Design Contest.</p>
+        <p class="pHead">Jun 2003	</p>
+        <p>Edheads won the first annual CMYK Magazine Interactive Design Contest.</p>
 
-        <p>Feb 2004</p>
+        <p class="pHead">Feb 2004</p>
         <p>Edheads is Macromedia Site of the Day.</p>
 
-        <p> Feb 2004</p>
+        <p class="pHead"> Feb 2004</p>
         <p>Edheads was SBC Blue Web’n Hot Site of the Week.</p>
 
-        <p> Mar 2004</p>
+        <p class="pHead"> Mar 2004</p>
         <p>Flash Forward 2004 winner for best educational project.</p>
 
-        <p> Apr 2004</p>
+        <p class="pHead"> Apr 2004</p>
         <p>Edheads had the top two listings (Simple Machines and Virtual
           Knee Surgery) on the Eisenhower National Clearinghouse Digital Dozen.</p>
 
-        <p>May 2004</p>
+        <p class="pHead">May 2004</p>
         <p>Edheads nominated for the highly prestigious Webby Award in the Science category.</p>
 
-        <p> May 2004</p>
+        <p class="pHead"> May 2004</p>
         <p>COSI and Edheads win the Gold Science MUSE award for best multimedia
           project against international competition.</p>
 
-        <p>Aug 2004</p>
+        <p class="pHead">Aug 2004</p>
         <p>Yahoo Picks New and Notable Sites.</p>
 
-        <p>Sep 2004</p>
+        <p class="pHead">Sep 2004</p>
         <p>Communication Arts Interactive Design Competition, Edheads won for best use of Flash.</p>
 
-        <p>2003-2004</p>
+        <p class="pHead">2003-2004</p>
         Multiple award winner for HOW Design Magazine’s Top Ten Sites of
-          the Month and multiple winner of the USA Today Hot Site of the Day.</p>
+        the Month and multiple winner of the USA Today Hot Site of the Day.</p>
 
-        <p>2008</p>
+        <p class="pHead">2008</p>
         <p>US Distance Learning Assocation’s Award for Outstanding Leadership
           by an Individual in the Field of Distance Learning.</p>
 
-        <p>Feb 2010	</p>
+        <p class="pHead">Feb 2010	</p>
         <p>Edheads won the Kids at Play Interactive (KAPi) Award for Best Children’s
           Web site or Service for Deep Brain Stimulation.</p>
 
-        <p>Feb 2010	</p>
+        <p class="pHead">Feb 2010	</p>
         Edheads won the TechColumubus Award for Innovation in Nonprofit Service Delivery.</p>
 
-        <p>Sep 2011	</p>
+        <p class="pHead">Sep 2011	</p>
         <p>Finalist in the INDEX Award: Design to Improve Life, the largest cash
           prize for design in the world, under the patronage of HRH the Crown Prince of Denmark.
           Only 6% of the more than 1,000 entries made it to the finalist’s list.</p>
@@ -185,7 +169,7 @@
       <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
     <a href="https://www.youtube.com/user/Edheadsorg">
       <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
-    <button class="footerButton"><a href="#">Make a Donation</a></button>
+    <button class="footerButton"><a href="/donate">Make a Donation</a></button>
   </div>
 
 </section>

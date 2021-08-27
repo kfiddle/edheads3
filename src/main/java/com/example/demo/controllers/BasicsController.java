@@ -142,6 +142,18 @@ public class BasicsController {
         return "getInvolved";
     }
 
+    @RequestMapping("/donate")
+    public String displayDonatePage() {
+
+        return "donate";
+    }
+
+    @RequestMapping("/login-test")
+    public String displayLogInTestPage() {
+
+        return "logInTest";
+    }
+
     @RequestMapping("/basic-page")
     public String displayBasicPage() {
 

@@ -8,95 +8,79 @@
     <link rel="stylesheet" href="/css/basicPage.css">
     <link rel="stylesheet" href="/css/allGamesView.css">
 
+    <script src="js/navHeightMaker.js" defer></script>
     <script src="js/accordion.js" defer></script>
+
 
 </head>
 <body>
 
 <section id="header">
-
     <div class="logoContainer">
         <div class="logo">
             <img src="/assets/ed_logo.png" alt="" class="logoImg">
         </div>
     </div>
-
-    <!--<div class="navWithWeathergirl">-->
     <div class="mainNavContainer">
-        <ul class="mainNavLeft">
-            <li class="mainNavItem activeNav"><a href="/welcome">Welcome</a></li>
-            <li class="mainNavItem"><a href="/about-us">About Us</a></li>
-            <li class="mainNavItem"><a href="/our-games">Our Games</a></li>
-            <!--            <li class="mainNavItemGetInvolved"><a href="/get-involved">Get Involved</a></li>-->
-            <!--            <li class="mainNavItem"><a href="#">Donate</a></li>-->
-        </ul>
 
         <div class="weatherGirlContainer">
             <div class="weatherGirl">
                 <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
             </div>
-            <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>
+            <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>
         </div>
-
-        <ul class="mainNavRight">
-            <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
+        <ul class="mainNavLeft" id="mainNavLeft">
+            <li class="mainNavItem"><a href="/welcome">Welcome</a></li>
+            <li class="mainNavItem"><a href="/about-us">About Us</a></li>
+            <li class="mainNavItem activeNav" style="margin-right: 5rem"><a href="/our-games">Our Games</a></li>
+            <li class="mainNavItem" style="margin-left: 5rem"><a href="/get-involved">Get Involved</a></li>
             <li class="mainNavItem"><a href="#">Donate</a></li>
         </ul>
-        <!--    </div>-->
-
-        <!--    <div class="weatherGirlContainer">-->
-        <!--        <div class="weatherGirl">-->
-        <!--            <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">-->
-        <!--        </div>-->
-        <!--        <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>-->
-        <!--    </div>-->
     </div>
-    <!--</div>-->
-
 </section>
 
 
+
 <section id="basicPageContainer">
-    <div class="titleContainer">   <h1 class="gamesPageTitle">Title of Page</h1>
+    <div class="titleContainer">
+        <h1 class="gamesPageTitle">Our Games</h1>
 
-    <div class="gamesPageContentContainer">
+        <div class="gamesPageContentContainer">
 
+            <div class="tileContent">
+                <a href="/nano-start-up"><img src="/assets/game1.jpg" alt="" class="gameImg"></a>
+                <div class="gameText">
+                    <h2>Nano Start Up</h2>
+                    <p>Grades: 5-8</p>
+                    <p>Nano Start Up is a science game for students (kids) to research
+                        and develop a business plan for a nanoparticle.
+                    </p>
+                </div>
+            </div>
 
+            <div class="tileContent">
+                <a href="/manufacturing-technician"><img src="/assets/game3.jpg" alt="" class="gameImg"></a>
+                <div class="gameText">
+                    <h2>Manufacturing Technician</h2>
+                    <p>Grades: 5-8</p>
+                    <p>Manufacturing Technician is a math game for students (kids) to learn what
+                        happens on the manufacturing line and troubleshooting,
+                        maintaining and repairing equipment.
+                    </p>
+                </div>
+            </div>
 
-        <!--        <div class="basicPageContent">-->
-<!--            what does this look like?-->
-<!--  </div>-->
-
-        <div class="tileContent">
-            <a href="/nano-start-up"><img src="/assets/game1.jpg" alt="" class="gameImg"></a>
-        <div class="gameText">
-            <h2>Game Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Cras congue ultricies justo vitae rhoncus.
-            </p>
-        </div>
-        </div>
-
-        <div class="tileContent">
-            <a href="/manufacturing-technician"><img src="/assets/game2.jpg" alt="" class="gameImg"></a>
-            <div class="gameText">
-                <h2>Game Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Cras congue ultricies justo vitae rhoncus.
-                </p>
+            <div class="tileContent">
+                <a href="/simple-machines"><img src="/assets/game2.jpg" alt="" class="gameImg"></a>
+                <div class="gameText">
+                    <h2>Simple Machines</h2>
+                    <p>Grades: 2-6</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Cras congue ultricies justo vitae rhoncus.
+                    </p>
+                </div>
             </div>
         </div>
-
-        <div class="tileContent">
-            <a href="/simple-machines"><img src="/assets/game3.jpg" alt="" class="gameImg"></a>
-            <div class="gameText">
-                <h2>Game Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Cras congue ultricies justo vitae rhoncus.
-                </p>
-            </div>
-        </div>
-    </div>
     </div>
 
 
@@ -132,7 +116,7 @@
             <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
         <a href="https://www.youtube.com/user/Edheadsorg">
             <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
-        <button class="footerButton"><a href="#">Make a Donation</a></button>
+        <button class="footerButton"><a href="/donate">Make a Donation</a></button>
     </div>
 
 </section>

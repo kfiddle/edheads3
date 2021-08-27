@@ -7,51 +7,36 @@
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/basicPage.css">
     <link rel="stylesheet" href="/css/faq.css">
+
+    <script src="js/navHeightMaker.js" defer></script>
     <script src="js/accordion.js" defer></script>
+
 
 </head>
 <body>
 
 <section id="header">
-
     <div class="logoContainer">
         <div class="logo">
             <img src="/assets/ed_logo.png" alt="" class="logoImg">
         </div>
     </div>
-
-    <!--<div class="navWithWeathergirl">-->
     <div class="mainNavContainer">
-        <ul class="mainNavLeft">
-            <li class="mainNavItem activeNav"><a href="/welcome">Welcome</a></li>
-            <li class="mainNavItem"><a href="/about-us">About Us</a></li>
-            <li class="mainNavItem"><a href="/our-games">Our Games</a></li>
-            <!--            <li class="mainNavItemGetInvolved"><a href="/get-involved">Get Involved</a></li>-->
-            <!--            <li class="mainNavItem"><a href="#">Donate</a></li>-->
-        </ul>
 
         <div class="weatherGirlContainer">
             <div class="weatherGirl">
                 <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
             </div>
-            <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>
+            <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>
         </div>
-
-        <ul class="mainNavRight">
-            <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
-            <li class="mainNavItem"><a href="#">Donate</a></li>
+        <ul class="mainNavLeft" id="mainNavLeft">
+            <li class="mainNavItem"><a href="/welcome">Welcome</a></li>
+            <li class="mainNavItem  activeNav"><a href="/about-us">About Us</a></li>
+            <li class="mainNavItem" style="margin-right: 5rem"><a href="/our-games">Our Games</a></li>
+            <li class="mainNavItem" style="margin-left: 5rem"><a href="/get-involved">Get Involved</a></li>
+            <li class="mainNavItem"><a href="/donate">Donate</a></li>
         </ul>
-        <!--    </div>-->
-
-        <!--    <div class="weatherGirlContainer">-->
-        <!--        <div class="weatherGirl">-->
-        <!--            <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">-->
-        <!--        </div>-->
-        <!--        <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>-->
-        <!--    </div>-->
     </div>
-    <!--</div>-->
-
 </section>
 
 
@@ -93,7 +78,7 @@
                 we have the following activities available:
             </p>
             <p class="gameTitle">Simple Machines</p>
-                <p class="gameInfo">Grade Level: 2-6<br>
+            <p class="gameInfo">Grade Level: 2-6<br>
                 Topics Covered: Identification of simple and compound machines</p>
             <p class="gameTitle">Manufacturing Technician</p>
             <p class="gameInfo">Grade Level: 5-8<br>
@@ -106,10 +91,10 @@
         <div class="accordion">Why do some activities take a long time to download?
         </div>
         <div class="accordionContent">
-           <p>Our activities have cool graphics, great sound, and a ton of animations,
-               so the size of some activities can be pretty big. This means activities
-               will take longer to download if you have a slower connection.
-           </p>
+            <p>Our activities have cool graphics, great sound, and a ton of animations,
+                so the size of some activities can be pretty big. This means activities
+                will take longer to download if you have a slower connection.
+            </p>
         </div>
 
         <div class="accordion">What if I see an objectionable advertisement?
@@ -157,11 +142,11 @@
         </div>
         <div class="accordionContent">
             <p>Our ideas come from a lot of places. Sometimes our users write in with
-            ideas of activities they'd like to see
-            (and no, sorry, we won't be producing things where
-            hundreds of knee patients die violent deaths or you
-            win by just having better eye-hand coordination than someone else)
-            or scientists, corporations, and teachers give us ideas. </p>
+                ideas of activities they'd like to see
+                (and no, sorry, we won't be producing things where
+                hundreds of knee patients die violent deaths or you
+                win by just having better eye-hand coordination than someone else)
+                or scientists, corporations, and teachers give us ideas. </p>
             <p>We also have a LOT of ideas of our own! We get ideas from the
                 news of the day and the exciting areas of research that are making headlines.
                 So, we are pretty open to ideas and there is no shortage of them.
@@ -186,7 +171,7 @@
                 develop new projects, please contact
                 <a href = "mailto: info@edheads.org">info@edheads.org</a> .</p>
         </div>
-   </div>
+    </div>
 
 
     <div class="sideBar">
@@ -221,7 +206,7 @@
             <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
         <a href="https://www.youtube.com/user/Edheadsorg">
             <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
-        <button class="footerButton"><a href="#">Make a Donation</a></button>
+        <button class="footerButton"><a href="/donate">Make a Donation</a></button>
     </div>
 
 </section>

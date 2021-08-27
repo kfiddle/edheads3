@@ -16,7 +16,6 @@
 .logoContainer{
     align-items: flex-end;
     display: flex;
-    /*transform: translateX(3vw);*/
 }
 
 .logo{
@@ -27,18 +26,16 @@
     width:20vw;
 }
 
-
-
 .mainNavContainer{
     align-items: flex-end;
     display: flex;
     flex-direction: column;
+    transform: translateX(-3vw);
 }
 
 .mainNavLeft{
     display: flex;
     list-style-type: none;
-    /*transform: translateY(-5vh);*/
 }
 
 .mainNavRight{
@@ -72,34 +69,10 @@
     font-weight: 900;
 }
 
-/*.mainNavItemGetInvolved{*/
-/*    background-color: #cbd543;*/
-/*    border-top-left-radius: .75rem;*/
-/*    border-top-right-radius: .75rem;*/
-/*    height: 50px;*/
-/*    margin-left: 7rem;*/
-/*    padding: .75rem 2rem;*/
-/*    text-transform: uppercase;*/
-/*    white-space: nowrap;*/
-/*}*/
-
-/*.mainNavItemGetInvolved a{*/
-/*    color: #474747;*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*.mainNavItemGetInvolved a:hover{*/
-/*    font-weight: 900;*/
-/*}*/
-
-/*.activeNav {*/
-/*    font-weight: 900;*/
-/*}*/
-
 .weatherGirlContainer {
     display: flex;
     position: relative;
-    transform: translate(-3vw, 2vh);
+    transform: translate(-4vw, 2vh);
 }
 
 .weatherGirl{
@@ -214,3 +187,18 @@
 }
 
 /*END FOOTER STYLING*/
+
+/*BEGIN BACK NAV STYLING*/
+
+.backNav{
+    font-size: .75rem;
+    font-weight: 300;
+    text-transform: lowercase;
+}
+
+.backNav a{
+    color: #d1a10e;
+    text-decoration: none;
+}
+
+/*END BACK NAV STYLING*/

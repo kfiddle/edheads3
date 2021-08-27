@@ -8,53 +8,34 @@
     <link rel="stylesheet" href="/css/basicPage.css">
     <link rel="stylesheet" href="/css/privacy.css">
 
+    <script src="js/navHeightMaker.js" defer></script>
     <script src="js/accordion.js" defer></script>
-
 </head>
 <body>
 
 <section id="header">
-
     <div class="logoContainer">
         <div class="logo">
             <img src="/assets/ed_logo.png" alt="" class="logoImg">
         </div>
     </div>
-
-    <!--<div class="navWithWeathergirl">-->
     <div class="mainNavContainer">
-        <ul class="mainNavLeft">
-            <li class="mainNavItem activeNav"><a href="/welcome">Welcome</a></li>
-            <li class="mainNavItem"><a href="/about-us">About Us</a></li>
-            <li class="mainNavItem"><a href="/our-games">Our Games</a></li>
-            <!--            <li class="mainNavItemGetInvolved"><a href="/get-involved">Get Involved</a></li>-->
-            <!--            <li class="mainNavItem"><a href="#">Donate</a></li>-->
-        </ul>
 
         <div class="weatherGirlContainer">
             <div class="weatherGirl">
                 <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
             </div>
-            <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>
+            <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>
         </div>
-
-        <ul class="mainNavRight">
-            <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
-            <li class="mainNavItem"><a href="#">Donate</a></li>
+        <ul class="mainNavLeft" id="mainNavLeft">
+            <li class="mainNavItem"><a href="/welcome">Welcome</a></li>
+            <li class="mainNavItem  activeNav"><a href="/about-us">About Us</a></li>
+            <li class="mainNavItem" style="margin-right: 5rem"><a href="/our-games">Our Games</a></li>
+            <li class="mainNavItem" style="margin-left: 5rem"><a href="/get-involved">Get Involved</a></li>
+            <li class="mainNavItem"><a href="/donate">Donate</a></li>
         </ul>
-        <!--    </div>-->
-
-        <!--    <div class="weatherGirlContainer">-->
-        <!--        <div class="weatherGirl">-->
-        <!--            <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">-->
-        <!--        </div>-->
-        <!--        <div class="bannerText"><a href="/about-us">Log In</a> or <a href="/about-us">Sign Up!</a></div>-->
-        <!--    </div>-->
     </div>
-    <!--</div>-->
-
 </section>
-
 
 <div class="secondaryNavContainer">
     <ul class="secondaryNav">
@@ -71,8 +52,8 @@
     <div class="basicPageContentContainer">
         <div class="basicPageMain">
             <h1>Privacy Policy</h1>
-<!--            <div class="privacyPageContent">-->
-                <div class="basicPageContent">
+            <!--            <div class="privacyPageContent">-->
+            <div class="basicPageContent">
 
                 <p>Thank you for visiting our web site, Edheads.org. This privacy policy
                     tells you how we use personal information collected at this site.
@@ -137,14 +118,14 @@
             </div>
         </div>
 
-<!--        <div class="accordion">Accordion Title-->
-<!--        </div>-->
-<!--        <div class="accordionContent">-->
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-<!--                Etiam tristique, ex ut tincidunt ullamcorper, sapien lorem viverra eros, ac lobortis massa-->
-<!--                risus ut massa.-->
-<!--            </p>-->
-<!--        </div>-->
+        <!--        <div class="accordion">Accordion Title-->
+        <!--        </div>-->
+        <!--        <div class="accordionContent">-->
+        <!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+        <!--                Etiam tristique, ex ut tincidunt ullamcorper, sapien lorem viverra eros, ac lobortis massa-->
+        <!--                risus ut massa.-->
+        <!--            </p>-->
+        <!--        </div>-->
 
     </div>
     <div class="sideBar">
@@ -179,7 +160,7 @@
             <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
         <a href="https://www.youtube.com/user/Edheadsorg">
             <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
-        <button class="footerButton"><a href="#">Make a Donation</a></button>
+        <button class="footerButton"><a href="/donate">Make a Donation</a></button>
     </div>
 
 </section>
