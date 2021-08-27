@@ -81,6 +81,12 @@ public class BasicsController {
         return "login";
     }
 
+    @GetMapping("/login-test")
+    public String displayLoginTestPage() {
+
+        return "loginTest";
+    }
+
     @RequestMapping("/faq")
     public String displayFaqPage() {
 
@@ -140,6 +146,18 @@ public class BasicsController {
     public String displayGetInvolvedPage() {
 
         return "getInvolved";
+    }
+
+    @RequestMapping("/donate")
+    public String displayDonatePage() {
+
+        return "donate";
+    }
+
+    @RequestMapping("/teachers")
+    public String displayTeachersPage() {
+
+        return "teacherResources";
     }
 
     @RequestMapping("/basic-page")
