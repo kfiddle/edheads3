@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Manufacturing Quiz</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/basicPage.css">
+  <link rel="stylesheet" href="/css/singleGameView.css">
+
+  <script src="js/accordion.js" defer></script>
+  <script src="js/game.js" defer></script>
+  <script src="js/navHeightMaker.js" defer></script>
+
+</head>
+<body>
+
+<section id="header">
+  <div class="logoContainer">
+    <div class="logo">
+      <img src="/assets/ed_logo.png" alt="" class="logoImg">
+    </div>
+  </div>
+  <div class="mainNavContainer">
+
+    <div class="weatherGirlContainer">
+      <div class="weatherGirl">
+        <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
+      </div>
+      <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>
+    </div>
+    <ul class="mainNavLeft" id="mainNavLeft">
+      <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
+      <li class="mainNavItem "><a href="/welcome">Welcome</a></li>
+      <li class="mainNavItem"><a href="/about-us">About Us</a></li>
+      <li class="mainNavItem   activeNav" style="margin-right: 2rem"><a href="/our-games">Our Games</a></li>
+      <li class="mainNavItem" style="margin-left: 2rem"><a href="/get-involved">Get Involved</a></li>
+      <li class="mainNavItem"><a href="/donate">Donate</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<section id="singleGameContainer">
+
+  <div class="singleGameContentContainer">
+    <div class="backNav"><a href="/our-games">Back to Games</a> </div>
+
+    <h1>Manufacturing Quiz</h1>
+
+    <div class="gameImageContainer">
+
+<!--      <a href="http://www.edheads2.org/nano/Browser/Intro/Index.html" onclick="return openwindow('http://www.edheads2.org/nano/Browser/Intro/Index.html')">-->
+        <img src="/assets/game3.jpg" alt="" class="gameImg">
+      </a>
+      <div class="sponsorTag">
+        <a href="#"> Sponsor This Game!</a>
+      </div>
+    </div>
+
+    <div class="singleGameContent">
+      <p class="pHead">Grades: 10-12</p>
+      <p>Test your knowledge of modern manufacturing!
+      </p>
+    </div>
+
+    <div class="sponsorContainer">
+      <div class="sponsorContent"> OHIO LOGOS WILL GO HERE</div>
+    </div>
+
+
+    <div class="accordion">Want to Know More About Manufacturing as a Career?
+    </div>
+    <div class="accordionContent">
+      <p>Play Edheads’Manufacturing Technician Game</p>
+      <p>Do an internet search for ‘tech camps,’ ‘manufacturing camps,’ or computer or robotics camps.
+        All of these provide skills used in manufacturing. In Columbus, Ohio,
+        check out TechCorps, which holds full-day, weeklong summer
+        “Techie Camps” where middle-school students are able to immerse
+        themselves in activities such as computer programming, and web and app
+        development. <a href="https:www.twenty.techcorps.org">twenty.techcorps.org</a>
+      </p>
+
+      <p>Talk to your teachers or guidance counselors about entering a technical
+        training course aimed at a manufacturing career, such as a Fab Lab course or Manufacturing Pathway.</p>
+
+      <p>After high school, pursue an associate degree in Manufacturing or Mechanical
+        Engineering Technology from local college institutions (In Ohio: Rhodes State,
+        Columbus State, Marion Technical, Edison Community, Sinclair Community and Clark State).</p>
+
+      <p>Ask about a work-study pilot program allows students the opportunity to work at
+        Honda or some other manufacturing plant three days a week, while taking classes
+        two days. You can build technical skills while earning your degree.
+        Honda is expanding their program in the future, and many other manufacturers have similar programs.</p>
+
+      <p>Ask about certification programs at local career skills centers.
+        Many of these centers now provide classes and certifications that allow you to
+        leave high school already employed.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="sideBar">
+    <!--        <div class="sideBarText">Sidebar Text</div>-->
+    <div>
+      <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="sideBarAd">
+    </div>
+
+    <div>
+      <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="sideBarAd">
+    </div>
+  </div>
+
+</section>
+
+
+<section id="footer">
+  <div class="footerText">
+    <p>Edheads is a non-profit that creates unique,
+      free Web experiences to promote STEM education.
+    </p>
+  </div>
+
+  <div class="footerLinks">
+    <a href="https://www.facebook.com/Edheads">
+      <img src="/assets/facebook.png" alt="" class="socialIcon"></a>
+    <a href="https://twitter.com/Edheadsdotorg">
+      <img src="/assets/twitter.png" alt="" class="socialIcon"></a>
+    <a href="https://www.linkedin.com/company/edheads">
+      <img src="/assets/instagram.png" alt="" class="socialIcon"></a>
+    <a href="https://www.pinterest.com/edheads/_created/">
+      <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
+    <a href="https://www.youtube.com/user/Edheadsorg">
+      <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
+    <button class="footerButton"><a href="/donate">Make a Donation</a></button>
+  </div>
+
+</section>
+</body>
+</html>

@@ -136,6 +136,13 @@ public class BasicsController {
         return "manufacturingTechnician";
     }
 
+    @RequestMapping("/manufacturing-quiz")
+    public String displayManufacturingQuizPage() {
+
+        return "manufacturingQuiz";
+    }
+
+
     @RequestMapping("/simple-machines")
     public String displaySimpleMachinesGamePage() {
 
