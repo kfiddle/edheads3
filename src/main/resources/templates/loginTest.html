@@ -1,86 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
   <meta charset="UTF-8">
-  <title>Basic Page</title>
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/nav.css">
-  <link rel="stylesheet" href="/css/basicPage.css">
+  <title>Login Page</title>
 
-  <script src="js/navHeightMaker.js" defer></script>
-  <script src="js/accordion.js" defer></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/basicPage.css">
+  <link rel="stylesheet" href="/css/login.css">
 
 
 </head>
 <body>
 
-<section id="header">
-  <div class="logoContainer">
-    <div class="logo">
-      <img src="/assets/ed_logo.png" alt="" class="logoImg">
-    </div>
-  </div>
-  <div class="mainNavContainer">
-
-    <div class="weatherGirlContainer">
-      <div class="weatherGirl">
-        <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
-      </div>
-      <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>
-    </div>
-    <ul class="mainNavLeft" id="mainNavLeft">
-      <li class="mainNavItem"><a href="/welcome">Welcome</a></li>
-      <li class="mainNavItem"><a href="/about-us">About Us</a></li>
-      <li class="mainNavItem" style="margin-right: 5rem"><a href="/our-games">Our Games</a></li>
-      <li class="mainNavItem" style="margin-left: 5rem"><a href="/get-involved">Get Involved</a></li>
-      <li class="mainNavItem"><a href="/donate">Donate</a></li>
-    </ul>
-  </div>
-</section>
-
-
 <section id="basicPageContainer">
 
   <div class="logInContainer">
     <div class="basicPageMain">
-      <h1>Title of Page</h1>
       <div class="basicPageContent">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Etiam tristique, ex ut tincidunt ullamcorper, sapien lorem viverra eros, ac lobortis massa
-          risus ut massa. Cras egestas erat ac molestie luctus. Phasellus non arcu mauris.
-          Aenean ut pulvinar ipsum. Curabitur tincidunt leo rhoncus viverra fermentum. Nulla quis
-          fermentum odio. Nam ex nibh, interdum quis elit eget, ultricies porta lectus. Vestibulum a
-          nte ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-          Nunc placerat leo eu tincidunt efficitur. Fusce iaculis, turpis non finibus malesuada,
-          mauris leo cursus leo, in mollis turpis orci fringilla tellus.
-        </p>
+        <form name='login' th:action="@{/login}" method='post'>
+
+          <label>
+            <input type="text" placeholder="userName" name="username">
+          </label>
+          <label>
+            <input type="text" placeholder="password" name="password">
+          </label>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
   </div>
 </section>
 
 
-<section id="footer">
-  <div class="footerText">
-    <p>Edheads is a non-profit that creates unique,
-      free Web experiences to promote STEM education.
-    </p>
-  </div>
-
-  <div class="footerLinks">
-    <a href="https://www.facebook.com/Edheads">
-      <img src="/assets/facebook.png" alt="" class="socialIcon"></a>
-    <a href="https://twitter.com/Edheadsdotorg">
-      <img src="/assets/twitter.png" alt="" class="socialIcon"></a>
-    <a href="https://www.linkedin.com/company/edheads">
-      <img src="/assets/instagram.png" alt="" class="socialIcon"></a>
-    <a href="https://www.pinterest.com/edheads/_created/">
-      <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
-    <a href="https://www.youtube.com/user/Edheadsorg">
-      <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
-    <button class="footerButton"><a href="/donate">Make a Donation</a></button>
-  </div>
-
-</section>
 </body>
 </html>

@@ -72,7 +72,7 @@
 .weatherGirlContainer {
     display: flex;
     position: relative;
-    transform: translate(-4vw, 2vh);
+    transform: translate(-1vw, 2vh);
 }
 
 .weatherGirl{
