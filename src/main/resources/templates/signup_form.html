@@ -22,11 +22,11 @@
                         <h1>User Registration - Sign Up</h1>
                     </div>
 
-                    <h2>Your Account</h2>
+
                     <form th:action="@{/process_register}" th:object="${user}"
                           method="post" style="max-width: 600px; margin: 0 auto;">
                         <div class="m-3">
-
+                            <h2>Your Account</h2>
                             <div class="form-group row">
                                 <label class="col-4 col-form-label">Role: </label>
                                 <div class="col-8">
@@ -72,7 +72,7 @@
                             <h2>Your School or Organization</h2>
 
                             <div class="form-group row">
-                                <label class="col-4 col-form-label">School or Organization: </label>
+                                <label class="col-4 col-form-label">Name of School or Organization: </label>
                                 <div class="col-8">
                                     <input type="text" th:field="*{schoolOrganization}" class="form-control" required/>
                                 </div>
