@@ -20,14 +20,4 @@ public class Teacher extends User {
     public Teacher() {
     }
 
-    public Teacher(String email, String firstName, String lastName, USAState usaState, GradeRange gradeRange, LocalDate dateCreated) {
-        super(email, firstName, lastName, usaState, dateCreated);
-        this.gradeRange = gradeRange;
-    }
-
-    public GradeRange getGradeRange() {
-        return this.gradeRange;
-    }
-
-
 }

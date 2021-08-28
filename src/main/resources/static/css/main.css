@@ -14,6 +14,10 @@ body{
     line-height: 1.75rem;
 }
 
+hidden{
+    display: none;
+}
+
 p{
     margin-bottom: 1rem;
 }

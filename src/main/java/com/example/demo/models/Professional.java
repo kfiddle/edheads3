@@ -33,12 +33,12 @@ public class Professional extends User {
     public Professional() {
     }
 
-    public Professional(String email, String firstName, String lastName, USAState usaState, GradeRange gradeRange, LocalDate dateCreated) {
-        super(email, firstName, lastName, usaState, dateCreated);
+    public Professional(String email, String firstName, String lastName) {
+        super(email, firstName, lastName);
     }
 
-    public Professional(String email, String firstName, String lastName, USAState usaState, LocalDate dateCreated, boolean approvedByAdmin, String careerTitle, String careerDescription, String educationDescription, String jobBestDescription, String jobWorstDescription, String pastChangeDesc, String careerPathChallenge, String futureChangeDesc, AccountType accountType, String company, String university, boolean gameHelpInd, boolean gameFundingInd, boolean socialMediaInd, boolean volunteerInd) {
-        super(email, firstName, lastName, usaState, dateCreated);
+    public Professional(String email, String firstName, String lastName, boolean approvedByAdmin, String careerTitle, String careerDescription, String educationDescription, String jobBestDescription, String jobWorstDescription, String pastChangeDesc, String careerPathChallenge, String futureChangeDesc, AccountType accountType, String company, String university, boolean gameHelpInd, boolean gameFundingInd, boolean socialMediaInd, boolean volunteerInd) {
+        super(email, firstName, lastName);
         this.approvedByAdmin = approvedByAdmin;
         this.careerTitle = careerTitle;
         this.careerDescription = careerDescription;
