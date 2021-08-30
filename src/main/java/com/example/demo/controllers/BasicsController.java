@@ -59,6 +59,7 @@ public class BasicsController {
         userToAdd.setFirstName(incomingUser.getFirstName());
 
         System.out.println("incoming email is: " + userToAdd.getEmail());
+        System.out.println("the new role is : " + incomingUser.getRole());
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encodedPassword = passwordEncoder.encode(incomingUser.getPassword());
         userToAdd.setPassword(encodedPassword);
