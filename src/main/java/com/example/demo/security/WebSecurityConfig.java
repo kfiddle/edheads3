@@ -82,7 +82,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .successHandler((request, response, authentication) -> System.out.println("user name is: " + authentication.getName()))
+                .successHandler((request, response, authentication) -> {
+                    // run custom logics upon successful login
+
+                    UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+                    String username = userDetails.getUsername();
+
+                    System.out.println("The user " + username + " has logged in.");
+
+                    response.sendRedirect(request.getContextPath());
+                })
+
+
                 .permitAll()
                 .and()
                 .logout()
@@ -90,6 +101,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .httpBasic();
     }
+
 
 //    @Override
 //    protected void configure(HttpSecurity http) throws Exception {
