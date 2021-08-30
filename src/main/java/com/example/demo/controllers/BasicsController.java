@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.time.LocalDate;
 
 
 @Controller
@@ -62,10 +63,9 @@ public class BasicsController {
         String encodedPassword = passwordEncoder.encode(incomingUser.getPassword());
         userToAdd.setPassword(encodedPassword);
 
-//        System.out.println(userToAdd.getFirstName() + "  " + userToAdd.getEmail() + "    " + incomingUser.getPassword());
-
+        userToAdd.setDateCreated(LocalDate.now());
         userRepo.save(userToAdd);
-        System.out.println("we have a saved user at   " +   userRepo.findByEmail(userToAdd.getEmail()).getFirstName());
+
         return "redirect:register_success";
     }
 
