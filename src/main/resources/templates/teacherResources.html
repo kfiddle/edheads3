@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
-    <title>Resources for Teachers</title>
+    <title>Teacher Resources</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/basicPage.css">
+    <link rel="stylesheet" href="/css/teacherResources.css">
+
 
     <script src="js/navHeightMaker.js" defer></script>
     <script src="js/accordion.js" defer></script>
@@ -31,7 +33,7 @@
             <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>
         </div>
         <ul class="mainNavLeft" id="mainNavLeft">
-            <li sec:authorize="isAuthenticated()" class="mainNavItem    activeNav"><a href="/teachers">Teachers</a></li>
+            <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
             <li class="mainNavItem"><a href="/welcome">Welcome</a></li>
             <li class="mainNavItem"><a href="/about-us">About Us</a></li>
             <li class="mainNavItem" style="margin-right: 2rem"><a href="/our-games">Our Games</a></li>
@@ -41,65 +43,155 @@
     </div>
 </section>
 
+
 <section id="basicPageContainer">
 
     <div class="basicPageContentContainer">
         <div class="basicPageMain">
-            <h1>Resources for Teachers</h1>
+            <h1>Teacher Resources</h1>
             <div class="basicPageContent">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Etiam tristique, ex ut tincidunt ullamcorper, sapien lorem viverra eros, ac lobortis massa
-                    risus ut massa. Cras egestas erat ac molestie luctus. Phasellus non arcu mauris.
-                    Aenean ut pulvinar ipsum. Curabitur tincidunt leo rhoncus viverra fermentum. Nulla quis
-                    fermentum odio. Nam ex nibh, interdum quis elit eget, ultricies porta lectus. Vestibulum a
-                    nte ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-                    Nunc placerat leo eu tincidunt efficitur. Fusce iaculis, turpis non finibus malesuada,
-                    mauris leo cursus leo, in mollis turpis orci fringilla tellus.
-                </p>
+                    risus ut massa.</p>
             </div>
         </div>
-
-        <div class="accordion">Nano Start Up
+        <div class="accordion">Simple Machines
         </div>
-
         <div class="accordionContent">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Etiam tristique, ex ut tincidunt ullamcorper, sapien lorem viverra eros, ac lobortis massa
-                risus ut massa.
+            <p class="pHeadOrange">Recommended Grade Levels: 2-6
             </p>
 
-            <div class="nestedAccordion">Interior Accordion with different class
-                name so it can be styled differently than the main accordion
+            <div class="nestedAccordion">Tips for using the site with students
             </div>
 
             <div class="accordionContent">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam tristique, ex ut tincidunt ullamcorper, sapien lorem viverra eros, ac lobortis massa
-                    risus ut massa.
+                <p>Before using this activity in class (or at home with your kids) go
+                    through the activity once to make sure it works correctly on your computer(s).
                 </p>
+                <p>If the activity does not load after clicking the 'start' button, you may be asked
+                    to download a Flash Player from Adobe.com. Please click yes as this allows you to
+                    view the Edheads Simple Machines activity. If you are using school computers,
+                    you might need to contact your tech support team to download the Flash Player.</p>
+                <p>If you are using an iPad or other iDevice, our games will not play without
+                    downloading an app or browser. We recommend the Puffin Academy browser,
+                    that is a moderated site limited to educational content for teachers and
+                    families to use. The Puffin Academy browser is FREE to
+                    <a href="https://www.puffin.com/">download</a> and use.</p>
+                <p>Your computer(s) will need to have some sort of sound output.
+                    Either speakers or headphones will work well.</p>
+                <p>Students in the target grade-range will take approximately eight to ten minutes
+                    per room working individually or in groups of two to three. Students seemed
+                    to spend more time and have more fun working in small groups. If time is
+                    limited, you may want to consider assigning a certain number of rooms
+                    or specific areas for the students to experience. The House is
+                    identifying simple machines and the Tool Shed is identifying the simple
+                    machines that make up compound machines.</p>
+                <hr>
+                <p>Students have the ability to print their scores
+                    after finishing all four rooms in the House and the Tool Shed.
+                    Teachers should make certain they know which printers the students’
+                    computers are set to print to.</p>
+                <hr>
+                <p>During testing, most students finished each room at roughly the same time.
+                    All the students printing at the same time could potentially back up in a
+                    very long print queue or clog the school’s network. Teachers may want to
+                    consider having students call out when they want to print, limiting the
+                    number of rooms students will print scores for or having students
+                    use multiple printers.</p>
+                <p>The purpose of the printable score sheet is to give teachers an idea
+                    of how students are performing within the site and what their knowledge
+                    level is. Many students prefer to go through a room two to three times in order
+                    to increase their scores. Teachers may choose to ask that students only print
+                    the scores from their first time through a room.
+                </p>
+                <p>After students use the site, teachers may want to discuss with their class why
+                    certain objects were simple machines. Leading questions such as “Would the fan
+                    blades work as well if they were flat instead of tilted?” will get students
+                    thinking about WHY the blades of a fan can be considered inclined planes.
+                    Many students will ask questions about the same objects and this can generate
+                    excellent classroom discussion about the characteristics of the various
+                    simple machines.</p>
             </div>
-
-            <div class="accordion">Interior Accordion
+            <div class="nestedAccordion">Printable activities for use in class
             </div>
 
             <div class="accordionContent">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam tristique, ex ut tincidunt ullamcorper, sapien lorem viverra eros, ac lobortis massa
-                    risus ut massa.
-                </p>
+                <p>These downloadable activities are in Adobe PDF Format. In order to read these
+                        files you must have Acrobat Reader which is FREE to
+                    <a href="https://get.adobe.com/reader/">download</a> and use.</p>
+                <p>Pre and post Test<br>
+                    Download the Simple Machines Pre-Test<br>
+                    Download the Simple Machines Post-test </p>
+                <p>While the new Ohio Academic Content Standards for Science no longer specifically
+                    mention Simple Machines, there are many standards that can be met by teaching
+                    Simple Machines or using them to illustrate the various concepts outlined below.
+                    he standards below could be met or expanded upon by the Simple Machines
+                    activities on the Edheads site.</p>
+
+            </div>
+            <div class="nestedAccordion">Physical Science Standards
+            </div>
+            <div class="accordionContent">
+                <p class="pHead">Grade 1</p>
+                <p>Explain or predict the motion of an object.</p>
+                <p>Explore the effects of some objects on other objects,
+                    even when the two objects might not touch.</p>
+                <p>Investigate a variety of ways of making things move and
+                    what causes them to change speed, direction and/or stop.</p>
+                <p class="pHead">Grade 3</p>
+                <p>Explain how objects are put into motion by pushes or pulls and
+                    the change in motion depends on the strength of the push or pull.</p>
+
             </div>
 
-        </div>
+            <div class="nestedAccordion">Science and Technology
+            </div>
+            <div class="accordionContent">
+                <p class="pHead">Grade K</p>
+                <p>Develop an understanding that the use of tools
+                    and machines can be helpful or harmful.
+                </p>
+                <p>Know that each kind of tool has a special purpose.</p>
 
-<!--        <div class="accordion">Interior Accordion-->
-<!--        </div>-->
-<!--        <div class="accordionContent">-->
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-<!--                Etiam tristique, ex ut tincidunt ullamcorper, sapien lorem viverra eros, ac lobortis massa-->
-<!--                risus ut massa.-->
-<!--            </p>-->
-<!--        </div>-->
+                <p class="pHead">Grade 1</p>
+                <p>Know that when parts are put together they can do things that
+                    they could not do by themselves.</p>
+                <p>Investigate that tools are used to help make things and some
+                    things cannot be made without tools.</p>
 
+                <p class="pHead">Grade 6</p>
+                <p>Know that decisions about the use of products and systems
+                    can result in desirable or undesirable consequences.</p>
+            </div>
+            <div class="nestedAccordion">Scientific Inquiry
+            </div>
+            <div class="accordionContent">
+                <p class="pHead">Grade 1</p>
+                <p>Work in a small group, then share findings with others.</p>
+            </div>
+
+            <div class="nestedAccordion">Scientific Ways of Knowing
+            </div>
+            <div class="accordionContent">
+                <p class="pHead">Grade K</p>
+                <p>Recognize that people are more likely to accept your ideas if you can
+                    give good reasons for them.</p>
+            </div>
+
+            <div class="nestedAccordion">Physical Sciences
+            </div>
+            <div class="accordionContent">
+                <p class="pHead">Grade 2</p>
+                <p>Tools and machines are used to apply pushes and pulls
+                    (forces) to make things move.</p>
+
+                <p class="pHead">Grade 3</p>
+                <p>Machines and living things convert stored energy to motion and heat.</p>
+
+            </div>
+
+            </div>
+    </div>
 
 
     </div>

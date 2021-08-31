@@ -10,6 +10,10 @@ h1{
     margin-bottom: 0;
 }
 
+.pHeadOrange{
+    color: #d1a10e;
+}
+
 .pText{
     padding-bottom: 1rem;
     position: relative;
