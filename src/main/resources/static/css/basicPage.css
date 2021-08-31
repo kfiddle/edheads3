@@ -10,6 +10,10 @@ h1{
     margin-bottom: 0;
 }
 
+.pHeadOrange{
+    color: #d1a10e;
+}
+
 .pText{
     padding-bottom: 1rem;
     position: relative;
@@ -102,14 +106,12 @@ hr{
     transition: 0.4s;
 }
 
-.accordionInterior {
-    background-color: #cbd543;
-    border-radius: 1rem;
+.nestedAccordion {
     cursor: pointer;
     font-size: 1.125rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    padding: 1rem 2rem;
+    padding: 1rem 0 .5rem;
     transition: 0.4s;
 }
 
@@ -131,7 +133,7 @@ hr{
 /*    padding: 0rem 2rem 2rem;*/
 /*}*/
 
-.accordion:after {
+.accordion:after, .nestedAccordion:after {
     content: '\02795';
     float: right;
     font-size: 1rem;
@@ -141,15 +143,15 @@ hr{
     content: "\2796";
 }
 
-.accordionInterior:after {
-    content: '\02795';
-    float: right;
-    font-size: 1rem;
-}
+/*.accordionInterior:after {*/
+/*    content: '\02795';*/
+/*    float: right;*/
+/*    font-size: 1rem;*/
+/*}*/
 
-.active:after {
-    content: "\2796";
-}
+/*.active:after {*/
+/*    content: "\2796";*/
+/*}*/
 
 .accordionContentTwoColumn {
     display: none;
