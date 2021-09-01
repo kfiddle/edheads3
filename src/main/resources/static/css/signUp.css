@@ -61,12 +61,12 @@
 /*color: #2cccd3*/
 /*}*/
 
-.questionsRowOne{
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr 3fr;
-    margin: 2rem 0 1rem;
-}
+/*.questionsRowOne{*/
+/*    display: grid;*/
+/*    grid-gap: 1rem;*/
+/*    grid-template-columns: 1fr 3fr;*/
+/*    margin: 2rem 0 1rem;*/
+/*}*/
 
 .questionsRowTwo, .questionsRowThree, .questionsRowFour, .questionsRowFive{
     display: grid;
