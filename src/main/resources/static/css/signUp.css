@@ -4,13 +4,87 @@
 }
 
 .signUpPageContent {
-    /* height: 50vh; */
-    /* line-height: 1.75rem; */
-    letter-spacing: .0125rem;
-    /* overflow: scroll; */
-    /* overflow-x: hidden; */
-    /* padding: 0rem 1.5rem; */
-    /* text-align: center;
-     */
-
+    padding: 2rem;
 }
+
+.signUpTitle{
+    font-size: 3rem;
+    margin: 0;
+    text-align: center;
+}
+
+.createAccountTitle{
+    margin: 2rem 0;
+    text-align: center;
+}
+
+/*::placeholder {*/
+/*    font-size: 1.2rem;*/
+/*    font-weight: 300;*/
+/*}*/
+
+/*input{*/
+/*    font-family: 'Roboto';*/
+/*    border: solid .25rem #2cccd3;*/
+/*    border-radius: .5rem;*/
+/*    padding: 1rem;*/
+/*    margin-bottom: 1rem;*/
+/*    width: 100%;*/
+/*}*/
+
+.form-control{
+    font-family: 'Roboto';
+    border: solid .25rem #2cccd3;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.accountRowOne{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.accountRowTwo{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*.firstName input{*/
+/*    font-weight: 100;*/
+/*}*/
+
+/*.lastName input{*/
+/*color: #2cccd3*/
+/*}*/
+
+.questionsRowOne{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 3fr;
+    margin: 2rem 0 1rem;
+}
+
+/*select {*/
+/*    border: solid .25rem #2cccd3;*/
+/*    border-radius: .5rem;*/
+/*    padding: 1rem;*/
+/*    font-size: 1.2rem;*/
+/*    width: 100%;*/
+/*}*/
+
+
+
+/*select option:disabled {*/
+/*    background-color: #2cccd3;*/
+/*    !*color: white;*!*/
+/*    font-weight: 900;*/
+/*    padding: .5rem 0rem .5rem 0rem;*/
+/*}*/
+
+/*select option {*/
+/*    line-height: 10rem;*/
+/*}*/
