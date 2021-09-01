@@ -81,6 +81,8 @@
                                 </div>
                             </div>
 
+                            <div class="questionsRowTwo">
+
                             <div class="schoolOrOrganization">
 <!--                                <label class="col-4 col-form-label">Name of School or Organization: </label>-->
 <!--                                <div class="col-8">-->
@@ -94,8 +96,9 @@
                                     <input type="text" placeholder="School District" th:field="*{district}" class="form-control" required/>
 <!--                                </div>-->
                             </div>
+                            </div>
 
-
+                        <div class="questionsRowThree">
                             <div class="city">
 <!--                                <label class="col-4 col-form-label">City: </label>-->
 <!--                                <div class="col-8">-->
@@ -109,6 +112,8 @@
                             <input type="text" placeholder="State" th:field="*{state}" class="form-control" required/>
                             <!--                                </div>-->
                         </div>
+                        </div>
+
 
 <!--                            <div class="form-group row">-->
 <!--                                <label class="col-4 col-form-label">State: </label>-->
@@ -166,7 +171,9 @@
 <!--                                </div>-->
 <!--                            </div>-->
 
-                            <div class="form-group row">
+                        <div class="questionsRowFour">
+
+                        <div class="gradeLevel">
                                 <label class="col-4 col-form-label">Grade(s) Taught or Reached: </label>
                                 <div class="col-8">
                                     <select name="gradeRange" type="text" th:field="*{gradeRange}" class="form-control" required>
@@ -180,7 +187,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
+                            <div class="schoolCommunity">
                                 <label class="col-4 col-form-label">Type of School Community: </label>
                                 <div class="col-8">
                                     <select name="schoolType" type="text" th:field="*{schoolType}" class="form-control" required>
@@ -191,8 +198,10 @@
                                     </select>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="form-group row">
+                        <div class="questionsRowFive">
+                            <div class="numberOfStudents">
                                 <label class="col-4 col-form-label">Number of Students in your School District: </label>
                                 <div class="col-8">
                                     <select name="numberOfStudents" type="text" th:field="*{numberOfStudents}" class="form-control" required>
@@ -208,7 +217,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
+                            <div class="lunchProgram">
                                 <label class="col-4 col-form-label">Roughly what percentage of your school's students are on free and
                                     reduce lunches? </label>
                                 <div class="col-8">
@@ -222,8 +231,9 @@
                                     </select>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="form-group row">
+                            <div class="description">
                                 <label class="col-4 col-form-label">If you are not a teacher, please indicate what most
                                     closely describes you: parent, social organization or club leader (for scouts or
                                     after school programs), other (please be as specific as possible):</label>

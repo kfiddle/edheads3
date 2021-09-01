@@ -68,6 +68,15 @@
     margin: 2rem 0 1rem;
 }
 
+.questionsRowTwo, .questionsRowThree, .questionsRowFour, .questionsRowFive{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem 0 1rem;
+}
+
+
+
 /*select {*/
 /*    border: solid .25rem #2cccd3;*/
 /*    border-radius: .5rem;*/
