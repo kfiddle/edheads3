@@ -1,7 +1,7 @@
 .closeForm a{
+    color: #cbd543;
     font-size: 3rem;
     font-weight: 100;
-    color: #cbd543;
 }
 
 .signUpContainer {
@@ -25,14 +25,15 @@
 }
 
 ::placeholder {
+    color: #2cccd3;
     font-size: 1rem;
     font-weight: 300;
-    color: #2cccd3;
 }
 
 
 .formLabel{
     padding-left: 1.25rem ;
+    padding-right: 2rem;
 }
 
 .dropdown{
@@ -51,19 +52,13 @@
     width: 100%;
 }
 
-.accountRowOne{
+.accountRowOne, .accountRowTwo{
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 1fr 1fr;
 }
 
-.accountRowTwo{
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-}
-
-.questionsRowTwo, .questionsRowThree, .questionsRowFour, .questionsRowFive{
+.questionsRowTwo, .questionsRowThree{
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 1fr 1fr;
@@ -71,19 +66,18 @@
 }
 
 .signUpButton{
-    padding: 1rem 3rem;
     background-color: #4a86c2;
-    color: #fff;
-    font-size: 1.25rem;
     border: none;
     border-radius: .75rem;
     cursor: pointer;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 1rem 3rem;
 }
 
 .buttonContainer{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 

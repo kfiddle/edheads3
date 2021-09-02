@@ -1,39 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Login Page</title>
-
+    <meta charset="ISO-8859-1">
+    <title>Log In</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/basicPage.css">
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/form.css">
 
-
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <section id="basicPageContainer">
-
-    <div class="logInContainer">
+    <div class="signUpContainer">
         <div class="basicPageMain">
-            <div class="basicPageContent">
-                <form name='login' th:action="@{/login}" method='post'>
 
-                    <label>
-                        <input type="text" placeholder="userName" name="username">
-                    </label>
-                    <label>
-                        <input type="text" placeholder="password" name="password">
-                    </label>
-                    <button type="submit">Submit</button>
-                </form>
+            <div class="closeForm"><a href="/welcome">X</a></div>
+
+            <div class="signUpPageContent">
+                <div class="container text-center">
+
+                    <div>
+                        <h1 class="signUpTitle">Welcome to Edheads!</h1>
+                    </div>
+
+                    <form name='login' th:action="@{/login}" method='post'>
+
+                        <div class="accountRowTwo">
+                            <div class="userName">
+                                <div class="formLabel"><label>
+                                    <input type="text" placeholder="userName" name="username" class="form-control">
+                                </label></div>
+                            </div>
+
+                            <div class="password">
+                                <div class="formLabel"> <label>
+                                    <input type="text" placeholder="password"
+                                           name="password" class="form-control">
+                                </label></div>
+                            </div>
+                        </div>
+
+
+                        <div class="buttonContainer">
+                            <button type="submit" class="signUpButton">Log In</button>
+                            <div class="logInLink">Forgot username or password?
+                                Not a member yet?<a href="/sign-up">
+                                    Sign Up! </a> </div>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-
 </body>
 </html>
