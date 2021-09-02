@@ -13,9 +13,11 @@
 </head>
 <body>
 <section id="basicPageContainer">
-
     <div class="signUpContainer">
         <div class="basicPageMain">
+
+            <div class="closeForm"><a href="/welcome">X</a></div>
+
             <div class="signUpPageContent">
                 <div class="container text-center">
 
@@ -31,53 +33,41 @@
 
                             <div class="accountRowOne">
                                 <div class="firstName">
-<!--                                    <label class="col-4 col-form-label">First Name: </label>-->
-<!--                                    <div class="col-8">-->
-                                        <input type="text" placeholder="First Name"   th:field="*{firstName}" class="form-control"
-                                               required minlength="1" maxlength="20" />
-<!--                                    </div>-->
+                                    <input type="text" placeholder="First Name"   th:field="*{firstName}"
+                                           class="form-control"
+                                           required minlength="1" maxlength="20" />
                                 </div>
 
                                 <div class="lastName">
-<!--                                    <label class="col-4 col-form-label">Last Name: </label>-->
-<!--                                    <div class="col-8">-->
-                                        <input type="text" placeholder="Last Name"  th:field="*{lastName}" class="form-control"
-                                               required minlength="1" maxlength="20" />
-<!--                                    </div>-->
+                                    <input type="text" placeholder="Last Name"  th:field="*{lastName}"
+                                           class="form-control"
+                                           required minlength="1" maxlength="20" />
                                 </div>
                             </div>
 
                             <div class="accountRowTwo">
-
                                 <div class="email">
-<!--                                    <label class="col-4 col-form-label">E-mail:</label>-->
-<!--                                    <div class="col-8">-->
-                                        <input type="email" placeholder="Email"  th:field="*{email}" class="form-control" required />
-<!--                                    </div>-->
+                                        <input type="email" placeholder="Email"  th:field="*{email}"
+                                               class="form-control" required />
                                 </div>
 
                                 <div class="password">
-<!--                                    <label class="col-4 col-form-label">Password (minimum of 6 characters): </label>-->
-<!--                                    <div class="col-8">-->
-                                        <input type="password" placeholder="Choose a password (minimum of 6 characters)"  th:field="*{password}" class="form-control"
+                                        <input type="password" placeholder="Choose a password"
+                                               th:field="*{password}" class="form-control"
                                                required minlength="6" maxlength="20" />
-<!--                                    </div>-->
                                 </div>
-
                             </div>
 
 
-                            <h2 class="createAccountTitle">Tell us more about yourself.</h2>
+                            <h2 class="createAccountTitle">Please tell us more about yourself.</h2>
 
                             <div class="questionsRowOne">
-                                <div class="roleLabel">
-                                    <label class="role">I am a... </label></div>
-<!--                                    <div class="col-8">-->
-                                <div class="roleSelect">
+                                <div class="formLabel">
+                                    <label>I am a... </label></div>
+                                <div class="dropdown">
                                         <select type="text" name="role" th:field="*{role}" class="form-control" required>
                                             <option selected="selected" value="Teacher">Teacher</option>
                                         </select>
-<!--                                    </div>-->
                                 </div>
                                 </div>
                             </div>
@@ -85,34 +75,28 @@
                             <div class="questionsRowTwo">
 
                             <div class="schoolOrOrganization">
-<!--                                <label class="col-4 col-form-label">Name of School or Organization: </label>-->
-<!--                                <div class="col-8">-->
-                                    <input type="text" placeholder="Name of School or Organization"  th:field="*{schoolOrganization}" class="form-control" required/>
-<!--                                </div>-->
+                                    <input type="text" placeholder="Name of School or Organization"
+                                           th:field="*{schoolOrganization}" class="form-control" required/>
                             </div>
 
                             <div class="schoolDistrict">
-<!--                                <label class="col-4 col-form-label">School District: </label>-->
-<!--                                <div class="col-8">-->
-                                    <input type="text" placeholder="School District" th:field="*{district}" class="form-control" required/>
-<!--                                </div>-->
+                                    <input type="text" placeholder="School District" th:field="*{district}"
+                                           class="form-control" required/>
                             </div>
                             </div>
 
                         <div class="questionsRowThree">
                             <div class="city">
-<!--                                <label class="col-4 col-form-label">City: </label>-->
-<!--                                <div class="col-8">-->
-                                    <input type="text" placeholder="City" th:field="*{city}" class="form-control" required/>
-<!--                                </div>-->
+                                    <input type="text" placeholder="City" th:field="*{city}"
+                                           class="form-control" required/>
                             </div>
 
                         <div class="state">
-                            <!--                                <label class="col-4 col-form-label">School District: </label>-->
-                            <!--                                <div class="col-8">-->
-                            <input type="text" placeholder="State" th:field="*{state}" class="form-control" required/>
-                            <!--                                </div>-->
+                            <input type="text" placeholder="State" th:field="*{state}"
+                                   class="form-control" required/>
                         </div>
+
+
                         </div>
 
 
@@ -175,9 +159,10 @@
 <!--                        <div class="questionsRowFour">-->
 
                         <div class="gradeLevel">
-                                <label class="col-4 col-form-label">Grade(s) Taught or Reached: </label>
-                                <div class="col-8">
-                                    <select name="gradeRange" type="text" th:field="*{gradeRange}" class="form-control" required>
+                            <div class="formLabel"><label>Grade(s) Taught or Reached: </label></div>
+                                <div class="dropdown">
+                                    <select name="gradeRange" type="text" th:field="*{gradeRange}"
+                                            class="form-control" required>
                                         <option value="K-3">K-3</option>
                                         <option value="4-6">4-6</option>
                                         <option value="7-8">7-8</option>
@@ -189,8 +174,8 @@
                             </div>
 
                             <div class="schoolCommunity">
-                                <label class="col-4 col-form-label">Type of School Community: </label>
-                                <div class="col-8">
+                                <div class="formLabel"> <label>Type of School Community: </label></div>
+                                <div class="dropdown">
                                     <select name="schoolType" type="text" th:field="*{schoolType}" class="form-control" required>
                                         <option value="Urban">Urban</option>
                                         <option value="Suburban">Suburban</option>
@@ -199,13 +184,12 @@
                                     </select>
                                 </div>
                             </div>
-<!--                        </div>-->
 
-<!--                        <div class="questionsRowFive">-->
                             <div class="numberOfStudents">
-                                <label class="col-4 col-form-label">Number of Students in your School District: </label>
-                                <div class="col-8">
-                                    <select name="numberOfStudents" type="text" th:field="*{numberOfStudents}" class="form-control" required>
+                                <div class="formLabel"><label>Number of Students in your School District:</label></div>
+                                <div class="dropdown">
+                                    <select name="numberOfStudents" type="text" th:field="*{numberOfStudents}"
+                                            class="form-control" required>
                                         <option value="Fewer than 250">Fewer than 250</option>
                                         <option value="250-500">250-500</option>
                                         <option value="501-2000">501-2,000</option>
@@ -219,9 +203,10 @@
                             </div>
 
                             <div class="lunchProgram">
-                                <label class="col-4 col-form-label">Roughly what percentage of your school's students are on free and
-                                    reduce lunches? </label>
-                                <div class="col-8">
+                                <div class="formLabel">
+                                <label>Roughly what percentage of your school's students are on free and
+                                    reduce lunches? </label></div>
+                                <div class="dropdown">
                                     <select name="percentOfFreeLunches" type="text" th:field="*{percentOfFreeLunches}"
                                             class="form-control" required>
                                         <option value="Teacher">0-30%</option>
@@ -232,19 +217,23 @@
                                     </select>
                                 </div>
                             </div>
-<!--                        </div>-->
 
                             <div class="description">
-                                <label class="col-4 col-form-label">If you are not a teacher, please indicate what most
+                                <div class="formLabel">
+                                <label>If you are not a teacher, please indicate what most
                                     closely describes you: parent, social organization or club leader (for scouts or
                                     after school programs), other (please be as specific as possible):</label>
-                                <div class="col-8">
-                                    <input type="text" name="description" th:field="*{description}" class="form-control" />
+                                </div>
+                                <div class="dropdown">
+                                    <input type="text area" name="description" th:field="*{description}" class="form-control" />
                                 </div>
                             </div>
 
-                            <div>
-                                <button type="submit" class="btn btn-primary">Sign Up</button>
+                            <div class="buttonContainer">
+                                <button type="submit" class="signUpButton">Sign Up</button>
+                                <div class="logInLink">Already a member?
+                                    <a href="/login">
+                                    Log In </a> </div>
                             </div>
 
 
