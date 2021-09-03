@@ -53,10 +53,10 @@
     <div class="gameImageContainer">
 
 <!--      <a href="http://www.edheads2.org/nano/Browser/Intro/Index.html" onclick="return openwindow('http://www.edheads2.org/nano/Browser/Intro/Index.html')">-->
-        <img src="/assets/game3.jpg" alt="" class="gameImg">
+        <img src="/assets/manufacturingQuiz.jpg" alt="" class="gameImg">
       </a>
       <div class="sponsorTag">
-        <a href="#"> Sponsor This Game!</a>
+        <a href="/donor"> Sponsor This Game!</a>
       </div>
     </div>
 
@@ -112,6 +112,11 @@
     <div>
       <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="sideBarAd">
     </div>
+
+    <div sec:authorize="isAuthenticated()" class="buttonContainer">
+      <a href="/welcome">View Teacher Resources</a>
+    </div>
+
   </div>
 
 </section>

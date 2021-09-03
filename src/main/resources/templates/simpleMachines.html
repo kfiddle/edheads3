@@ -48,15 +48,15 @@
   <div class="singleGameContentContainer">
     <div class="backNav"><a href="/our-games">Back to Games</a> </div>
 
-    <h1>Simple Machines</h1>
+    <h1>Simple Machines</h1
 
     <div class="gameImageContainer">
 
       <a href="http://www.edheads2.org/nano/Browser/Intro/Index.html" onclick="return openwindow('http://www.edheads2.org/nano/Browser/Intro/Index.html')">
-        <img src="/assets/game2.jpg" alt="" class="gameImg">
+        <img src="/assets/simpleMachines.jpg" alt="" class="gameImg">
       </a>
       <div class="sponsorTag">
-        <a href="#"> Sponsor This Game!</a>
+        <a href="/donate"> Sponsor This Game!</a>
       </div>
     </div>
 
@@ -187,6 +187,11 @@
     <div>
       <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="sideBarAd">
     </div>
+
+    <div sec:authorize="isAuthenticated()" class="buttonContainer">
+      <a href="/welcome">View Teacher Resources</a>
+    </div>
+
   </div>
 
 </section>
