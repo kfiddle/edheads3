@@ -61,12 +61,12 @@ hr{
 }
 
 .basicPageContentContainer{
-    margin: 15rem 3rem 3rem 0rem;
+    margin: 20rem 3rem 3rem 0rem;
     width: 80%;
 }
 
 .basicPageSubNav{
-    margin: 20rem 3rem 3rem 0rem;
+    margin: 25rem 3rem 3rem 0rem;
     width: 80%;
 }
 
@@ -197,13 +197,13 @@ hr{
 
 .sideBar {
     background-color: #cbd543;
-    padding-top: 15rem;
+    padding-top: 20rem;
     width: 300px;
 }
 
 .sideBarSubNav {
     background-color: #cbd543;
-    padding-top: 20rem;
+    padding-top: 25rem;
     width: 300px;
 }
 
