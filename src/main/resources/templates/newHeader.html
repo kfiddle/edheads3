@@ -16,8 +16,8 @@
 </head>
 <body>
 
+<div class="stickyHeader">
 <section id="header">
-
     <div class="headerContents">
         <div class="topNav">
             <ul class="mainNav">
@@ -25,11 +25,9 @@
                 <li class="topNavItem"><a href="/sign-up">Sign Up</a></li>
             </ul>
         </div>
-
         <div class="logo">
             <img src="/assets/ed_logo.png" alt="" class="logoImg">
     </div>
-
     <div class="mainNavContainer">
         <ul class="mainNav">
             <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
@@ -40,27 +38,25 @@
             <li class="mainNavItem"><a href="/donate">Donate</a></li>
         </ul>
     </div>
-
-
-
     </div>
 </section>
 
 
+<div class="secondaryNavContainer">
+  <ul class="secondaryNav">
+    <li class="secondaryNavItem"><a href="/faq">FAQ's</a></li>
+    <li class="secondaryNavItem"><a href="/awards">Awards</a></li>
+    <li class="secondaryNavItem"><a href="/privacy">Privacy</a></li>
+    <li class="secondaryNavItem"><a href="/terms-of-use">Terms of Use</a></li>
+    <li class="secondaryNavItem"><a href="/activity-help">Activity Help</a></li>
+  </ul>
+</div>
 
-<!--<div class="secondaryNavContainer">-->
-<!--  <ul class="secondaryNav">-->
-<!--    <li class="secondaryNavItem"><a href="/faq">FAQ's</a></li>-->
-<!--    <li class="secondaryNavItem"><a href="/awards">Awards</a></li>-->
-<!--    <li class="secondaryNavItem"><a href="/privacy">Privacy</a></li>-->
-<!--    <li class="secondaryNavItem"><a href="/terms-of-use">Terms of Use</a></li>-->
-<!--    <li class="secondaryNavItem"><a href="/activity-help">Activity Help</a></li>-->
-<!--  </ul>-->
-<!--</div>-->
+</div>
 
 <section id="basicPageContainer">
 
-    <div class="basicPageContentContainer">
+    <div class="basicPageSubNav">
         <div class="basicPageMain">
             <h1>Basic Page</h1>
             <div class="basicPageContent">
@@ -116,7 +112,7 @@
 
 
     </div>
-    <div class="sideBar">
+    <div class="sideBarSubNav">
         <!--        <div class="sideBarText">Sidebar Text</div>-->
         <div>
             <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="sideBarAd">
@@ -148,7 +144,7 @@
             <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
         <a href="https://www.youtube.com/user/Edheadsorg">
             <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
-        <button class="footerButton"><a href="/donate">Make a Donation</a></button>
+        <button class="footerButton"><a href="mailto:info@edheads.org">Contact Us!</a></button>
     </div>
 
 </section>

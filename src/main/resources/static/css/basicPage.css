@@ -61,8 +61,12 @@ hr{
 }
 
 .basicPageContentContainer{
-    /*margin: 15rem 3rem 3rem 0rem;*/
-    margin: 3rem 3rem 3rem 0rem;
+    margin: 15rem 3rem 3rem 0rem;
+    width: 80%;
+}
+
+.basicPageSubNav{
+    margin: 20rem 3rem 3rem 0rem;
     width: 80%;
 }
 
@@ -187,15 +191,19 @@ hr{
 }
 
 .footNote{
-    /*border-top: .0125rem solid rgb(0,0,0,.2);*/
     font-size: .9rem;
     line-height: 1.25rem;
-    /*padding-top: 1rem;*/
 }
 
 .sideBar {
     background-color: #cbd543;
-    padding-top: 3rem;
+    padding-top: 15rem;
+    width: 300px;
+}
+
+.sideBarSubNav {
+    background-color: #cbd543;
+    padding-top: 20rem;
     width: 300px;
 }
 

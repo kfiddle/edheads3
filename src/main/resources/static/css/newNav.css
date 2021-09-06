@@ -1,5 +1,10 @@
 
 /*BEGIN HEADER STYLING*/
+
+.stickyHeader{
+    position: fixed;
+}
+
 #header {
     background-color: #2cccd3;
     background-image: url(/assets/headerClouds.png);
@@ -19,15 +24,15 @@
     margin: 0 auto;
 }
 
-.logoContainer{
-    /*!*align-items: flex-end;*!*/
-    /*!*display: flex;*!*/
-    /*padding-top: 2rem;*/
-}
+/*.logoContainer{*/
+/*    !*!*align-items: flex-end;*!*!*/
+/*    !*!*display: flex;*!*!*/
+/*    !*padding-top: 2rem;*!*/
+/*}*/
 
-.logo{
-    /*margin-bottom: 1.25rem;*/
-}
+/*.logo{*/
+/*    !*margin-bottom: 1.25rem;*!*/
+/*}*/
 
 .logoImg{
     width:20vw;
@@ -77,8 +82,9 @@
     background-color: #cbd543;
     border-bottom-left-radius: .75rem;
     border-bottom-right-radius: .75rem;
+    font-size: 1rem;
     margin-left: .75rem;
-    padding: .75rem 2rem;
+    padding: .5rem 1rem;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -205,6 +211,7 @@
     max-height: 50px;
     padding: 1rem 1.5rem;
     text-transform: capitalize;
+    white-space: nowrap;
 }
 
 .footerButton a{
