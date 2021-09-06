@@ -9,26 +9,30 @@
     <link rel="stylesheet" href="/css/newNav.css">
     <link rel="stylesheet" href="/css/basicPage.css">
 
-<!--    <script src="js/navHeightMaker.js" defer></script>-->
+    <!--  <script src="js/navHeightMaker.js" defer></script>-->
     <script src="js/accordion.js" defer></script>
 
 
 </head>
 <body>
 
+<section id="header">
 
-<section id="headerContainer">
-
-<!--    <div class="headerContents">-->
-
-<!--    <div class="logoContainer">-->
-<!--        <div class="logo">-->
-<!--            <img src="/assets/ed_logo.png" alt="" class="logoImg">-->
-<!--        </div>-->
-<!--    </div>-->
-
+    <div class="headerContents">
+    <div class="logoContainer">
+        <div class="logo">
+            <img src="/assets/ed_logo.png" alt="" class="logoImg">
+        </div>
+    </div>
     <div class="mainNavContainer">
-<ul class="mainNav" id="mainNav">
+
+<!--        <div class="weatherGirlContainer">-->
+<!--            <div class="weatherGirl">-->
+<!--                <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">-->
+<!--            </div>-->
+<!--            <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>-->
+<!--        </div>-->
+        <ul class="mainNavLeft" id="mainNavLeft">
             <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
             <li class="mainNavItem"><a href="/welcome">Welcome</a></li>
             <li class="mainNavItem"><a href="/about-us">About Us</a></li>
@@ -37,9 +41,7 @@
             <li class="mainNavItem"><a href="/donate">Donate</a></li>
         </ul>
     </div>
-
-<!--    </div>-->
-
+    </div>
 </section>
 
 

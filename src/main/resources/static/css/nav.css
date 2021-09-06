@@ -13,6 +13,11 @@
     width: 100vw;
 }
 
+.headerContents{
+    width: 90%;
+    margin: 0 auto;
+}
+
 .logoContainer{
     align-items: flex-end;
     display: flex;

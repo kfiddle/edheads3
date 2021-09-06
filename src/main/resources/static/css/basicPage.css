@@ -61,6 +61,7 @@ hr{
 }
 
 .basicPageContentContainer{
+    /*margin: 15rem 3rem 3rem 0rem;*/
     margin: 3rem 3rem 3rem 0rem;
     width: 80%;
 }
@@ -194,7 +195,7 @@ hr{
 
 .sideBar {
     background-color: #cbd543;
-    padding: 3rem 0;
+    padding-top: 3rem;
     width: 300px;
 }
 
