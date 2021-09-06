@@ -1,13 +1,17 @@
+
 /*BEGIN HEADER STYLING*/
+
+.stickyHeader{
+    position: fixed;
+}
+
 #header {
     background-color: #2cccd3;
-    background-image: url("/assets/headerClouds.png");
+    background-image: url(/assets/headerClouds.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-bottom: .5rem solid #cbd543;
-    display: flex;
-    height: 200px;
     justify-content: space-around;
     position: relative;
     width: 100vw;
@@ -18,13 +22,9 @@
     margin: 0 auto;
 }
 
-.logoContainer{
-    align-items: flex-end;
-    display: flex;
-}
-
 .logo{
-    margin-bottom: 1.25rem;
+    position: absolute;
+    z-index: 1;
 }
 
 .logoImg{
@@ -34,27 +34,18 @@
 .mainNavContainer{
     align-items: flex-end;
     display: flex;
-    flex-direction: column;
-    transform: translateX(-3vw);
+    justify-content: center;
 }
 
-.mainNavLeft{
+.mainNav{
     display: flex;
     list-style-type: none;
 }
-
-.mainNavRight{
-    display: flex;
-    list-style-type: none;
-    transform: translateX(-25vw)
-}
-
 
 .mainNavItem{
     background-color: #cbd543;
     border-top-left-radius: .75rem;
     border-top-right-radius: .75rem;
-    height: 50px;
     margin-left: .75rem;
     padding: .75rem 2rem;
     text-transform: uppercase;
@@ -74,33 +65,67 @@
     font-weight: 900;
 }
 
-.weatherGirlContainer {
+
+.topNav{
     display: flex;
-    position: relative;
-    transform: translate(-1vw, 2vh);
+    justify-content: end;
 }
 
-.weatherGirl{
-    /*background-color: #ccc;*/
+.topNavItem{
+    background-color: #cbd543;
+    border-bottom-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    font-size: 1rem;
+    margin-left: .75rem;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
-.weatherGirlImg{
-    width: 450px;
-}
-
-.bannerText {
-    margin: 1.25rem 0rem 0rem 16.5rem;
-    position: absolute;
-}
-
-.bannerText a{
+.topNavItem a{
     color: #474747;
     text-decoration: none;
 }
 
-.bannerText a:hover{
+.topNavItem a:hover{
     font-weight: 900;
 }
+
+.logoWG{
+    transform: translate(-2vw, 1vw);
+}
+
+.logoImgWG{
+    width:15vw;
+}
+
+/*.weatherGirlContainer {*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    transform: translate(-1vw, 2vh);*/
+/*}*/
+
+/*.weatherGirl{*/
+/*    !*background-color: #ccc;*!*/
+/*}*/
+
+/*.weatherGirlImg{*/
+/*    width: 450px;*/
+/*}*/
+
+/*.bannerText {*/
+/*    margin: 1.25rem 0rem 0rem 16.5rem;*/
+/*    position: absolute;*/
+/*}*/
+
+/*.bannerText a{*/
+/*    color: #474747;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.bannerText a:hover{*/
+/*    font-weight: 900;*/
+/*}*/
 
 
 
@@ -184,6 +209,7 @@
     max-height: 50px;
     padding: 1rem 1.5rem;
     text-transform: capitalize;
+    white-space: nowrap;
 }
 
 .footerButton a{
