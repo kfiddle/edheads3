@@ -56,15 +56,29 @@ public class BasicsController {
     public String processRegister(@ModelAttribute User incomingUser) {
 
         User userToAdd = new User(incomingUser.getEmail());
-        userToAdd.setFirstName(incomingUser.getFirstName());
 
-        System.out.println("incoming email is: " + userToAdd.getEmail());
-        System.out.println("the new role is : " + incomingUser.getRole());
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encodedPassword = passwordEncoder.encode(incomingUser.getPassword());
         userToAdd.setPassword(encodedPassword);
 
+        userToAdd.setRole(incomingUser.getRole());
+        userToAdd.setFirstName(incomingUser.getFirstName());
+        userToAdd.setLastName(incomingUser.getLastName());
+        userToAdd.setSubscribeToNewsInd(incomingUser.isSubscribeToNewsInd());
+
+        userToAdd.setSchoolOrganization(incomingUser.getSchoolOrganization());
+        userToAdd.setDistrict(incomingUser.getDistrict());
+        userToAdd.setCountry(incomingUser.getCountry());
+        userToAdd.setState(incomingUser.getState());
+        userToAdd.setCity(incomingUser.getCity());
+        userToAdd.setGradeRange(incomingUser.getGradeRange());
+        userToAdd.setSchoolType(incomingUser.getSchoolType());
+        userToAdd.setNumberOfStudents(incomingUser.getNumberOfStudents());
+        userToAdd.setPercentOfFreeLunches(incomingUser.getPercentOfFreeLunches());
+        userToAdd.setDescription(incomingUser.getDescription());
+
         userToAdd.setDateCreated(LocalDate.now());
+        userToAdd.setDateUpdate(LocalDate.now());
         userRepo.save(userToAdd);
 
         return "redirect:register_success";
