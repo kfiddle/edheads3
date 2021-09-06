@@ -10,35 +10,40 @@
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/welcome.css">
 
-<!--    <script src="js/navHeightMaker.js" defer></script>-->
-
 </head>
 <body>
 
+<div class="stickyHeader">
 <section id="header">
-    <div class="logoContainer">
+    <div class="headerContents">
+        <div class="topNav">
+            <ul class="mainNav">
+                <li class="topNavItem"><a href="/login">Log In</a></li>
+                <li class="topNavItem"><a href="/sign-up">Sign Up</a></li>
+            </ul>
+        </div>
         <div class="logo">
             <img src="/assets/ed_logo.png" alt="" class="logoImg">
         </div>
-    </div>
-    <div class="mainNavContainer">
 
-        <div class="weatherGirlContainer">
-            <div class="weatherGirl">
-                <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
+        <div class=""> </div>
+
+        <div class="mainNavContainer">
+            <ul class="mainNav">
+                <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
+                <li class="mainNavItem activeNav" style="margin-left: 0;"><a href="/welcome">Welcome</a></li>
+                <li class="mainNavItem"><a href="/about-us">About Us</a></li>
+                <li class="mainNavItem"><a href="/our-games">Our Games</a></li>
+                <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
+                <li class="mainNavItem"><a href="/donate">Donate</a></li>
+            </ul>
+            <div class="logoWG">
+                <img src="/assets/weatherhead.PNG" alt="" class="logoImgWG">
             </div>
-            <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>
         </div>
-        <ul class="mainNavLeft" id="mainNavLeft">
-            <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
-            <li class="mainNavItem   activeNav"><a href="/welcome">Welcome</a></li>
-            <li class="mainNavItem"><a href="/about-us">About Us</a></li>
-            <li class="mainNavItem" style="margin-right: 2rem"><a href="/our-games">Our Games</a></li>
-            <li class="mainNavItem" style="margin-left: 2rem"><a href="/get-involved">Get Involved</a></li>
-            <li class="mainNavItem"><a href="/donate">Donate</a></li>
-        </ul>
     </div>
 </section>
+</div>
 
 <section class="titlePanel">
     <div class="contentContainerTitle">
@@ -46,7 +51,6 @@
             Welcome to Edheads!
         </h1>
 
-<!--        <h2 sec:authorize="isAuthenticated()">This will appear when logged in </h2>-->
 
 
     </div>
