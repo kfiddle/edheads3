@@ -3,6 +3,7 @@
 
 .stickyHeader{
     position: fixed;
+    z-index: 1;
 }
 
 #header {
