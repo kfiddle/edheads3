@@ -78,7 +78,7 @@ hr{
 }
 
 .basicPageContent{
-    height: 50vh;
+    /*height: 50vh;*/
     line-height: 1.75rem;
     letter-spacing: .0125rem;
     overflow: scroll;
