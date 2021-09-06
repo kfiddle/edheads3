@@ -20,13 +20,13 @@
 }
 
 .logoContainer{
-    /*align-items: flex-end;*/
-    /*display: flex;*/
-    padding-top: 2rem;
+    /*!*align-items: flex-end;*!*/
+    /*!*display: flex;*!*/
+    /*padding-top: 2rem;*/
 }
 
 .logo{
-    margin-bottom: 1.25rem;
+    /*margin-bottom: 1.25rem;*/
 }
 
 .logoImg{
@@ -39,23 +39,15 @@
     justify-content: center;
 }
 
-.mainNavLeft{
+.mainNav{
     display: flex;
     list-style-type: none;
 }
-
-.mainNavRight{
-    display: flex;
-    list-style-type: none;
-    transform: translateX(-25vw)
-}
-
 
 .mainNavItem{
     background-color: #cbd543;
     border-top-left-radius: .75rem;
     border-top-right-radius: .75rem;
-    height: 50px;
     margin-left: .75rem;
     padding: .75rem 2rem;
     text-transform: uppercase;
@@ -74,6 +66,34 @@
 .activeNav {
     font-weight: 900;
 }
+
+
+.topNav{
+    display: flex;
+    justify-content: end;
+}
+
+.topNavItem{
+    background-color: #cbd543;
+    border-bottom-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    margin-left: .75rem;
+    padding: .75rem 2rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.topNavItem a{
+    color: #474747;
+    text-decoration: none;
+}
+
+.topNavItem a:hover{
+    font-weight: 900;
+}
+
+
+
 
 .weatherGirlContainer {
     display: flex;

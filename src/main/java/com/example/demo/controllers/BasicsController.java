@@ -82,11 +82,6 @@ public class BasicsController {
         return "login";
     }
 
-    @GetMapping("/login-test")
-    public String displayLoginTestPage() {
-
-        return "loginTest";
-    }
 
     @RequestMapping("/faq")
     public String displayFaqPage() {
@@ -167,12 +162,6 @@ public class BasicsController {
 
         return "teacherResources";
     }
-
-//    @RequestMapping("/teachers-test")
-//    public String displayTeachersTestPage() {
-//
-//        return "teacherResources";
-//    }
 
     @RequestMapping("/basic-page")
     public String displayBasicPage() {
