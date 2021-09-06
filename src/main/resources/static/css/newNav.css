@@ -12,8 +12,6 @@
     background-size: cover;
     background-position: center;
     border-bottom: .5rem solid #cbd543;
-    /* display: flex; */
-    /* height: 200px; */
     justify-content: space-around;
     position: relative;
     width: 100vw;
@@ -24,15 +22,10 @@
     margin: 0 auto;
 }
 
-/*.logoContainer{*/
-/*    !*!*align-items: flex-end;*!*!*/
-/*    !*!*display: flex;*!*!*/
-/*    !*padding-top: 2rem;*!*/
-/*}*/
-
-/*.logo{*/
-/*    !*margin-bottom: 1.25rem;*!*/
-/*}*/
+.logo{
+    position: absolute;
+    z-index: 1;
+}
 
 .logoImg{
     width:20vw;
@@ -98,36 +91,41 @@
     font-weight: 900;
 }
 
-
-
-
-.weatherGirlContainer {
-    display: flex;
-    position: relative;
-    transform: translate(-1vw, 2vh);
+.logoWG{
+    transform: translate(-2vw, 1vw);
 }
 
-.weatherGirl{
-    /*background-color: #ccc;*/
+.logoImgWG{
+    width:15vw;
 }
 
-.weatherGirlImg{
-    width: 450px;
-}
+/*.weatherGirlContainer {*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    transform: translate(-1vw, 2vh);*/
+/*}*/
 
-.bannerText {
-    margin: 1.25rem 0rem 0rem 16.5rem;
-    position: absolute;
-}
+/*.weatherGirl{*/
+/*    !*background-color: #ccc;*!*/
+/*}*/
 
-.bannerText a{
-    color: #474747;
-    text-decoration: none;
-}
+/*.weatherGirlImg{*/
+/*    width: 450px;*/
+/*}*/
 
-.bannerText a:hover{
-    font-weight: 900;
-}
+/*.bannerText {*/
+/*    margin: 1.25rem 0rem 0rem 16.5rem;*/
+/*    position: absolute;*/
+/*}*/
+
+/*.bannerText a{*/
+/*    color: #474747;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.bannerText a:hover{*/
+/*    font-weight: 900;*/
+/*}*/
 
 
 
@@ -235,212 +233,3 @@
 }
 
 /*END BACK NAV STYLING*/
-
-/*!*BEGIN HEADER STYLING*!*/
-/*#headerContainer {*/
-/*    background-color: #2cccd3;*/
-/*    background-image: url(/assets/headerClouds.png);*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    border-bottom: .5rem solid #cbd543;*/
-/*    height: 20vh;*/
-/*    position: fixed;*/
-/*    width: 100vw;*/
-/*}*/
-
-/*.headerContents{*/
-/*    width: 90vw;*/
-/*    margin: 0 auto;*/
-/*    height: 20vh;*/
-/*}*/
-
-/*.logoContainer{*/
-/*!*position: absolute;*!*/
-/*}*/
-
-/*!*.logo{*!*/
-/*!*    margin-bottom: 1.25rem;*!*/
-/*!*}*!*/
-
-/*.logoImg{*/
-/*    width:20vw;*/
-/*}*/
-
-/*.mainNavContainer{*/
-/*    align-items: flex-end;*/
-/*    display: flex;*/
-/*    height: 20vh;*/
-/*    width: 90%;*/
-/*    margin: 0 auto;*/
-/*}*/
-
-/*.mainNav{*/
-/*    display: flex;*/
-/*    list-style-type: none;*/
-/*}*/
-
-/*!*.mainNavRight{*!*/
-/*!*    display: flex;*!*/
-/*!*    list-style-type: none;*!*/
-/*!*    transform: translateX(-25vw)*!*/
-/*!*}*!*/
-
-
-/*.mainNavItem{*/
-/*    background-color: #cbd543;*/
-/*    border-top-left-radius: .75rem;*/
-/*    border-top-right-radius: .75rem;*/
-/*    !*height: 50px;*!*/
-/*    margin-left: .75rem;*/
-/*    padding: .75rem 2rem;*/
-/*    text-transform: uppercase;*/
-/*    white-space: nowrap;*/
-/*}*/
-
-/*.mainNavItem a{*/
-/*    color: #474747;*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*.mainNavItem a:hover{*/
-/*    font-weight: 900;*/
-/*}*/
-
-/*.activeNav {*/
-/*    font-weight: 900;*/
-/*}*/
-
-/*.weatherGirlContainer {*/
-/*    display: flex;*/
-/*    position: relative;*/
-/*    transform: translate(-1vw, 2vh);*/
-/*}*/
-
-/*.weatherGirl{*/
-/*    !*background-color: #ccc;*!*/
-/*}*/
-
-/*.weatherGirlImg{*/
-/*    width: 450px;*/
-/*}*/
-
-/*.bannerText {*/
-/*    margin: 1.25rem 0rem 0rem 16.5rem;*/
-/*    position: absolute;*/
-/*}*/
-
-/*.bannerText a{*/
-/*    color: #474747;*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*.bannerText a:hover{*/
-/*    font-weight: 900;*/
-/*}*/
-
-
-
-/*!*END HEADER STYLING*!*/
-
-/*!*BEGIN SECONDARY NAV STYLING*!*/
-
-/*.secondaryNavContainer{*/
-/*    background-color: #cbd543;*/
-/*    width: 100vw;*/
-
-/*}*/
-
-/*.secondaryNav{*/
-/*    display: flex;*/
-/*    list-style-type: none;*/
-/*    margin: auto;*/
-/*    width: 80%;*/
-/*}*/
-
-
-/*.secondaryNavItem{*/
-/*    font-size: 1rem;*/
-/*    padding: 1rem 2rem .75rem;*/
-/*    text-transform: uppercase;*/
-/*    white-space: nowrap;*/
-/*}*/
-
-/*.secondaryNavItem a{*/
-/*    color: #474747;*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*.secondaryNavItem a:hover{*/
-/*    border-bottom: solid .125rem;*/
-/*}*/
-
-/*.activeSubNav {*/
-/*    border-bottom: solid .125rem;*/
-/*}*/
-
-/*.secondaryNavItem a:active{*/
-/*    border-bottom: solid .125rem;*/
-/*}*/
-
-/*!*END SECONDARY NAV STYLING*!*/
-
-/*!*BEGIN FOOTER STYLING*!*/
-
-/*#footer {*/
-/*    background-color: #474747;*/
-/*    display: flex;*/
-/*    justify-content: space-around;*/
-/*    width: 100vw;*/
-/*}*/
-
-/*.footerText{*/
-/*    color: #fff;*/
-/*    font-size:1rem;*/
-/*    padding: 3rem;*/
-/*    width: 40%;*/
-/*}*/
-
-/*.footerLinks{*/
-/*    display: flex;*/
-/*    padding: 3rem;*/
-/*}*/
-
-/*.socialIcon{*/
-/*    margin-right: .5rem;*/
-/*    max-height: 50px;*/
-/*}*/
-
-/*.footerButton{*/
-/*    background-color: #cbd543;*/
-/*    border: none;*/
-/*    border-radius: .5rem;*/
-/*    font-size: 1rem;*/
-/*    font-weight: 900;*/
-/*    letter-spacing: .05rem;*/
-/*    max-height: 50px;*/
-/*    padding: 1rem 1.5rem;*/
-/*    text-transform: capitalize;*/
-/*}*/
-
-/*.footerButton a{*/
-/*    color: #ffffff;*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*!*END FOOTER STYLING*!*/
-
-/*!*BEGIN BACK NAV STYLING*!*/
-
-/*.backNav{*/
-/*    font-size: .75rem;*/
-/*    font-weight: 300;*/
-/*    text-transform: lowercase;*/
-/*}*/
-
-/*.backNav a{*/
-/*    color: #d1a10e;*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*!*END BACK NAV STYLING*!*/
