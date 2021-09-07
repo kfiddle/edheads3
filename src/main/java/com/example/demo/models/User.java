@@ -121,9 +121,7 @@ public class User {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    public void setLastName(String lastName) { this.lastName = lastName; }
 
     public LocalDate getDateCreated() {
         return dateCreated;
@@ -228,9 +226,5 @@ public class User {
     public void setDescription(String description) {
         this.description = description;
     }
-
-
-
-
 
 }
