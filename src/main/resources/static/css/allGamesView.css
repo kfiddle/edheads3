@@ -1,17 +1,17 @@
 .titleContainer{
      width: 80%;
-    margin: 3rem 0rem;}
+    /*margin-top: 2rem;*/
+}
 
 .gamesPageTitle{
-    margin: 0 auto;
+    margin: 20rem auto 0;
 }
 
 .gamesPageContentContainer{
     display: grid;
     gap: 1rem 1rem;
     grid-template-columns: 1fr 1fr;
-    margin: 1.5rem 3rem 3rem 0rem;
-    /*width: 80%;*/
+    margin: 3rem 3rem 3rem 0rem;
 }
 
 .tileContent{

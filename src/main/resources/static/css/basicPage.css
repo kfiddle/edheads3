@@ -61,7 +61,12 @@ hr{
 }
 
 .basicPageContentContainer{
-    margin: 3rem 3rem 3rem 0rem;
+    margin: 20rem 3rem 3rem 0rem;
+    width: 80%;
+}
+
+.basicPageSubNav{
+    margin: 25rem 3rem 3rem 0rem;
     width: 80%;
 }
 
@@ -73,7 +78,7 @@ hr{
 }
 
 .basicPageContent{
-    height: 50vh;
+    /*height: 50vh;*/
     line-height: 1.75rem;
     letter-spacing: .0125rem;
     overflow: scroll;
@@ -186,15 +191,19 @@ hr{
 }
 
 .footNote{
-    /*border-top: .0125rem solid rgb(0,0,0,.2);*/
     font-size: .9rem;
     line-height: 1.25rem;
-    /*padding-top: 1rem;*/
 }
 
 .sideBar {
     background-color: #cbd543;
-    padding: 3rem 0;
+    padding-top: 20rem;
+    width: 300px;
+}
+
+.sideBarSubNav {
+    background-color: #cbd543;
+    padding-top: 25rem;
     width: 300px;
 }
 

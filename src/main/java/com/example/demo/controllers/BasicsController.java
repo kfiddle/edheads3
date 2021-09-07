@@ -182,6 +182,12 @@ public class BasicsController {
         return "basicPage";
     }
 
+    @RequestMapping("/header-test")
+    public String displayHeaderTestPage() {
+
+        return "newHeader";
+    }
+
 
 
 }
