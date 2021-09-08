@@ -15,46 +15,17 @@
     <meta charset="UTF-8">
     <title>Donate</title>
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/basicPage.css">
 
+    <script src="components/headerAbout.js" type="text/javascript" defer></script>
     <script src="js/accordion.js" defer></script>
-
+    <script src="components/footer.js" type="text/javascript" defer></script>
 
 </head>
 <body>
+<header-component></header-component>
+<main>
 
-<div class="stickyHeader">
-<section id="header">
-    <div class="headerContents">
-        <div class="topNav">
-            <ul class="mainNav">
-                <li class="topNavItem"><a href="/login">Log In</a></li>
-                <li class="topNavItem"><a href="/sign-up">Sign Up</a></li>
-            </ul>
-        </div>
-        <div class="logo">
-            <img src="/assets/ed_logo.png" alt="" class="logoImg">
-        </div>
-
-        <div class=""> </div>
-
-        <div class="mainNavContainer">
-            <ul class="mainNav">
-                <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
-                <li class="mainNavItem" style="margin-left: 0;"><a href="/welcome">Welcome</a></li>
-                <li class="mainNavItem"><a href="/about-us">About Us</a></li>
-                <li class="mainNavItem"><a href="/our-games">Our Games</a></li>
-                <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
-                <li class="mainNavItem activeNav"><a href="/donate">Donate</a></li>
-            </ul>
-            <div class="logoWG">
-                <img src="/assets/weatherhead.PNG" alt="" class="logoImgWG">
-            </div>
-        </div>
-    </div>
-</section>
-</div>
 
 <section id="basicPageContainer">
 
@@ -75,35 +46,6 @@
             </div>
         </div>
 
-<!--        <div class="accordion">Accordion Title-->
-<!--        </div>-->
-<!--        <div class="accordionContent">-->
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-<!--                Etiam tristique, ex ut tincidunt ullamcorper, sapien lorem viverra eros, ac lobortis massa-->
-<!--                risus ut massa.-->
-<!--            </p>-->
-<!--        </div>-->
-
-<!--        <div class="accordion">Accordion Two Column-->
-<!--        </div>-->
-<!--        <div class="accordionContentTwoColumn">-->
-<!--            <div class="accordionColumns">-->
-<!--                <div class="columnLeft">-->
-<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-<!--                        Etiam tristique, ex ut tincidunt ullamcorper, sapien lorem viverra eros, ac lobortis massa-->
-<!--                        risus ut massa.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--                <div class="columnRight">-->
-<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-<!--                        Etiam tristique, ex ut tincidunt ullamcorper, sapien lorem viverra eros, ac lobortis massa-->
-<!--                        risus ut massa.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-
     </div>
     <div class="sideBar">
         <!--        <div class="sideBarText">Sidebar Text</div>-->
@@ -117,29 +59,7 @@
     </div>
 
 </section>
-
-
-<section id="footer">
-    <div class="footerText">
-        <p>Edheads is a non-profit that creates unique,
-            free Web experiences to promote STEM education.
-        </p>
-    </div>
-
-    <div class="footerLinks">
-        <a href="https://www.facebook.com/Edheads">
-            <img src="/assets/facebook.png" alt="" class="socialIcon"></a>
-        <a href="https://twitter.com/Edheadsdotorg">
-            <img src="/assets/twitter.png" alt="" class="socialIcon"></a>
-        <a href="https://www.linkedin.com/company/edheads">
-            <img src="/assets/instagram.png" alt="" class="socialIcon"></a>
-        <a href="https://www.pinterest.com/edheads/_created/">
-            <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
-        <a href="https://www.youtube.com/user/Edheadsorg">
-            <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
-        <button class="footerButton"><a href="mailto:info@edheads.org">Contact Us!</a></button>
-    </div>
-
-</section>
+<footer-component></footer-component>
+</main>
 </body>
 </html>

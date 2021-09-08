@@ -15,12 +15,15 @@
     <meta charset="UTF-8">
     <title>Terms of Use</title>
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/basicPage.css">
 
-    <script src="js/accordion.js" defer></script>
+    <script src="components/headerAbout.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+
 </head>
 <body>
+<header-component></header-component>
+<main>
 
 <div class="stickyHeader">
     <section id="header">
@@ -247,28 +250,7 @@
 
 </section>
 
-
-<section id="footer">
-    <div class="footerText">
-        <p>Edheads is a non-profit that creates unique,
-            free Web experiences to promote STEM education.
-        </p>
-    </div>
-
-    <div class="footerLinks">
-        <a href="https://www.facebook.com/Edheads">
-            <img src="/assets/facebook.png" alt="" class="socialIcon"></a>
-        <a href="https://twitter.com/Edheadsdotorg">
-            <img src="/assets/twitter.png" alt="" class="socialIcon"></a>
-        <a href="https://www.linkedin.com/company/edheads">
-            <img src="/assets/instagram.png" alt="" class="socialIcon"></a>
-        <a href="https://www.pinterest.com/edheads/_created/">
-            <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
-        <a href="https://www.youtube.com/user/Edheadsorg">
-            <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
-        <button class="footerButton"><a href="mailto:info@edheads.org">Contact Us!</a></button>
-    </div>
-
-</section>
+    <footer-component></footer-component>
+</main>
 </body>
 </html>

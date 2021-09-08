@@ -168,11 +168,11 @@ public class BasicsController {
         return "teacherResources";
     }
 
-    @RequestMapping("/teachers-test")
-    public String displayTeachersTestPage() {
-
-        return "teacherResources";
-    }
+//    @RequestMapping("/teachers-test")
+//    public String displayTeachersTestPage() {
+//
+//        return "teacherResources";
+//    }
 
 
 
@@ -182,11 +182,7 @@ public class BasicsController {
         return "basicPage";
     }
 
-    @RequestMapping("/nav-test")
-    public String displayNavTestPage() {
 
-        return "navTest";
-    }
 
 
 
