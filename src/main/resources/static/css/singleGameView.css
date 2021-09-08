@@ -5,7 +5,7 @@
 }
 
 .singleGameContentContainer{
-    margin: 1rem 3rem 3rem 0rem;
+    margin: 20rem 3rem 3rem 0rem;
     width: 80%;
 }
 
@@ -57,8 +57,18 @@
 }
 
 .sponsorContent{
-    padding: 3rem;
+    padding:1rem 3rem;
      text-align: center;
+}
+
+.buttonContainer a{
+    background-color: white;
+    border-radius: .5rem;
+    color: #474747;
+    font-size: 1rem;
+    margin: 1rem;
+    padding: 1rem 3rem;
+    white-space: nowrap;
 }
 
 

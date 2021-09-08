@@ -3,6 +3,15 @@
 <html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
   <meta charset="UTF-8">
   <title>Manufacturing Quiz</title>
   <link rel="stylesheet" href="/css/main.css">
@@ -12,35 +21,41 @@
 
   <script src="js/accordion.js" defer></script>
   <script src="js/game.js" defer></script>
-  <script src="js/navHeightMaker.js" defer></script>
 
 </head>
 <body>
 
-<section id="header">
-  <div class="logoContainer">
-    <div class="logo">
-      <img src="/assets/ed_logo.png" alt="" class="logoImg">
-    </div>
-  </div>
-  <div class="mainNavContainer">
-
-    <div class="weatherGirlContainer">
-      <div class="weatherGirl">
-        <img src="/assets/weatherGirlWithBanner.png" alt="" class="weatherGirlImg">
+<div class="stickyHeader">
+  <section id="header">
+    <div class="headerContents">
+      <div class="topNav">
+        <ul class="mainNav">
+          <li class="topNavItem"><a href="/login">Log In</a></li>
+          <li class="topNavItem"><a href="/sign-up">Sign Up</a></li>
+        </ul>
       </div>
-      <div class="bannerText"><a href="/login">Log In</a> or <a href="/sign-up">Sign Up!</a></div>
+      <div class="logo">
+        <img src="/assets/ed_logo.png" alt="" class="logoImg">
+      </div>
+
+      <div class=""> </div>
+
+      <div class="mainNavContainer">
+        <ul class="mainNav">
+          <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
+          <li class="mainNavItem" style="margin-left: 0;"><a href="/welcome">Welcome</a></li>
+          <li class="mainNavItem"><a href="/about-us">About Us</a></li>
+          <li class="mainNavItem activeNav"><a href="/our-games">Our Games</a></li>
+          <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
+          <li class="mainNavItem"><a href="/donate">Donate</a></li>
+        </ul>
+        <div class="logoWG">
+          <img src="/assets/weatherhead.PNG" alt="" class="logoImgWG">
+        </div>
+      </div>
     </div>
-    <ul class="mainNavLeft" id="mainNavLeft">
-      <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
-      <li class="mainNavItem "><a href="/welcome">Welcome</a></li>
-      <li class="mainNavItem"><a href="/about-us">About Us</a></li>
-      <li class="mainNavItem   activeNav" style="margin-right: 2rem"><a href="/our-games">Our Games</a></li>
-      <li class="mainNavItem" style="margin-left: 2rem"><a href="/get-involved">Get Involved</a></li>
-      <li class="mainNavItem"><a href="/donate">Donate</a></li>
-    </ul>
-  </div>
-</section>
+  </section>
+</div>
 
 
 <section id="singleGameContainer">
@@ -52,11 +67,11 @@
 
     <div class="gameImageContainer">
 
-<!--      <a href="http://www.edheads2.org/nano/Browser/Intro/Index.html" onclick="return openwindow('http://www.edheads2.org/nano/Browser/Intro/Index.html')">-->
-        <img src="/assets/game3.jpg" alt="" class="gameImg">
+      <a href="http://edheads2.org/mquiz/story.html" onclick="return openwindow('http://edheads2.org/mquiz/story.html')">
+        <img src="/assets/manufacturingQuiz.jpg" alt="" class="gameImg">
       </a>
       <div class="sponsorTag">
-        <a href="#"> Sponsor This Game!</a>
+        <a href="/donor"> Sponsor This Game!</a>
       </div>
     </div>
 
@@ -105,13 +120,18 @@
 
   <div class="sideBar">
     <!--        <div class="sideBarText">Sidebar Text</div>-->
-    <div>
-      <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="sideBarAd">
+<!--    <div>-->
+<!--      <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="sideBarAd">-->
+<!--    </div>-->
+
+<!--    <div>-->
+<!--      <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="sideBarAd">-->
+<!--    </div>-->
+
+    <div sec:authorize="isAuthenticated()" class="buttonContainer">
+      <a href="/welcome">View Teacher Resources</a>
     </div>
 
-    <div>
-      <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="sideBarAd">
-    </div>
   </div>
 
 </section>
@@ -135,7 +155,7 @@
       <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
     <a href="https://www.youtube.com/user/Edheadsorg">
       <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
-    <button class="footerButton"><a href="/donate">Make a Donation</a></button>
+    <button class="footerButton"><a href="mailto:info@edheads.org">Contact Us!</a></button>
   </div>
 
 </section>

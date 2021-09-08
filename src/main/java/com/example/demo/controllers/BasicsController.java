@@ -174,6 +174,8 @@ public class BasicsController {
         return "teacherResources";
     }
 
+
+
     @RequestMapping("/basic-page")
     public String displayBasicPage() {
 
