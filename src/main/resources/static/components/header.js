@@ -67,15 +67,13 @@ header {
     font-weight: 900;
 }
 
-.mainNavItem a:active {
-    font-weight: 900;
-}
+/*.mainNavItem a:active {*/
+/*    font-weight: 900;*/
+/*}*/
 
-.mainNavItem a:focus {
-    font-weight: 900;
-}
-
-
+/*.mainNavItem a:focus {*/
+/*    font-weight: 900;*/
+/*}*/
 
 .topNav{
     display: flex;

@@ -67,15 +67,13 @@ header {
     font-weight: 900;
 }
 
-.mainNavItem a:active {
-    font-weight: 900;
-}
+/*.mainNavItem a:active {*/
+/*    font-weight: 900;*/
+/*}*/
 
-.mainNavItem a:focus {
-    font-weight: 900;
-}
-
-
+/*.mainNavItem a:focus {*/
+/*    font-weight: 900;*/
+/*}*/
 
 .topNav{
     display: flex;
@@ -110,7 +108,7 @@ header {
     width:15vw;
 }
 
-
+/*secondary nav*/
 .secondaryNavContainer{
     background-color: #cbd543;
     width: 100vw;
@@ -139,13 +137,14 @@ header {
     border-bottom: solid .125rem;
 }
 
-.activeSubNav {
-    border-bottom: solid .125rem;
-}
+/*.activeSubNav {*/
+/*    border-bottom: solid .125rem;*/
+/*}*/
 
-.secondaryNavItem a:active{
-    border-bottom: solid .125rem;
-}
+/*.secondaryNavItem a:active{*/
+/*    border-bottom: solid .125rem;*/
+/*}*/
+
   </style>
   <div class="stickyHeader">
     <header>
