@@ -1,0 +1,77 @@
+class Footer extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        this.innerHTML = `
+      <style>
+        footer {
+    background-color: #474747;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+.footerText{
+    color: #fff;
+    font-size:1rem;
+    padding: 3rem;
+    width: 40%;
+}
+
+.footerLinks{
+    display: flex;
+    padding: 3rem;
+}
+
+.socialIcon{
+    margin-right: .5rem;
+    max-height: 50px;
+}
+
+.footerButton{
+    background-color: #cbd543;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: .05rem;
+    max-height: 50px;
+    padding: 1rem 1.5rem;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.footerButton a{
+    color: #ffffff;
+    text-decoration: none;
+}
+      </style>
+      <footer>
+  <div class="footerText">
+    <p>Edheads is a non-profit that creates unique,
+      free Web experiences to promote STEM education.
+    </p>
+  </div>
+
+  <div class="footerLinks">
+    <a href="https://www.facebook.com/Edheads">
+      <img src="/assets/facebook.png" alt="" class="socialIcon"></a>
+    <a href="https://twitter.com/Edheadsdotorg">
+      <img src="/assets/twitter.png" alt="" class="socialIcon"></a>
+    <a href="https://www.linkedin.com/company/edheads">
+      <img src="/assets/instagram.png" alt="" class="socialIcon"></a>
+    <a href="https://www.pinterest.com/edheads/_created/">
+      <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
+    <a href="https://www.youtube.com/user/Edheadsorg">
+      <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
+    <button class="footerButton"><a href="mailto:info@edheads.org">Contact Us!</a></button>
+  </div>
+
+</footer>
+    `;
+    }
+}
+
+customElements.define('footer-component', Footer);

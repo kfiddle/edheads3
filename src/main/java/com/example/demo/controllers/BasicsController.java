@@ -182,6 +182,12 @@ public class BasicsController {
         return "basicPage";
     }
 
+    @RequestMapping("/nav-test")
+    public String displayNavTestPage() {
+
+        return "navTest";
+    }
+
 
 
 }
