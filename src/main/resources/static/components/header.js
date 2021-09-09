@@ -2,7 +2,6 @@ class Header extends HTMLElement {
     constructor() {
         super();
     }
-
     connectedCallback() {
         this.innerHTML = `
   <style>
@@ -67,13 +66,10 @@ header {
     font-weight: 900;
 }
 
-/*.mainNavItem a:active {*/
-/*    font-weight: 900;*/
-/*}*/
+.mainNavItem.active{
+    font-weight: 900;
+}
 
-/*.mainNavItem a:focus {*/
-/*    font-weight: 900;*/
-/*}*/
 
 .topNav{
     display: flex;
@@ -132,6 +128,9 @@ header {
                     <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
                     <li class="mainNavItem"><a href="/donate">Donate</a></li>
                 </ul>
+                
+            
+                
                 <div class="logoWG">
                     <img src="/assets/weatherhead.PNG" alt="" class="logoImgWG">
                 </div>
