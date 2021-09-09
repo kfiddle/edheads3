@@ -57,15 +57,15 @@ class Footer extends HTMLElement {
 
   <div class="footerLinks">
     <a href="https://www.facebook.com/Edheads">
-      <img src="/assets/facebook.png" alt="" class="socialIcon"></a>
+      <img src="/assets/facebook.png" alt="Link to Edheads on Facebook" class="socialIcon"></a>
     <a href="https://twitter.com/Edheadsdotorg">
-      <img src="/assets/twitter.png" alt="" class="socialIcon"></a>
+      <img src="/assets/twitter.png" alt="Link to Edheads on Twitter" class="socialIcon"></a>
     <a href="https://www.linkedin.com/company/edheads">
-      <img src="/assets/instagram.png" alt="" class="socialIcon"></a>
+      <img src="/assets/instagram.png" alt="Link to Edheads on Instagram" class="socialIcon"></a>
     <a href="https://www.pinterest.com/edheads/_created/">
-      <img src="/assets/pinterest.png" alt="" class="socialIcon"></a>
+      <img src="/assets/pinterest.png" alt="Link to Edheads on Pinterest" class="socialIcon"></a>
     <a href="https://www.youtube.com/user/Edheadsorg">
-      <img src="/assets/youTube.png" alt="" class="socialIcon"></a>
+      <img src="/assets/youTube.png" alt="Link to Edheads on YouTube" class="socialIcon"></a>
     <button class="footerButton"><a href="mailto:info@edheads.org">Contact Us!</a></button>
   </div>
 

@@ -156,7 +156,7 @@ header {
                 </ul>
             </div>
             <div class="logo">
-                <img src="/assets/ed_logo.png" alt="" class="logoImg">
+                <img src="/assets/ed_logo.png" alt="Edheads logo" class="logoImg">
             </div>
 
             <div class=""> </div>
@@ -171,7 +171,7 @@ header {
                     <li class="mainNavItem"><a href="/donate">Donate</a></li>
                 </ul>
                 <div class="logoWG">
-                    <img src="/assets/weatherhead.PNG" alt="" class="logoImgWG">
+                    <img src="/assets/weatherhead.PNG" alt="Edheads Weathergirl Mascot" class="logoImgWG">
                 </div>
             </div>
         </div>
