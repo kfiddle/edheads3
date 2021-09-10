@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="/css/basicPage.css">
     <link rel="stylesheet" href="/css/modal.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+
     <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="js/activeNav.js" type="text/javascript" defer></script>
+
     <script src="js/accordion.js" type="text/javascript" defer></script>
     <script src="js/modal.js" type="text/javascript" defer></script>
     <script src="components/footer.js" type="text/javascript" defer></script>
@@ -27,19 +32,11 @@
             <div class="navTest" style="margin-left: 2rem;">
 
                 <ul class="mainNav">
-                    <li class="mainNavItem"><a href="/basic-page">Page One</a></li>
-                    <li class="mainNavItem"><a href="/basic-page-one">Page Two</a></li>
-                    <li class="mainNavItem"><a href="/basic-page-two">Page Three</a></li>
+                    <li class="mainNavItem"><a href="basic-page">Basic Page</a></li>
+                    <li class="mainNavItem"><a href="basic-page-one">Basic Page One</a></li>
+                    <li class="mainNavItem"><a href="basic-page-two">Basic Page Two</a></li>
                 </ul>
             </div>
-            <!--    applies active class to nav items-->
-            <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-            <script type="text/javascript">
-                $(document).on('click', 'ul li', function (){
-                    $(this).addClass('active').siblings().removeClass('active')
-                })
-            </script>
-
 
             <div class="basicPageMain">
                 <h1>Basic Page</h1>
