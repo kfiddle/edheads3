@@ -6,7 +6,7 @@ class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
       <style>
-        footer {
+footer {
     background-color: #474747;
     display: flex;
     justify-content: space-around;

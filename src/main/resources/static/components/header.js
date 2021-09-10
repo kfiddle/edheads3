@@ -66,7 +66,7 @@ header {
     font-weight: 900;
 }
 
-.mainNavItem.active{
+.mainNavItem a:active{
     font-weight: 900;
 }
 
