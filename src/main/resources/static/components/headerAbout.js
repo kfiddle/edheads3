@@ -43,6 +43,7 @@ header {
     justify-content: center;
 }
 
+
 .mainNav{
     display: flex;
     list-style-type: none;
@@ -67,13 +68,13 @@ header {
     font-weight: 900;
 }
 
-/*.mainNavItem a:active {*/
-/*    font-weight: 900;*/
-/*}*/
+.mainNavItem.active a{
+    font-weight: 900;
+}
 
-/*.mainNavItem a:focus {*/
-/*    font-weight: 900;*/
-/*}*/
+.active:after{
+    display: none;
+}
 
 .topNav{
     display: flex;
@@ -136,14 +137,6 @@ header {
 .secondaryNavItem a:hover{
     border-bottom: solid .125rem;
 }
-
-/*.activeSubNav {*/
-/*    border-bottom: solid .125rem;*/
-/*}*/
-
-/*.secondaryNavItem a:active{*/
-/*    border-bottom: solid .125rem;*/
-/*}*/
 
   </style>
   <div class="stickyHeader">

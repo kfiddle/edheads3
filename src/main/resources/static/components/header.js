@@ -4,8 +4,10 @@ class Header extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
+
   <style>
-    .stickyHeader{
+    
+.stickyHeader{
     position: fixed;
     z-index: 2;
 }
@@ -42,6 +44,7 @@ header {
     justify-content: center;
 }
 
+
 .mainNav{
     display: flex;
     list-style-type: none;
@@ -66,10 +69,13 @@ header {
     font-weight: 900;
 }
 
-.mainNavItem a:active{
+.mainNavItem.active a{
     font-weight: 900;
 }
 
+.active:after{
+    display: none;
+}
 
 .topNav{
     display: flex;
@@ -120,6 +126,7 @@ header {
             <div class=""> </div>
 
             <div class="mainNavContainer">
+            
                 <ul class="mainNav">
                     <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
                     <li class="mainNavItem" style="margin-left: 1rem;"><a href="/welcome">Welcome</a></li>
@@ -128,10 +135,8 @@ header {
                     <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
                     <li class="mainNavItem"><a href="/donate">Donate</a></li>
                 </ul>
-                
-            
-                
-                <div class="logoWG">
+     
+          <div class="logoWG">
                     <img src="/assets/weatherhead.PNG" alt="Edheads Weathergirl Mascot" class="logoImgWG">
                 </div>
             </div>
@@ -140,5 +145,4 @@ header {
 `;
   }
 }
-
 customElements.define('header-component', Header);
