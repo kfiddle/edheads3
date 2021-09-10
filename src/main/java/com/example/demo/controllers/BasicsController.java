@@ -167,23 +167,4 @@ public class BasicsController {
 
         return "teacherResources";
     }
-
-//    @RequestMapping("/teachers-test")
-//    public String displayTeachersTestPage() {
-//
-//        return "teacherResources";
-//    }
-
-
-
-    @RequestMapping("/basic-page")
-    public String displayBasicPage() {
-
-        return "basicPage";
-    }
-
-
-
-
-
 }
