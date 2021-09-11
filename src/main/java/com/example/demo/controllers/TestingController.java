@@ -18,15 +18,4 @@ public class TestingController {
         return "basicPage";
     }
 
-    @RequestMapping("/basic-page-one")
-    public String displayBasicPageOne() {
-
-        return "basicPageOne";
-    }
-
-    @RequestMapping("/basic-page-two")
-    public String displayBasicPageTwo() {
-
-        return "basicPageTwo";
-    }
 }
