@@ -123,13 +123,13 @@ header {
                 <img src="/assets/ed_logo.png" alt="Edheads logo" class="logoImg">
             </div>
 
-            <div class=""> </div>
+<!--            <div class=""> </div>-->
 
             <div class="mainNavContainer">
             
                 <ul class="mainNav">
                     <li sec:authorize="isAuthenticated()" class="mainNavItem"><a href="/teachers">Teachers</a></li>
-                    <li class="mainNavItem" style="margin-left: 1rem;"><a href="/welcome">Welcome</a></li>
+                    <li class="mainNavItem active" style="margin-left: 1rem;"><a href="/welcome">Welcome</a></li>
                     <li class="mainNavItem"><a href="/about-us">About Us</a></li>
                     <li class="mainNavItem"><a href="/our-games">Our Games</a></li>
                     <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
