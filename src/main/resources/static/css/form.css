@@ -2,6 +2,13 @@
     color: #cbd543;
     font-size: 3rem;
     font-weight: 100;
+    float: right;
+
+}
+
+.closeForm a:hover,
+.closeForm a:focus {
+    color: #474747;
 }
 
 .signUpContainer {

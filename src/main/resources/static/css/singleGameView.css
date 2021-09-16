@@ -4,8 +4,14 @@
     width: 80%;
 }
 
+.backNav a{
+    color: #d1a10e;
+    font-size: 1rem;
+    text-transform: lowercase;
+}
+
 .singleGameContentContainer{
-    margin: 20rem 3rem 3rem 0rem;
+    margin: 18rem 3rem 3rem 0rem;
     width: 80%;
 }
 
