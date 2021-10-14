@@ -50,8 +50,8 @@ footer {
       </style>
       <footer>
   <div class="footerText">
-    <p>Edheads is a non-profit that creates unique,
-      free Web experiences to promote STEM education.
+    <p>Edheads is a non-profit that creates unique, free games 
+    that tie K12 math and science curricula to STEM careers.
     </p>
   </div>
 
