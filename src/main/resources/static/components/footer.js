@@ -56,15 +56,15 @@ footer {
   </div>
 
   <div class="footerLinks">
-    <a href="https://www.facebook.com/Edheads" onclick="return openwindow('https://www.facebook.com/Edheads'>
+    <a href="https://www.facebook.com/Edheads" target="_blank">
       <img src="/assets/facebook.png" alt="Link to Edheads on Facebook" class="socialIcon"></a>
-    <a href="https://twitter.com/Edheadsdotorg" onclick="return openwindow('https://twitter.com/Edheadsdotorg'>
+    <a href="https://twitter.com/Edheadsdotorg" target="_blank">
       <img src="/assets/twitter.png" alt="Link to Edheads on Twitter" class="socialIcon"></a>
-    <a href="https://www.linkedin.com/company/edheads" onclick="return openwindow('https://www.linkedin.com/company/edheads'>
+    <a href="https://www.linkedin.com/company/edheads" target="_blank">
       <img src="/assets/instagram.png" alt="Link to Edheads on Instagram" class="socialIcon"></a>
-    <a href="https://www.pinterest.com/edheads/_created/" onclick="return openwindow('https://www.pinterest.com/edheads/_created/'>
+    <a href="https://www.pinterest.com/edheads/_created/" target="_blank">
       <img src="/assets/pinterest.png" alt="Link to Edheads on Pinterest" class="socialIcon"></a>
-    <a href="https://www.youtube.com/user/Edheadsorg" onclick="return openwindow('https://www.youtube.com/user/Edheadsorg'>
+    <a href="https://www.youtube.com/user/Edheadsorg" target="_blank">
       <img src="/assets/youTube.png" alt="Link to Edheads on YouTube" class="socialIcon"></a>
     <button class="footerButton"><a href="mailto:info@edheads.org">Contact Us!</a></button>
   </div>
