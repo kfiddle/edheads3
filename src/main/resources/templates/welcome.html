@@ -3,21 +3,17 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+<!--     Global site tag (gtag.js) - Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            window.dataLayer.push(arguments);
-        }
-
+        function gtag(){window.dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'GA_MEASUREMENT_ID');
     </script>
     <meta charset="UTF-8">
-    <title>Welcome to Edheads!</title>
+    <h1><title>Welcome to Edheads!</title></h1>
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/header.css">
@@ -42,7 +38,7 @@
                 <img src="/assets/ed_logo.png" alt="Edheads logo" class="logoImg">
             </div>
 
-            <div class=""></div>
+            <div class=""> </div>
 
             <div class="mainNavContainer">
                 <ul class="mainNav">
@@ -58,110 +54,116 @@
                 </div>
             </div>
         </div>
-    </header>
+</header>
 </div>
 <main>
 
-    <section id="titlePanel" class="titlePanel">
-        <div class="contentContainerTitle">
-            <h1 class="welcomeTitle">
-                Welcome to Edheads!
-            </h1>
-        </div>
-    </section>
+<section id="titlePanel" class="titlePanel">
+    <div class="contentContainerTitle">
+<!--        <h1 class="welcomeTitle">-->
+<!--            Welcome to Edheads!-->
+<!--        </h1>-->
+    </div>
+</section>
 
-    <section id="aboutUs" class="contentPanel">
-        <div class="contentContainerTextLeft">
-            <div class="textBoxLeft">
-                <h2>About Us</h2>
-                <h3>We inspire K12 students to pursue STEM careers through games!
-                </h3>
-                <p>Edheads stands at the intersection of the STEM employee pipeline and equity.
-                    We reach students from all walks of life, and support teachers by reinforcing
-                    the educational foundations students need to succeed in life.
-                </p>
-                <div class="buttonContainer">
-                    <button class="textBoxButton"><a href="/about-us">Learn More</a></button>
-                    <button class="textBoxButton"><a href="/our-games">Explore Our Games</a></button>
-                </div>
-
-            </div>
-
-            <div class="aboutUsCharacter">
-                <img src="/assets/robot.png" alt="Edheads Robot Mascot talking about what Edheads is." class="robot">
-            </div>
-        </div>
-    </section>
-
-    <section class="adPanel">
-        <div class="contentContainerAd">
-
-            <script src="//ap.lijit.com/www/delivery/fpi.js?z=134321&width=160&height=600"></script>
-            <!--    <div >-->
-            <!--        <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adLeft">-->
-            <!--    </div>-->
-
-            <!--    <div >-->
-            <!--        <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adRight">-->
-            <!--    </div>-->
-        </div>
-    </section>
-
-
-    <section id="signUp" class="contentPanel">
-        <div class="contentContainerTextRight">
-            <div class="signUpCharacter">
-                <img src="/assets/robot.png" alt="Edheads Robot Mascot talking about how to sign up." class="robot">
-            </div>
-            <div class="textBoxRight">
-                <h2>Sign Up</h2>
-                <h3>Great teacher content, just for teachers!!
-                </h3>
-                <p>Teachers, we heard you. Students shouldn’t access teacher content,
-                    so we put it behind a log in. You will need to sign up and create
-                    a log in to access all the teacher content we have to offer!
-                </p>
-                <button class="textBoxButton"><a href="sign-up">Sign Up</a></button>
-            </div>
+<section id="aboutUs" class="contentPanel">
+    <div class="contentContainerTextLeft">
+    <div class="textBoxLeft">
+        <h2>About Us</h2>
+        <h3>We inspire K12 students to pursue STEM careers through games!
+        </h3>
+        <p>Edheads stands at the intersection of the STEM employee pipeline and equity.
+            We reach students from all walks of life, and support teachers by reinforcing
+            the educational foundations students need to succeed in life.
+        </p>
+        <div class="buttonContainer">
+        <button class="textBoxButton"> <a href="/about-us">Learn More</a> </button>
+        <button class="textBoxButton"> <a href="/our-games">Explore Our Games</a> </button>
         </div>
 
+    </div>
 
-    </section>
+    <div class="aboutUsCharacter">
+        <img src="/assets/robot.png" alt="Edheads Robot Mascot talking about what Edheads is." class="robot">
+    </div>
+    </div>
+</section>
 
-    <section class="adPanel">
-        <div class="contentContainerAd">
-            <!--        <div >-->
-            <!--            <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adLeft">-->
-            <!--        </div>-->
+<section class="adPanel">
+    <div class="contentContainerAd">
 
-            <!--        <div >-->
-            <!--            <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adRight">-->
-            <!--        </div>-->
+    <div class="adLeft">
+        <script src="//ap.lijit.com/www/delivery/fpi.js?z=331604&width=300&height=250"></script>
+        <!--        <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adLeft">-->
+    </div>
+
+    <div class="adRight">
+        <script src="//ap.lijit.com/www/delivery/fpi.js?z=331604&width=300&height=250"></script>
+<!--        <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adRight">-->
+    </div>
+    </div>
+</section>
+
+
+
+<section id="signUp" class="contentPanel">
+    <div class="contentContainerTextRight">
+        <div class="signUpCharacter">
+            <img src="/assets/robot.png" alt="Edheads Robot Mascot talking about how to sign up." class="robot">
         </div>
-    </section>
-
-    <section id="donate" class="contentPanel">
-        <div class="contentContainerTextLeft">
-            <div class="textBoxLeft">
-                <h2>Get Involved</h2>
-                <h3>Help Edheads change the lives of millions of students!
-                </h3>
-                <p><span style="font-weight: 900; color: #d1a10e">YOU</span> can help us meet our mission.
-                    You could donate, volunteer, introduce us to your company to sponsor a page or fund a new game,
-                    or share your ideas of how to steer K12 students toward STEM careers.
-                </p>
-                <button class="textBoxButton"><a href="/get-involved">Get Involved</a></button>
-            </div>
-
-            <div class="donateCharacter">
-                <img src="/assets/robot.png" alt="Edheads Robot Mascot talking about getting involved." class="robot">
-            </div>
-        </div>
-    </section>
+    <div class="textBoxRight">
+        <h2>Sign Up</h2>
+        <h3>Great teacher content, just for teachers!!
+        </h3>
+        <p>Teachers, we heard you.  Students shouldn’t access teacher content,
+            so we put it behind a log in. You will need to sign up and create
+            a log in to access all the teacher content we have to offer!
+        </p>
+        <button class="textBoxButton"> <a href="sign-up">Sign Up</a> </button>
+    </div>
     </div>
 
 
-    <footer-component></footer-component>
+
+</section>
+
+    <section class="adPanel">
+        <div class="contentContainerAd">
+
+            <div class="adLeft">
+                <script src="//ap.lijit.com/www/delivery/fpi.js?z=331605&width=300&height=250"></script>
+                <!--        <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adLeft">-->
+            </div>
+
+            <div class="adRight">
+                <script src="//ap.lijit.com/www/delivery/fpi.js?z=596345&width=300&height=250"></script>
+                <!--        <img src="/assets/AdPlaceholder300x250.jpg" alt="" class="adRight">-->
+            </div>
+        </div>
+    </section>
+
+<section id="donate" class="contentPanel">
+    <div class="contentContainerTextLeft">
+    <div class="textBoxLeft">
+        <h2>Get Involved</h2>
+        <h3>Help Edheads change the lives of millions of students!
+        </h3>
+        <p><span style="font-weight: 900; color: #d1a10e">YOU</span>  can help us meet our mission.
+            You could donate, volunteer, introduce us to your company to sponsor a page or fund a new game,
+            or share your ideas of how to steer K12 students toward STEM careers.
+        </p>
+        <button class="textBoxButton"> <a href="/get-involved">Get Involved</a> </button>
+    </div>
+
+    <div class="donateCharacter">
+        <img src="/assets/robot.png" alt="Edheads Robot Mascot talking about getting involved." class="robot">
+    </div>
+    </div>
+</section>
+</div>
+
+<footer-component></footer-component>
+
 </main>
 </body>
 </html>
