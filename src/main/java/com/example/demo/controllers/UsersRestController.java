@@ -18,16 +18,25 @@ public class UsersRestController {
     @Resource
     UserRepository userRepo;
 
-    @RequestMapping("/fetch-all-users")
-    public Collection<User> getAllUsersList() {
-        return (Collection<User>) userRepo.findAll();
-    }
+//    @RequestMapping("/fetch-all-users")
+//    public Collection<User> getAllUsersList() {
+//        return (Collection<User>) userRepo.findAll();
+//    }
 
     @PostMapping("/add-user")
     public Collection<User> addUserToDatabase(@RequestBody User userToAdd) throws IOException {
 
         System.out.println("User: " + userToAdd.getFirstName());
         User newUser = new User(userToAdd.getEmail(), userToAdd.getFirstName(), userToAdd.getLastName());
+        userRepo.save(newUser);
+        return (Collection<User>) userRepo.findAll();
+    }
+
+    @PostMapping("/edit-user")
+    public Collection<User> editUserToDatabase(@RequestBody User userToEdit) throws IOException {
+
+        System.out.println("User: " + userToEdit.getFirstName());
+        User newUser = new User(userToEdit.getEmail(), userToEdit.getFirstName(), userToEdit.getLastName());
         userRepo.save(newUser);
         return (Collection<User>) userRepo.findAll();
     }

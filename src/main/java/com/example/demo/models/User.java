@@ -1,6 +1,7 @@
 package com.example.demo.models;
 
 
+import com.example.demo.models.enums.AccountType;
 import com.example.demo.models.enums.USAState;
 import org.springframework.context.annotation.Bean;
 
@@ -38,6 +39,24 @@ public class User {
 
     private String description;
 
+    private boolean approvedByAdmin;
+    private String careerTitle;
+    private String careerDescription;
+    private String educationDescription;
+    private String careerPathChallenge;
+    private String jobBestDescription;
+    private String jobWorstDescription;
+    private String memorableCareerMoment;
+    private String pastChangeDesc;
+    private String futureChangeDesc;
+
+    private String company;
+    private String university;
+
+    private boolean gameHelpInd;
+    private boolean gameFundingInd;
+    private boolean socialMediaInd;
+    private boolean volunteerInd;
 
 
     public User() {}
@@ -55,7 +74,12 @@ public class User {
     public User(Long id, String role, String email, String password, String firstName, String lastName,
                 LocalDate dateCreated, LocalDate dateUpdate, boolean subscribeToNewsInd, String schoolOrganization,
                 String district, String country, String state, String city, String gradeRange, String schoolType,
-                String numberOfStudents, String percentOfFreeLunches, String description) {
+                String numberOfStudents, String percentOfFreeLunches, String description, boolean approvedByAdmin,
+                String careerTitle, String careerDescription, String educationDescription, String careerPathChallenge,
+                String jobBestDescription, String jobWorstDescription, String memorableCareerMoment, String pastChangeDesc,
+                String futureChangeDesc, String company, String university, boolean gameHelpInd, boolean gameFundingInd,
+                boolean socialMediaInd, boolean volunteerInd) {
+
         this.id = id;
         this.role = role;
         this.email = email;
@@ -65,6 +89,8 @@ public class User {
         this.dateCreated = dateCreated;
         this.dateUpdate = dateUpdate;
         this.subscribeToNewsInd = subscribeToNewsInd;
+
+        //teacher attributes
         this.schoolOrganization = schoolOrganization;
         this.district = district;
         this.country = country;
@@ -75,6 +101,28 @@ public class User {
         this.numberOfStudents = numberOfStudents;
         this.percentOfFreeLunches = percentOfFreeLunches;
         this.description = description;
+
+        //career attributes
+        this.approvedByAdmin = approvedByAdmin;
+        this.careerTitle = careerTitle;
+        this.careerDescription = careerDescription;
+        this.educationDescription = educationDescription;
+        this.careerPathChallenge = careerPathChallenge;
+        this.jobBestDescription = jobBestDescription;
+        this.jobWorstDescription = jobWorstDescription;
+        this.memorableCareerMoment = memorableCareerMoment;
+        this.pastChangeDesc = pastChangeDesc;
+        this.futureChangeDesc = futureChangeDesc;
+        this.company = company;
+        this.university = university;
+
+        //Edheads support atrributes
+        this.gameHelpInd = gameHelpInd;
+        this.gameFundingInd = gameFundingInd;
+        this.socialMediaInd = socialMediaInd;
+        this.volunteerInd = volunteerInd;
+
+
     }
 
     public Long getId() {
@@ -227,4 +275,131 @@ public class User {
         this.description = description;
     }
 
+    public boolean isApprovedByAdmin() {
+        return approvedByAdmin;
+    }
+
+    public void setApprovedByAdmin(boolean approvedByAdmin) {
+        this.approvedByAdmin = approvedByAdmin;
+    }
+
+    public String getCareerTitle() {
+        return careerTitle;
+    }
+
+    public void setCareerTitle(String careerTitle) {
+        this.careerTitle = careerTitle;
+    }
+
+    public String getCareerDescription() {
+        return careerDescription;
+    }
+
+    public void setCareerDescription(String careerDescription) {
+        this.careerDescription = careerDescription;
+    }
+
+    public String getEducationDescription() {
+        return educationDescription;
+    }
+
+    public void setEducationDescription(String educationDescription) {
+        this.educationDescription = educationDescription;
+    }
+
+    public String getCareerPathChallenge() {
+        return careerPathChallenge;
+    }
+
+    public void setCareerPathChallenge(String careerPathChallenge) {
+        this.careerPathChallenge = careerPathChallenge;
+    }
+
+    public String getJobBestDescription() {
+        return jobBestDescription;
+    }
+
+    public void setJobBestDescription(String jobBestDescription) {
+        this.jobBestDescription = jobBestDescription;
+    }
+
+    public String getJobWorstDescription() {
+        return jobWorstDescription;
+    }
+
+    public void setJobWorstDescription(String jobWorstDescription) {
+        this.jobWorstDescription = jobWorstDescription;
+    }
+
+    public String getMemorableCareerMoment() {
+        return memorableCareerMoment;
+    }
+
+    public void setMemorableCareerMoment(String memorableCareerMoment) {
+        this.memorableCareerMoment = memorableCareerMoment;
+    }
+
+    public String getPastChangeDesc() {
+        return pastChangeDesc;
+    }
+
+    public void setPastChangeDesc(String pastChangeDesc) {
+        this.pastChangeDesc = pastChangeDesc;
+    }
+
+    public String getFutureChangeDesc() {
+        return futureChangeDesc;
+    }
+
+    public void setFutureChangeDesc(String futureChangeDesc) {
+        this.futureChangeDesc = futureChangeDesc;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(String university) {
+        this.university = university;
+    }
+
+    public boolean isGameHelpInd() {
+        return gameHelpInd;
+    }
+
+    public void setGameHelpInd(boolean gameHelpInd) {
+        this.gameHelpInd = gameHelpInd;
+    }
+
+    public boolean isGameFundingInd() {
+        return gameFundingInd;
+    }
+
+    public void setGameFundingInd(boolean gameFundingInd) {
+        this.gameFundingInd = gameFundingInd;
+    }
+
+    public boolean isSocialMediaInd() {
+        return socialMediaInd;
+    }
+
+    public void setSocialMediaInd(boolean socialMediaInd) {
+        this.socialMediaInd = socialMediaInd;
+    }
+
+    public boolean isVolunteerInd() {
+        return volunteerInd;
+    }
+
+    public void setVolunteerInd(boolean volunteerInd) {
+        this.volunteerInd = volunteerInd;
+    }
 }

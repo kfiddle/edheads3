@@ -34,6 +34,18 @@ public class BasicsController {
         return "signup_form";
     }
 
+    @RequestMapping("/career_signup")
+    public String showCareerRegistrationForm(Model model) {
+        model.addAttribute("user", new User());
+        return "career_signup";
+    }
+
+    @RequestMapping("/teacher_signup")
+    public String showTeacherRegistrationForm(Model model) {
+        model.addAttribute("user", new User());
+        return "teacher_signup";
+    }
+
     @RequestMapping("/register_success")
     public String showSuccessfulRegistrationForm() {
         return "register_success";
@@ -51,6 +63,15 @@ public class BasicsController {
 //        userRepo.save(user);
 //        return "redirect:register_success";
 //    }
+
+    @PostMapping("/navigate_register")
+    public String navigateRegister(@RequestParam("role") String role) {
+        if(role.equalsIgnoreCase("Teacher")) {
+            return "redirect:teacher_signup";
+        } else {
+            return "redirect:career_signup";
+        }
+    }
 
     @PostMapping("/process_register")
     public String processRegister(@ModelAttribute User incomingUser) {
@@ -76,6 +97,7 @@ public class BasicsController {
         userToAdd.setNumberOfStudents(incomingUser.getNumberOfStudents());
         userToAdd.setPercentOfFreeLunches(incomingUser.getPercentOfFreeLunches());
         userToAdd.setDescription(incomingUser.getDescription());
+
 
         userToAdd.setDateCreated(LocalDate.now());
         userToAdd.setDateUpdate(LocalDate.now());

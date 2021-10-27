@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/basicPage.css">
+    <link rel="stylesheet" href="/css/form.css">
+
+<!--    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />-->
+<!--    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>-->
+<!--    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>-->
+</head>
+<body>
+<section id="basicPageContainer">
+    <div class="signUpContainer">
+        <div class="basicPageMain">
+
+            <div class="closeForm"><a href="/welcome">X</a></div>
+
+            <div class="signUpPageContent">
+                <div class="container text-center">
+
+                    <div>
+                        <h1 class="signUpTitle">Welcome to Edheads!</h1>
+                    </div>
+
+                    <form th:action="@{/process_register}" th:object="${user}"
+                          method="post">
+                        <div class="m-3">
+                            <h2 class="createAccountTitle">Create Your Account</h2>
+                        </div>
+
+                            <div class="accountRowOne">
+                                <div class="firstName">
+                                    <input type="text" placeholder="First Name"   th:field="*{firstName}"
+                                           class="form-control"
+                                           required minlength="1" maxlength="20" />
+                                </div>
+
+                                <div class="lastName">
+                                    <input type="text" placeholder="Last Name"  th:field="*{lastName}"
+                                           class="form-control"
+                                           required minlength="1" maxlength="20" />
+                                </div>
+                            </div>
+
+                            <div class="accountRowTwo">
+                                <div class="email">
+                                        <input type="email" placeholder="Email"  th:field="*{email}"
+                                               class="form-control" required />
+                                </div>
+
+                                <div class="password">
+                                        <input type="password" placeholder="Choose a password"
+                                               th:field="*{password}" class="form-control"
+                                               required minlength="6" maxlength="20" />
+                                </div>
+                            </div>
+
+
+                            <h2 class="createAccountTitle">Please tell us more about yourself.</h2>
+
+                            <div class="questionsRowOne">
+                                <div class="formLabel">
+                                    <label>I am a... </label>
+                                </div>
+                                <div class="dropdown">
+                                        <select type="text" name="role" th:field="*{role}" class="form-control" required>
+                                            <option selected="selected" value="Professional">STEM Professional</option>
+                                        </select>
+                                </div>
+                            </div>
+
+
+                                <div class="careerTitle">
+                                        <textarea type="text" placeholder="What is your job title? (generic preferred)"
+                                               th:field="*{careerTitle}" class="form-control" required></textarea>
+                                </div>
+
+                                <div class="careerDescription">
+                                    <textarea type="text" placeholder="Please provide summary of your research or job. What is an average day like or duties performed?"
+                                           th:field="*{careerDescription}" class="form-control" required></textarea>
+                                </div>
+
+                                <div class="educationDescription">
+                                    <textarea type="text" placeholder="What is your education background and what prompted you to go in this career direction?"
+                                           th:field="*{educationDescription}" class="form-control" required></textarea>
+                                </div>
+
+                                <div class="careerPathChallenge">
+                                    <textarea type="text" placeholder="What have you struggled with or overcome in your educational or life path to your current job?"
+                                           th:field="*{careerPathChallenge}" class="form-control" required></textarea>
+                                </div>
+
+                                <div class="jobBestDescription">
+                                    <textarea type="text" placeholder="What is the best part of your research/job?"
+                                           th:field="*{jobBestDescription}" class="form-control" required></textarea>
+                                </div>
+
+                                <div class="jobWorstDescription">
+                                    <textarea type="text" placeholder="What is the most challenging/difficult part of your research/job? (please make sure it is related to the actual job function and not the workplace)"
+                                           th:field="*{jobWorstDescription}" class="form-control" required></textarea>
+                                </div>
+
+                                <div class="memorableCareerMoment">
+                                    <textarea type="text" placeholder="What is the most exciting job/research related thing that ever happened to you?"
+                                           th:field="*{memorableCareerMoment}" class="form-control" required></textarea>
+                                </div>
+
+                                <div class="pastChangeDesc">
+                                    <textarea type="text" placeholder="What has changed about your profession in the past ten years?"
+                                           th:field="*{pastChangeDesc}" class="form-control" required></textarea>
+                                </div>
+
+                                <div class="futureChangeDesc">
+                                    <textarea type="text" placeholder="What do you think will change in the next 10 years?"
+                                           th:field="*{futureChangeDesc}" class="form-control" required></textarea>
+                                </div>
+
+
+
+                        <div class="questionsRowThree">
+                            <div class="city">
+                                    <input type="text" placeholder="City" th:field="*{city}"
+                                           class="form-control"/>
+                            </div>
+
+                            <div class="state">
+                                <input type="text" placeholder="State" th:field="*{state}"
+                                       class="form-control"/>
+                            </div>
+
+
+                        </div>
+
+
+
+                            <div class="buttonContainer">
+                                <button type="submit" class="signUpButton">Sign Up</button>
+                                <div class="logInLink">Already a member?
+                                    <a href="/login">
+                                    Log In </a> </div>
+                            </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
