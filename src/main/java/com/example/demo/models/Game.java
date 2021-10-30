@@ -13,43 +13,46 @@ public class Game {
     @GeneratedValue
     private Long id;
 
-    private String title;
+    private String gameTitle;
     private String gameDescription;
-    private GradeRange targetGradeRange;
+    private String targetGradeRange;
     private String gameLink;
-    private String guideLink;
-    private String quizLink;
+    private String gameGuideLink;
+    private String gameQuizLink;
+    private String gameImage;
 
     public Game() {
     }
 
-    public Game(String title, String gameLink) {
-        this.title = title;
-        this.gameLink = gameLink;
+    public Game(String gameTitle, String targetGradeRange, String gameDescription) {
+        this.gameTitle = gameTitle;
+        this.targetGradeRange = targetGradeRange;
+        this.gameDescription = gameDescription;
     }
 
-    public Game(String title, String gameDescription, GradeRange targetGradeRange, String gameLink, String guideLink, String quizLink) {
-        this.title = title;
+    public Game(String gameTitle, String gameDescription, String targetGradeRange, String gameLink, String gameGuideLink, String gameQuizLink, String gameImage) {
+        this.gameTitle = gameTitle;
         this.gameDescription = gameDescription;
         this.targetGradeRange = targetGradeRange;
         this.gameLink = gameLink;
-        this.guideLink = guideLink;
-        this.quizLink = quizLink;
+        this.gameGuideLink = gameGuideLink;
+        this.gameQuizLink = gameQuizLink;
+        this.gameImage = gameImage;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getGameTitle() {
+        return gameTitle;
     }
 
     public String getGameDescription() {
         return gameDescription;
     }
 
-    public GradeRange getTargetGradeRange() {
+    public String getTargetGradeRange() {
         return targetGradeRange;
     }
 
@@ -57,11 +60,47 @@ public class Game {
         return gameLink;
     }
 
-    public String getGuideLink() {
-        return guideLink;
+    public String getGameGuideLink() {
+        return gameGuideLink;
     }
 
-    public String getQuizLink() {
-        return quizLink;
+    public String getGameQuizLink() {
+        return gameQuizLink;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setGameTitle(String gameTitle) {
+        this.gameTitle = gameTitle;
+    }
+
+    public void setGameDescription(String gameDescription) {
+        this.gameDescription = gameDescription;
+    }
+
+    public void setTargetGradeRange(String targetGradeRange) {
+        this.targetGradeRange = targetGradeRange;
+    }
+
+    public void setGameLink(String gameLink) {
+        this.gameLink = gameLink;
+    }
+
+    public void setGameGuideLink(String gameGuideLink) {
+        this.gameGuideLink = gameGuideLink;
+    }
+
+    public void setGameQuizLink(String gameQuizLink) {
+        this.gameQuizLink = gameQuizLink;
+    }
+
+    public String getGameImage() {
+        return gameImage;
+    }
+
+    public void setGameImage(String gameImage) {
+        this.gameImage = gameImage;
     }
 }
