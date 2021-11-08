@@ -1,13 +1,16 @@
 package com.example.demo.controllers;
 
 
+import com.example.demo.models.Game;
 import com.example.demo.models.User;
 import com.example.demo.repositories.UserRepository;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.io.IOException;
@@ -23,6 +26,14 @@ public class UsersRestController {
 //    public Collection<User> getAllUsersList() {
 //        return (Collection<User>) userRepo.findAll();
 //    }
+
+    @RequestMapping(value="/stemprofessionals")
+    public ModelAndView getAllGames(Model model) {
+        Collection<User> professionals = (Collection<User>)userRepo.findAll();
+        ModelAndView mv = new ModelAndView("careers/careers-index");//setting view name here
+        mv.addObject("careers", professionals);
+        return mv;
+    }
 
     @PostMapping("/add-user")
     public Collection<User> addUserToDatabase(@RequestBody User userToAdd) throws IOException {

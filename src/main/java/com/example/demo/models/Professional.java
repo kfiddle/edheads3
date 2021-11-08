@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Entity
 public class Professional extends User {
 
-    private boolean approvedByAdmin;
+    private boolean approvedByAdmin = false;
     private String careerTitle;
     private String careerDescription;
     private String educationDescription;
