@@ -26,3 +26,32 @@ a{
     color: #4a86c2;
     text-decoration: none;
 }
+.addButton{
+    background-color: #4a86c2;
+    border: none;
+    border-radius: .75rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 1rem 3rem;
+}
+
+.editButton{
+    background-color: #f5c71a;
+    border: none;
+    border-radius: .75rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 1rem 3rem;
+}
+
+.deleteButton{
+    background-color: #f08080;
+    border: none;
+    border-radius: .75rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 1rem 3rem;
+}

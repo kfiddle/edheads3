@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/css/allGamesView.css">
 
 
-    <script src="components/footer.js" type="text/javascript" defer></script></head>
+    <script src="/components/footer.js" type="text/javascript" defer></script></head>
 
 <body>
 <div class="stickyHeader">
@@ -60,8 +60,17 @@
 
             <div class="gamesPageContentContainer">
 
+                        <div th:if="'Admin' == ${role}">
+                            <h2>Admin-view Only</h2>
+                            <div class="buttonContainer">
+                                <a href="/games/new">
+                                    <button type="submit" class="addButton">+ Add New Game</button>
+                                </a>
+                            </div>
+                        </div>
+
                 <div th:each="game: ${games}" class="tileContent">
-                    <a th:href="@{/{link}(link=${game.gameLink})}">
+                    <a th:href="@{/games/{link}(link=${game.gameLink})}">
                         <img th:src="@{/assets/{img}(img=${game.gameImage})}" th:alt="${game.gameTitle}" class="gameImg">
                     </a>
                     <div class="gameText">

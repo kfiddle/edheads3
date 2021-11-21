@@ -11,4 +11,10 @@ import javax.transaction.Transactional;
 public interface UserRepository extends CrudRepository<User, Long> {
 
     User findByEmail(String email);
+
+    Object findById(String id);
+
+    Object findByRole(String role);
+
+    Object findByApprovedByAdminTrue();
 }

@@ -30,22 +30,22 @@ public class GameService {
         return game;
     }
 
-//    public Game findByTitle(String title) {
-//
-//        var game = gameRepository.findByTitleIn(title);
-//
-//        return game;
-//    }
+    public Game findByGameLink(String gameLink) {
 
+        var game = gameRepository.findByGameLink(gameLink);
 
+        return game;
+    }
 
     public Long count() {
-
         return gameRepository.count();
     }
 
-    public void deleteById(Long gameId) {
+    public void saveGame(Game game) {
+        gameRepository.save(game);
+    }
 
+    public void deleteById(Long gameId) {
         gameRepository.deleteById(gameId);
     }
 

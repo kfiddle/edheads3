@@ -30,15 +30,18 @@
                         <div class="accountRowTwo">
                             <div class="userName">
                                 <div class="formLabel"><label>
-                                    <input type="text" placeholder="userName" name="username" class="form-control">
+                                    <input type="text" placeholder="userName" name="username" class="form-control" required>
                                 </label></div>
                             </div>
 
                             <div class="password">
-                                <div class="formLabel"> <label>
-                                    <input type="text" placeholder="password"
-                                           name="password" class="form-control">
-                                </label></div>
+                                <div class="formLabel">
+                                    <label>
+                                        <input id="login" type="password" placeholder="password"
+                                           name="password" class="form-control" required>
+                                    </label>
+                                    <input type="checkbox" onclick="showPassword()"> Show Password
+                                </div>
                             </div>
                         </div>
 
@@ -53,7 +56,10 @@
                     </form>
                 </div>
             </div>
-
+        </div>
+    </div>
 </section>
+
+<script type="text/javascript" src="/js/modal.js"></script>
 </body>
 </html>

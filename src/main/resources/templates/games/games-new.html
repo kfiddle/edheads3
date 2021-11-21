@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="/css/basicPage.css">
     <link rel="stylesheet" href="/css/form.css">
 
-    <!--    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />-->
-    <!--    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>-->
-    <!--    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>-->
 </head>
 <body>
 <section id="basicPageContainer">
@@ -48,6 +45,18 @@
                         <div class="gameDescription">
                                     <textarea type="text" placeholder="Game Description"
                                               th:field="*{gameDescription}" class="form-control" required></textarea>
+                        </div>
+
+                        <div class="gameLink">
+                            <input type="text"  placeholder="Unique identifier with no spaces (ex: simple-machines)" th:field="*{gameLink}"
+                                   class="form-control"
+                                   required minlength="1" maxlength="50" />
+                        </div>
+
+                        <div class="launchLink">
+                            <input type="text" placeholder="Link to launch game"  th:field="*{launchLink}"
+                                   class="form-control"
+                                   required minlength="1" maxlength="50" />
                         </div>
 
                         <div class="buttonContainer">
