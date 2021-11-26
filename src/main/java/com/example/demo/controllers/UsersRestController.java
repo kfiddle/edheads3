@@ -13,7 +13,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class UsersRestController {
@@ -29,15 +33,22 @@ public class UsersRestController {
     //INDEX (all, admin only)
     @RequestMapping(value="/stem-careers/admin")
     public ModelAndView getAllCareers(Model model) {
-        Collection<User> professionals = (Collection<User>)userRepo.findByRole("Professional");
-        ModelAndView mv = new ModelAndView("careers/careers-admin");//setting view name here
-        mv.addObject("careers", professionals);
-        return mv;
+        String role = getLoggedInUserRole();
+
+        if(role.equalsIgnoreCase("Admin")) {
+            Collection<User> professionals = (Collection<User>) userRepo.findAllByRoleOrderByDateCreated("Professional");
+            ModelAndView mv = new ModelAndView("careers/careers-admin");//setting view name here
+            mv.addObject("careers", professionals);
+            return mv;
+        } else {
+            ModelAndView mv = new ModelAndView("login");
+            return mv;
+        }
     }
 
-    //INDEX (filter approvedByAdmin, return by keyword)
+    //INDEX (filter approvedByAdmin)
     @RequestMapping(value="/stem-careers/list")
-    public ModelAndView getAllApprovedCareers(Model model) {
+    public ModelAndView getAllApprovedCareers() {
         Collection<User> professionals = (Collection<User>)userRepo.findByApprovedByAdminTrue();
         ModelAndView mv = new ModelAndView("careers/careers-index");//setting view name here
         mv.addObject("careers", professionals);
@@ -45,84 +56,131 @@ public class UsersRestController {
     }
 
     //INDEX (filter approvedByAdmin, return by keyword)
+    @RequestMapping(value="/stem-careers/tags")
+    public String getKeywordsPage() {
+        return "keywords";
+    }
+
+    //INDEX (filter approvedByAdmin, return by keyword)
     @RequestMapping(value="/stem-careers/tags/{tag}")
-    public ModelAndView getAllApprovedCareersByKeyword(Model model) {
+    public ModelAndView getAllApprovedCareersByKeyword(@PathVariable("tag") String keyword) {
         Collection<User> professionals = (Collection<User>)userRepo.findByApprovedByAdminTrue();
-        ModelAndView mv = new ModelAndView("careers/careers-keyword");//setting view name hereadmin
-        mv.addObject("careers", professionals);
+        List<User> matchingPros = new ArrayList<>();
+        for(User pro : professionals) {
+            System.out.println("***********************************************");
+            System.out.println(pro.getKeywords());
+            System.out.println(keyword);
+            if(pro.getKeywords().contains(keyword)) {
+                System.out.println("made it into if^^^^^^^^^^^^^^^^^^^^^^");
+                matchingPros.add(pro);
+                System.out.println(pro.toString());
+            }
+        }
+        ModelAndView mv = new ModelAndView("careers/careers-keyword");
+        mv.addObject("careers", matchingPros);
         return mv;
     }
 
-    @PostMapping("/add-user")
-    public Collection<User> addUserToDatabase(@RequestBody User userToAdd) throws IOException {
-
-        System.out.println("User: " + userToAdd.getFirstName());
-        User newUser = new User(userToAdd.getEmail(), userToAdd.getFirstName(), userToAdd.getLastName());
-        userRepo.save(newUser);
-        return (Collection<User>) userRepo.findAll();
-    }
+//    @PostMapping("/add-user")
+//    public Collection<User> addUserToDatabase(@RequestBody User userToAdd) throws IOException {
+//        User newUser = new User(userToAdd.getEmail(), userToAdd.getFirstName(), userToAdd.getLastName());
+//        userRepo.save(newUser);
+//        return (Collection<User>) userRepo.findAll();
+//    }
 
     //SHOW (id)
-    @RequestMapping(value="/stem-careers/{id}")
-    public ModelAndView getUserById(@PathVariable String id) {
-        String role = getLoggedInUserRole();
-
-        User user = (User)userRepo.findById(id);
-        ModelAndView mv = new ModelAndView("careers/careers-show");
-        mv.addObject("user ", user);
-        mv.addObject("role", role);
-        return mv;
-    }
+//    @RequestMapping(value="/stem-careers/{id}")
+//    public ModelAndView getUserById(@PathVariable("id") Long id) {
+//        String role = getLoggedInUserRole();
+//
+//        Optional<User> user = (Optional<User>)userRepo.findById(id);
+//        ModelAndView mv = new ModelAndView("careers/careers-show");
+//        mv.addObject("user ", user);
+//        mv.addObject("role", role);
+//        return mv;
+//    }
 
     //EDIT (form)
     @RequestMapping("/stem-careers/{id}/edit")
-    public ModelAndView showEditGameForm(@PathVariable String id) {
+    public ModelAndView showEditGameForm(@PathVariable("id") Long id) {
         String role = getLoggedInUserRole();
 
-        User user = (User)userRepo.findById(id);
+        Optional<User> user = (Optional<User>)userRepo.findById(id);
         ModelAndView mv = new ModelAndView("careers/careers-edit");
         mv.addObject("user", user);
         mv.addObject("role", role);
         return mv;
     }
 
-    //EDIT (form)
-    @RequestMapping("/stem-careers/{id}/approve")
-    public String approveCareer(@PathVariable String id) {
+    //EDIT (approve only)
+    @PostMapping("/stem-careers/{id}/approve")
+    public String approveCareer(@PathVariable("id") Long id) {
         String role = getLoggedInUserRole();
 
-        User user = (User)userRepo.findById(id);
-        user.setApprovedByAdmin(true);
-        userRepo.save(user);
-        return "careers/careers-admin";
+        if(role.equalsIgnoreCase("Admin")) {
+            Optional<User> user = (Optional<User>) userRepo.findById(id);
+            user.ifPresent(founduser -> {
+                        founduser.setApprovedByAdmin(true);
+                        userRepo.save(founduser);
+                    }
+            );
+            return "redirect:/stem-careers/admin";
+        } else {
+            return "redirect:login";
+        }
     }
 
-    //EDIT (form)
-    @RequestMapping("/stem-careers/{id}/disable")
-    public String disableCareer(@PathVariable String id) {
+    //EDIT (disable only)
+    @PostMapping("/stem-careers/{id}/disable")
+    public String disableCareer(@PathVariable("id") Long id) {
         String role = getLoggedInUserRole();
 
-        User user = (User)userRepo.findById(id);
-        user.setApprovedByAdmin(false);
-        return "careers/careers-admin";
+        if(role.equalsIgnoreCase("Admin")) {
+            Optional<User> user = (Optional<User>) userRepo.findById(id);
+            user.ifPresent(founduser -> {
+                        founduser.setApprovedByAdmin(false);
+                        userRepo.save(founduser);
+                    }
+            );
+            return "redirect:/stem-careers/admin";
+        } else {
+            return "redirect:login";
+        }
     }
 
-    @PostMapping("/edit-user")
-    public Collection<User> editUserToDatabase(@RequestBody User userToEdit) throws IOException {
+    //EDIT (submit)
+    @PostMapping("/stem-careers/edit")
+    public String editCareerToDatabase(@ModelAttribute("user") User userToEdit) throws IOException {
+        String role = getLoggedInUserRole();
 
-        System.out.println("User: " + userToEdit.getFirstName());
-        User newUser = new User(userToEdit.getEmail(), userToEdit.getFirstName(), userToEdit.getLastName());
-        userRepo.save(newUser);
-        return (Collection<User>) userRepo.findAll();
+        if(role.equalsIgnoreCase("Admin")) {
+            Optional<User> user = (Optional<User>) userRepo.findById(userToEdit.getId());
+            user.ifPresent(founduser -> {
+                        userToEdit.setPassword(founduser.getPassword()); //do not clear from database
+                        userToEdit.setProfileImage(founduser.getProfileImage()); //do not clear from database
+                        userToEdit.setDateUpdate(LocalDate.now());
+                        userRepo.save(userToEdit);
+                    }
+            );
+            return "redirect:/stem-careers/admin";
+        } else {
+            return "redirect:login";
+        }
     }
 
     @PostMapping("/delete-user")
-    public Collection<User> deleteUserFromDatabase(@RequestBody User userToDelete) throws IOException {
+    public String deleteUserFromDatabase(@ModelAttribute("user") User userToDelete) throws IOException {
 
-        if (userRepo.existsById(userToDelete.getId())) {
-            userRepo.deleteById(userToDelete.getId());
+        String role = getLoggedInUserRole();
+
+        if(role.equalsIgnoreCase("Admin")) {
+            if (userRepo.existsById(userToDelete.getId())) {
+                userRepo.deleteById(userToDelete.getId());
+            }
+            return "redirect:/stem-careers/admin";
+        } else {
+            return "redirect:login";
         }
-        return (Collection<User>) userRepo.findAll();
     }
 
     public String getLoggedInUserRole() {

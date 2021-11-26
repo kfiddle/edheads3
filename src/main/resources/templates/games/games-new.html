@@ -23,7 +23,9 @@
                     </div>
 
                     <form th:action="@{/games}" th:object="${game}"
-                          method="post">
+                          method="post"
+                          enctype="multipart/form-data">
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
                         <div class="m-3">
                             <h2 class="createAccountTitle">Add Game Details</h2>
                         </div>
@@ -57,6 +59,14 @@
                             <input type="text" placeholder="Link to launch game"  th:field="*{launchLink}"
                                    class="form-control"
                                    required minlength="1" maxlength="50" />
+                        </div>
+                        <div class="gameImage">
+                            <label path="gameImage">Please upload the primary image for this game.</label>
+                            <input type="file" name="gameImage">
+                        </div>
+                        <div class="playImage">
+                            <label path="playImage">Please upload the "play" image for this game.</label>
+                            <input type="file" name="playImage">
                         </div>
 
                         <div class="buttonContainer">

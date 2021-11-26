@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 
 @Entity
@@ -46,9 +47,14 @@ public class User {
     private String careerPathChallenge;
     private String jobBestDescription;
     private String jobWorstDescription;
+    private String jobExcitingDescription;
     private String memorableCareerMoment;
     private String pastChangeDesc;
     private String futureChangeDesc;
+
+    private String profileImage;
+    private ArrayList<String> careerImages;
+    private String keywords;
 
     private String company;
     private String university;
@@ -76,9 +82,9 @@ public class User {
                 String district, String country, String state, String city, String gradeRange, String schoolType,
                 String numberOfStudents, String percentOfFreeLunches, String description, boolean approvedByAdmin,
                 String careerTitle, String careerDescription, String educationDescription, String careerPathChallenge,
-                String jobBestDescription, String jobWorstDescription, String memorableCareerMoment, String pastChangeDesc,
+                String jobBestDescription, String jobWorstDescription, String jobExcitingDescription, String memorableCareerMoment, String pastChangeDesc,
                 String futureChangeDesc, String company, String university, boolean gameHelpInd, boolean gameFundingInd,
-                boolean socialMediaInd, boolean volunteerInd) {
+                boolean socialMediaInd, boolean volunteerInd, String profileImage) {
 
         this.id = id;
         this.role = role;
@@ -110,9 +116,14 @@ public class User {
         this.careerPathChallenge = careerPathChallenge;
         this.jobBestDescription = jobBestDescription;
         this.jobWorstDescription = jobWorstDescription;
+        this.jobExcitingDescription = jobExcitingDescription;
         this.memorableCareerMoment = memorableCareerMoment;
         this.pastChangeDesc = pastChangeDesc;
         this.futureChangeDesc = futureChangeDesc;
+        this.profileImage = profileImage;
+//        this.careerImages = careerImages;
+        this.keywords = keywords;
+
         this.company = company;
         this.university = university;
 
@@ -331,6 +342,14 @@ public class User {
         this.jobWorstDescription = jobWorstDescription;
     }
 
+    public String getJobExcitingDescription() {
+        return jobExcitingDescription;
+    }
+
+    public void setJobExcitingDescription(String jobExcitingDescription) {
+        this.jobExcitingDescription = jobExcitingDescription;
+    }
+
     public String getMemorableCareerMoment() {
         return memorableCareerMoment;
     }
@@ -401,5 +420,29 @@ public class User {
 
     public void setVolunteerInd(boolean volunteerInd) {
         this.volunteerInd = volunteerInd;
+    }
+
+    public String getProfileImage() {
+        return profileImage;
+    }
+
+    public void setProfileImage(String profileImage) {
+        this.profileImage = profileImage;
+    }
+
+    public ArrayList<String> getCareerImages() {
+        return careerImages;
+    }
+
+    public void setCareerImages(ArrayList<String> careerImages) {
+        this.careerImages = careerImages;
+    }
+
+    public String getKeywords() {
+        return keywords;
+    }
+
+    public void setKeywords(String keywords) {
+        this.keywords = keywords;
     }
 }

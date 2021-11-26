@@ -6,14 +6,22 @@ import com.example.demo.repositories.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 
 
 @Controller
 public class BasicsController {
+
+    public static String uploadDirectory = System.getProperty("user.dir")+"/src/main/resources/static/uploads/users";
 
     @Resource
     UserRepository userRepo;
@@ -74,7 +82,7 @@ public class BasicsController {
     }
 
     @PostMapping("/process_register")
-    public String processRegister(@ModelAttribute User incomingUser) {
+    public String processRegister(@ModelAttribute User incomingUser, @RequestParam("file") MultipartFile profileImage) {
 
         User userToAdd = new User(incomingUser.getEmail());
 
@@ -98,13 +106,79 @@ public class BasicsController {
         userToAdd.setPercentOfFreeLunches(incomingUser.getPercentOfFreeLunches());
         userToAdd.setDescription(incomingUser.getDescription());
 
+        userToAdd.setApprovedByAdmin(false);
+        userToAdd.setCareerTitle(incomingUser.getCareerTitle());
+        userToAdd.setCareerDescription(incomingUser.getCareerDescription());
+        userToAdd.setEducationDescription(incomingUser.getEducationDescription());
+        userToAdd.setCareerPathChallenge(incomingUser.getCareerPathChallenge());
+        userToAdd.setJobBestDescription(incomingUser.getJobBestDescription());
+        userToAdd.setJobWorstDescription(incomingUser.getJobWorstDescription());
+        userToAdd.setJobExcitingDescription(incomingUser.getJobExcitingDescription());
+        userToAdd.setMemorableCareerMoment(incomingUser.getMemorableCareerMoment());
+        userToAdd.setPastChangeDesc(incomingUser.getPastChangeDesc());
+        userToAdd.setFutureChangeDesc(incomingUser.getFutureChangeDesc());
+        userToAdd.setDescription(incomingUser.getDescription());
+        userToAdd.setCompany(incomingUser.getCompany());
+        userToAdd.setUniversity(incomingUser.getUniversity());
+
+        userToAdd.setGameHelpInd(incomingUser.isGameHelpInd());
+        userToAdd.setGameFundingInd(incomingUser.isGameFundingInd());
+        userToAdd.setSocialMediaInd(incomingUser.isSocialMediaInd());
+        userToAdd.setVolunteerInd(incomingUser.isVolunteerInd());
+
+        Path profileImagePath = Paths.get(uploadDirectory, LocalDate.now()+"-"+profileImage.getOriginalFilename());
+        try {
+            Files.write(profileImagePath, profileImage.getBytes());
+            incomingUser.setProfileImage(LocalDate.now()+"-"+profileImage.getOriginalFilename());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        userToAdd.setProfileImage(profileImage.getOriginalFilename());
 
         userToAdd.setDateCreated(LocalDate.now());
         userToAdd.setDateUpdate(LocalDate.now());
         userRepo.save(userToAdd);
 
-        return "redirect:register_success";
+            return "redirect:register_success";
     }
+
+//    @RequestMapping("/career_images")
+//    public String showCareerImagesForm() {
+//        return "career_images";
+//    }
+
+//    @PostMapping("/career_images") //, consumes = { "multipart/form-data" }
+//    public String submitCareerImages(@ModelAttribute User incomingUser,
+//            @RequestParam MultipartFile profileImage, @RequestParam MultipartFile[] careerImages, ModelMap modelMap) {
+//        StringBuilder profileImageString = new StringBuilder();
+//        StringBuilder careerImageString = new StringBuilder();
+//
+//        Path profileImagePath = Paths.get(uploadDirectory, incomingUser.getId() + "-" + profileImage.getOriginalFilename());
+//        try {
+//            Files.write(profileImagePath, profileImage.getBytes());
+//            System.out.println("******************************"+profileImagePath.getFileName().toString());
+//            incomingUser.setProfileImage(profileImagePath.getFileName().toString());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+//        for (MultipartFile image : careerImages) {
+//            Path careerImagesPath = Paths.get(uploadDirectory, incomingUser.getId() + "-" + image.getOriginalFilename());
+//            try {
+//                Files.write(careerImagesPath, image.getBytes());
+//                System.out.println(careerImagesPath.getFileName().toString());
+//                careerImageString.append(file.getOriginalFilename()+" ");
+//                //incomingUser.setProfileImage(careerImagesPath.getFileName().toString());
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//        userRepo.save(incomingUser);
+//        modelMap.addAttribute("profileImage", profileImage);
+//        modelMap.addAttribute("careerImages", careerImages);
+//        return "redirect:register_success";
+//    }
 
     @RequestMapping("/about-us")
     public String displayAboutUsPage() {
@@ -209,7 +283,4 @@ public class BasicsController {
 
         return "newHeader";
     }
-
-
-
 }

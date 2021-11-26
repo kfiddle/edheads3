@@ -4,7 +4,8 @@ import com.example.demo.models.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import javax.transaction.Transactional;
+import java.util.Collection;
+import java.util.Optional;
 
 @Repository
 //@Transactional(readOnly = true)
@@ -12,9 +13,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
     User findByEmail(String email);
 
-    Object findById(String id);
+    Collection<User> findAllByRoleOrderByDateCreated(String role);
 
-    Object findByRole(String role);
-
-    Object findByApprovedByAdminTrue();
+    Collection<User> findByApprovedByAdminTrue();
 }

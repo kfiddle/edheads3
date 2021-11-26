@@ -10,7 +10,6 @@
         gtag('js', new Date());
 
         gtag('config', 'GA_MEASUREMENT_ID');
-
     </script>
     <meta charset="UTF-8">
     <title>Our Games</title>
@@ -37,7 +36,7 @@
                 <img src="/assets/ed_logo.png" alt="Edheads logo" class="logoImg">
             </div>
 
-            <div class=""></div>
+            <div class=""> </div>
 
             <div class="mainNavContainer">
                 <ul class="mainNav">
@@ -64,8 +63,7 @@
             <!--        start professional accordion-->
 
             <div th:each="career : ${careers}">
-                <div th:text="${career.firstName + ' ' + career.lastName + ' - ' + career.careerTitle}"
-                     class="accordion">
+                <div th:text="${career.firstName + ' ' + career.lastName + ' - ' + career.careerTitle}" class="accordion">
                 </div>
                 <div class="accordionContent">
                     <img th:src="@{/uploads/users/{img}(img=${career.profileImage})}" th:alt="${career.lastName}" class="profile">
@@ -75,6 +73,9 @@
                     </p>
                     <p class="pHeadOrange" th:text="${career.university}">
                     </p>
+
+                    <div class="nestedAccordion">Career Description
+                    </div>
                     <div th:if="${career.careerDescription} != null">
                         <div class="nestedAccordion">Career Description
                         </div>

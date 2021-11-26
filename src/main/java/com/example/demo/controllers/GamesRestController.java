@@ -11,11 +11,16 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collection;
 
 
@@ -24,6 +29,8 @@ import java.util.Collection;
 
 @Controller
 public class GamesRestController {
+
+    public static String uploadDirectory = System.getProperty("user.dir")+"/src/main/resources/static/uploads/games";
 
     @Autowired
     private GameService gameService;
@@ -60,6 +67,7 @@ public class GamesRestController {
         return mv;
     }
 
+
     //NEW (form)
     @RequestMapping("/games/new")
     public String showNewGameForm(Model model) {
@@ -88,7 +96,26 @@ public class GamesRestController {
 //    }
 
     @PostMapping("/games")
-    public String addGame(@ModelAttribute("game") Game game) {
+    public String addGame(@ModelAttribute("game") Game game, @RequestParam MultipartFile gameImage, @RequestParam MultipartFile playImage) {
+
+        Path gameImagePath = Paths.get(uploadDirectory, gameImage.getOriginalFilename());
+        try {
+            Files.write(gameImagePath, gameImage.getBytes());
+            System.out.println(gameImagePath.getFileName().toString());
+            game.setGameImage(gameImagePath.getFileName().toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Path playImagePath = Paths.get(uploadDirectory, playImage.getOriginalFilename());
+        try {
+            Files.write(playImagePath, playImage.getBytes());
+            System.out.println(playImagePath.getFileName().toString());
+            game.setPlayImage(playImagePath.getFileName().toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         gameService.saveGame(game);
         return "/games/games-index";
     }

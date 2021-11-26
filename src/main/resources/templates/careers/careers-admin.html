@@ -57,34 +57,32 @@
     <section id="basicPageContainer">
         <div class="titleContainer">
             <h1 class="gamesPageTitle">STEM Professionals</h1>
-
+            <a th:href = "@{/career_signup}" class="addButton">+ Add STEM Professional </a>
             <div class="gamesPageContentContainer">
-                    <a th:href = "@{/career_signup}" class="addButton">+ Add STEM Professional </a>
-
                     <table border="1">
                         <thead>
                             <tr>
                                 <th>
-                                    <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
                                         Professional First Name
-                                    </a>
                                 </th>
                                 <th>
-                                    <a th:href="@{'/page/' + ${currentPage} + '?sortField=lastName&sortDir=' + ${reverseSortDir}}">
                                         Professional Last Name
-                                    </a>
                                 </th>
                                 <th>
-                                    <a th:href="@{'/page/' + ${currentPage} + '?sortField=email&sortDir=' + ${reverseSortDir}}">
                                         Professional Email
-                                    </a>
                                 </th>
                                 <th>
-                                    <a th:href="@{'/page/' + ${currentPage} + '?sortField=approvedByAdmin&sortDir=' + ${reverseSortDir}}">
-                                        Approved by Admin?
-                                    </a>
+                                    Keywords
                                 </th>
-                                <th> Actions </th>
+                                <th>
+                                        Approved by Admin?
+                                </th>
+                                <th> Update </th>
+                                <th> Display on Site </th>
+                                <th> Game Help </th>
+                                <th> Game Funding </th>
+                                <th> Social Media </th>
+                                <th> Volunteer </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -92,42 +90,32 @@
                                 <td th:text="${career.firstName}"></td>
                                 <td th:text="${career.lastName}"></td>
                                 <td th:text="${career.email}"></td>
+                                <td th:text="${career.keywords}"></td>
                                 <td th:text="${career.approvedByAdmin}"></td>
                                 <td>
-                                    <a th:href="@{/stem-careers/{id}/edit(id=${career.id})}" class="editButton">Update</a>
-                                    <div th:if="'false' == ${career.approvedByAdmin}">
-                                        <a th:href="@{/stem-careers/{id}/approve(id=${career.id})}" class="addButton">Approve</a>
+                                    <a th:href="@{/stem-careers/{id}/edit(id=${career.id})}">Update</a>
+                                </td>
+                                <td>
+                                    <div th:if="false == ${career.approvedByAdmin}">
+                                        <form th:action="@{/stem-careers/{id}/approve(id=${career.id})}" th:object="${user}"
+                                              method="post">
+                                            <button type="submit" class="addButton">Approve</button>
+                                        </form>
                                     </div>
-                                    <div th:if="'false' == ${career.approvedByAdmin}">
-                                        <a th:href="@{/stem-careers/{id}/disable(id=${career.id})}" class="deleteButton">Disable</a>
+                                    <div th:if="true == ${career.approvedByAdmin}">
+                                        <form th:action="@{/stem-careers/{id}/disable(id=${career.id})}" th:object="${user}"
+                                              method="post">
+                                            <button type="submit" class="deleteButton">Disable</button>
+                                        </form>
                                     </div>
                                 </td>
+                                <td th:text="${career.gameHelpInd}"></td>
+                                <td th:text="${career.gameFundingInd}"></td>
+                                <td th:text="${career.socialMediaInd}"></td>
+                                <td th:text="${career.volunteerInd}"></td>
                             </tr>
                         </tbody>
                     </table>
-
-                    <div th:if = "${totalPages > 1}">
-                        <div class = "row col-sm-10">
-                            <div class = "col-sm-2">
-                                Total Rows: [[${totalItems}]]
-                            </div>
-                            <div class = "col-sm-1">
-					<span th:each="i: ${#numbers.sequence(1, totalPages)}">
-						<a th:if="${currentPage != i}" th:href="@{'/page/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
-						<span th:unless="${currentPage != i}">[[${i}]]</span>  &nbsp; &nbsp;
-					</span>
-                            </div>
-                            <div class = "col-sm-1">
-                                <a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Next</a>
-                                <span th:unless="${currentPage < totalPages}">Next</span>
-                            </div>
-
-                            <div class="col-sm-1">
-                                <a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Last</a>
-                                <span th:unless="${currentPage < totalPages}">Last</span>
-                            </div>
-                        </div>
-                    </div>
             </div>
         </div>
 

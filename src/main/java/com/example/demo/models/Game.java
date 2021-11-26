@@ -23,6 +23,7 @@ public class Game {
     private String gameGuideLink;
     private String gameQuizLink;
     private String gameImage;
+    private String playImage;
 
     public Game() {
     }
@@ -35,7 +36,8 @@ public class Game {
         this.launchLink = launchLink;
     }
 
-    public Game(String gameTitle, String gameDescription, String targetGradeRange, String gameLink, String launchLink, String gameGuideLink, String gameQuizLink, String gameImage) {
+    public Game(String gameTitle, String gameDescription, String targetGradeRange, String gameLink, String launchLink,
+                String gameGuideLink, String gameQuizLink, String gameImage, String playImage) {
         this.gameTitle = gameTitle;
         this.gameDescription = gameDescription;
         this.targetGradeRange = targetGradeRange;
@@ -44,6 +46,7 @@ public class Game {
         this.gameGuideLink = gameGuideLink;
         this.gameQuizLink = gameQuizLink;
         this.gameImage = gameImage;
+        this.playImage = playImage;
     }
 
     public Long getId() {
@@ -116,5 +119,13 @@ public class Game {
 
     public void setGameImage(String gameImage) {
         this.gameImage = gameImage;
+    }
+
+    public String getPlayImage() {
+        return playImage;
+    }
+
+    public void setPlayImage(String gameImage) {
+        this.playImage = playImage;
     }
 }
