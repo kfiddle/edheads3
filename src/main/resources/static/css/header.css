@@ -89,6 +89,10 @@ header {
     text-decoration: none;
 }
 
+.topNavItem button {
+    border: none;
+}
+
 .topNavItem a:hover{
     font-weight: 900;
 }

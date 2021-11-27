@@ -59,6 +59,19 @@
     width: 100%;
 }
 
+.form-control-readonly{
+    display: inline;
+    border: none;
+    border-radius: .5rem;
+    color: #cbd543;
+    font-family: 'Roboto';
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
+}
+
 .accountRowOne, .accountRowTwo{
     display: grid;
     grid-gap: 1rem;

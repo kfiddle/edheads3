@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
-    <title>Edheads</title>
+    <title>Edheads - STEM Professionals</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/basicPage.css">
     <link rel="stylesheet" href="/css/form.css">
@@ -30,19 +30,15 @@
                             <input type="hidden" th:field="*{city}">
                             <input type="hidden" th:field="*{state}">
                             <input type="hidden" th:field="*{dateCreated}">
-                            <input type="hidden" th:field="*{firstName}">
-                            <input type="hidden" th:field="*{lastName}">
-                            <input type="hidden" th:field="*{email}">
                             <input type="hidden" th:field="*{gameHelpInd}">
                             <input type="hidden" th:field="*{gameFundingInd}">
                             <input type="hidden" th:field="*{socialMediaInd}">
                             <input type="hidden" th:field="*{volunteerInd}">
-                            <div class="approvedByAdmin">
-                                Approved By Admin: <input type="text"  th:field="*{approvedByAdmin}"
-                                       class="form-control"
-                                       required minlength="1" maxlength="50" hidden/>
-                            </div>
+                            <input type="hidden"   th:field="*{approvedByAdmin}">
                         </div>
+
+                            <input  class="form-control-readonly"th:field="*{firstName}" readonly>
+                            <input  class="form-control-readonly" th:field="*{lastName}" readonly>
 
                         <div class="company">
                                         <textarea type="text" placeholder="Company"

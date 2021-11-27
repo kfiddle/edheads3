@@ -67,13 +67,8 @@ public class UsersRestController {
         Collection<User> professionals = (Collection<User>)userRepo.findByApprovedByAdminTrue();
         List<User> matchingPros = new ArrayList<>();
         for(User pro : professionals) {
-            System.out.println("***********************************************");
-            System.out.println(pro.getKeywords());
-            System.out.println(keyword);
             if(pro.getKeywords().contains(keyword)) {
-                System.out.println("made it into if^^^^^^^^^^^^^^^^^^^^^^");
                 matchingPros.add(pro);
-                System.out.println(pro.toString());
             }
         }
         ModelAndView mv = new ModelAndView("careers/careers-keyword");
@@ -153,10 +148,21 @@ public class UsersRestController {
     public String editCareerToDatabase(@ModelAttribute("user") User userToEdit) throws IOException {
         String role = getLoggedInUserRole();
 
+        String keywordString = userToEdit.getKeywords();
+        System.out.println("*********************ORIG:"+keywordString);
+
+        keywordString = keywordString.replaceAll(", ", ",");
+        keywordString = keywordString.replaceAll(" ", "-");
+        keywordString = keywordString.toLowerCase();
+
+
+        //engineering,aerospace,forces,motion
+
         if(role.equalsIgnoreCase("Admin")) {
             Optional<User> user = (Optional<User>) userRepo.findById(userToEdit.getId());
             user.ifPresent(founduser -> {
-                        userToEdit.setPassword(founduser.getPassword()); //do not clear from database
+                userToEdit.setEmail(founduser.getEmail());
+                userToEdit.setPassword(founduser.getPassword()); //do not clear from database
                         userToEdit.setProfileImage(founduser.getProfileImage()); //do not clear from database
                         userToEdit.setDateUpdate(LocalDate.now());
                         userRepo.save(userToEdit);

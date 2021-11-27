@@ -126,14 +126,14 @@ public class BasicsController {
         userToAdd.setSocialMediaInd(incomingUser.isSocialMediaInd());
         userToAdd.setVolunteerInd(incomingUser.isVolunteerInd());
 
-        Path profileImagePath = Paths.get(uploadDirectory, LocalDate.now()+"-"+profileImage.getOriginalFilename());
+        Path profileImagePath = Paths.get(uploadDirectory, profileImage.getOriginalFilename()+"-"+LocalDate.now());
         try {
             Files.write(profileImagePath, profileImage.getBytes());
-            incomingUser.setProfileImage(LocalDate.now()+"-"+profileImage.getOriginalFilename());
+            incomingUser.setProfileImage(profileImage.getOriginalFilename()+"-"+LocalDate.now());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        userToAdd.setProfileImage(profileImage.getOriginalFilename());
+        userToAdd.setProfileImage(profileImage.getOriginalFilename()+"-"+LocalDate.now());
 
         userToAdd.setDateCreated(LocalDate.now());
         userToAdd.setDateUpdate(LocalDate.now());
