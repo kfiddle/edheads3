@@ -25,12 +25,13 @@
                         <h1 class="signUpTitle">Welcome to Edheads!</h1>
                     </div>
 
-                    <form th:action="@{/process_register}" th:object="${user}"
+                    <form th:action="@{/register_professional}" th:object="${user}"
                           method="post"
                           enctype="multipart/form-data">
 
                         <div class="m-3">
                             <h2 class="createAccountTitle">Create Your Account</h2>
+                            <p>Please note: Professional profiles require review by Edheads prior to being available to view on the site.</p>
                         </div>
 
                         <div class="accountRowOne">
@@ -62,9 +63,10 @@
 
 
                         <h2 class="createAccountTitle">Please upload a primary image for your profile.</h2>
+                        <p>*Accepted file formats: .png, .jpeg, .gif</p>
                         <div class="file">
                             <label path="profileImage">Profile image:</label>
-                            <input type="file" name="file">
+                            <input type="file" name="file" accept="image/png, image/gif, image/jpeg">
                         </div>
 
                         <h2 class="createAccountTitle">Please tell us more about yourself.</h2>
@@ -159,12 +161,13 @@
                         </div>
 
                         <h2 class="createAccountTitle">Please upload 3-5 images related to your career or industry.</h2>
+                        <p>*Accepted file formats: .png, .jpeg, .gif</p>
                         <div class="file">
                             <label path="careerImages">For example, any pictures of you doing field work, lab work, or
                                 an interesting activity related to the topic covered in your profile.
                                 Or images of graphs, charts, etc. that support your job/research summary would also be
                                 suitable.</label>
-                            <input type="file" name="files" mutiple>
+                            <input type="file" name="files" mutiple accept="image/png, image/gif, image/jpeg">
                         </div>
 
 
@@ -225,6 +228,7 @@
                             <label for="volunteerNo">No</label>
                         </div>
                         <div class="buttonContainer">
+                            <p>Please note: Professional profiles require review by Edheads prior to being available to view on the site.</p>
                             <button type="submit" class="signUpButton">Sign Up</button>
                             <div class="logInLink">Already a member?
                                 <a href="/login">

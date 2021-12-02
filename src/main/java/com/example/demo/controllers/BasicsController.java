@@ -81,8 +81,8 @@ public class BasicsController {
         }
     }
 
-    @PostMapping("/process_register")
-    public String processRegister(@ModelAttribute User incomingUser, @RequestParam("file") MultipartFile profileImage) {
+    @PostMapping("/register_teacher")
+    public String processRegister(@ModelAttribute User incomingUser) {
 
         User userToAdd = new User(incomingUser.getEmail());
 
@@ -106,6 +106,36 @@ public class BasicsController {
         userToAdd.setPercentOfFreeLunches(incomingUser.getPercentOfFreeLunches());
         userToAdd.setDescription(incomingUser.getDescription());
 
+        userToAdd.setGameHelpInd(incomingUser.isGameHelpInd());
+        userToAdd.setGameFundingInd(incomingUser.isGameFundingInd());
+        userToAdd.setSocialMediaInd(incomingUser.isSocialMediaInd());
+        userToAdd.setVolunteerInd(incomingUser.isVolunteerInd());
+
+        userToAdd.setDateCreated(LocalDate.now());
+        userToAdd.setDateUpdate(LocalDate.now());
+        userRepo.save(userToAdd);
+
+        return "redirect:register_success";
+    }
+
+    @PostMapping("/register_professional")
+    public String processRegister(@ModelAttribute User incomingUser, @RequestParam("file") MultipartFile profileImage) {
+
+        User userToAdd = new User(incomingUser.getEmail());
+
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encodedPassword = passwordEncoder.encode(incomingUser.getPassword());
+        userToAdd.setPassword(encodedPassword);
+
+        userToAdd.setRole(incomingUser.getRole());
+        userToAdd.setFirstName(incomingUser.getFirstName());
+        userToAdd.setLastName(incomingUser.getLastName());
+        userToAdd.setSubscribeToNewsInd(incomingUser.isSubscribeToNewsInd());
+
+        userToAdd.setCountry(incomingUser.getCountry());
+        userToAdd.setState(incomingUser.getState());
+        userToAdd.setCity(incomingUser.getCity());
+
         userToAdd.setApprovedByAdmin(false);
         userToAdd.setCareerTitle(incomingUser.getCareerTitle());
         userToAdd.setCareerDescription(incomingUser.getCareerDescription());
@@ -126,14 +156,14 @@ public class BasicsController {
         userToAdd.setSocialMediaInd(incomingUser.isSocialMediaInd());
         userToAdd.setVolunteerInd(incomingUser.isVolunteerInd());
 
-        Path profileImagePath = Paths.get(uploadDirectory, profileImage.getOriginalFilename()+"-"+LocalDate.now());
+        Path profileImagePath = Paths.get(uploadDirectory, LocalDate.now()+"-" + profileImage.getOriginalFilename());
         try {
             Files.write(profileImagePath, profileImage.getBytes());
-            incomingUser.setProfileImage(profileImage.getOriginalFilename()+"-"+LocalDate.now());
+            incomingUser.setProfileImage(LocalDate.now()+"-" + profileImage.getOriginalFilename());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        userToAdd.setProfileImage(profileImage.getOriginalFilename()+"-"+LocalDate.now());
+        userToAdd.setProfileImage(LocalDate.now()+"-" + profileImage.getOriginalFilename());
 
         userToAdd.setDateCreated(LocalDate.now());
         userToAdd.setDateUpdate(LocalDate.now());
