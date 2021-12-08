@@ -77,6 +77,12 @@ hr{
     padding: 1rem;
 }
 
+.donateCharacter{
+    /*bottom: 0;*/
+    margin-right: 2rem;
+    /*position: fixed;*/
+}
+
 .basicPageContent{
     /*height: 50vh;*/
     line-height: 1.75rem;
@@ -84,7 +90,29 @@ hr{
     overflow: scroll;
     overflow-x: hidden;
     padding: 0rem 1.5rem;
+}
 
+.donate{
+    padding: 0;
+}
+
+.parent {
+    position: relative;
+    height: 200px;
+    border: 3px solid red;
+    display: flex;
+    flex-direction: row;
+}
+
+.absolute {
+    position: absolute;
+    width: 50%;
+    bottom: 10px;
+    border: 3px solid #8AC007;
+}
+
+.donateTitle{
+    margin: 1.5rem 0;
 }
 
 .basicPageContent::-webkit-scrollbar {
