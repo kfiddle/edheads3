@@ -69,8 +69,8 @@ header {
 }
 
 .topNav{
-    display: flex;
-    justify-content: right;
+    position: absolute;
+    right: 30vw;
 }
 
 .topNavItem{
