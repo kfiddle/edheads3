@@ -97,18 +97,18 @@ hr{
 }
 
 .parent {
-    position: relative;
-    height: 200px;
-    border: 3px solid red;
     display: flex;
     flex-direction: row;
+    position: relative;
+}
+
+.donateContent{
+    margin: 0rem 2rem 0rem 18rem;
 }
 
 .absolute {
+    bottom: -8px;
     position: absolute;
-    width: 50%;
-    bottom: 10px;
-    border: 3px solid #8AC007;
 }
 
 .donateTitle{
