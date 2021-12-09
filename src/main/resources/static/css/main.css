@@ -84,3 +84,15 @@ a{
   right: 0px;
   width: 50%;
 }
+.term{
+    column-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.glossaryImg{
+    border: solid .125rem #4a86c2;
+    border-radius: 50%;
+    max-width: 7rem;
+}
