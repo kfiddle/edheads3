@@ -65,6 +65,10 @@ header {
     font-weight: 900;
 }
 
+.topNavItem.active a{
+    font-weight: 900;
+}
+
 .active:after{
     display: none;
 }
