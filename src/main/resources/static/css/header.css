@@ -21,6 +21,7 @@ header {
 }
 
 .logo{
+    margin-top: .75rem;
     position: absolute;
     z-index: 1;
 }
