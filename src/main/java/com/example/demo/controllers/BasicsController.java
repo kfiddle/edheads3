@@ -313,4 +313,10 @@ public class BasicsController {
 
         return "newHeader";
     }
+
+    @RequestMapping("/more-fun-stuff")
+    public String displayMoreFunStuffPage() {
+
+        return "moreFunStuff";
+    }
 }
