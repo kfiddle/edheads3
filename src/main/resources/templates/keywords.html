@@ -46,7 +46,7 @@
                     <li class="mainNavItem" style="margin-left: 1rem;"><a href="/welcome">Welcome</a></li>
                     <li class="mainNavItem"><a href="/about-us">About Us</a></li>
                     <li class="mainNavItem"><a href="/our-games">Our Games</a></li>
-                    <li class="mainNavItem"><a href="/more-fun-stuff">More Fun Stuff!</a></li>
+                    <li class="mainNavItem active"><a href="/more-fun-stuff">More Fun Stuff!</a></li>
                     <li class="mainNavItem"><a href="/get-involved">Get Involved</a></li>
                 </ul>
                 <div class="logoWG">
@@ -58,10 +58,12 @@
 </div>
 <main>
     <section id="basicPageContainer">
+        <div class="basicPageContentContainer">
+            <div class="basicPageMain">
+                <h1>STEM Professions</h1>
+            </div>
         <div class="titleContainer">
-            <h1 class="gamesPageTitle">STEM Professionals - Keywords</h1>
-
-            <div class="gamesPageContentContainer">
+            <div class="keywords">
                 <a th:href = "@{/stem-careers/tags/aerospace}" class="addButton">Aerospace</a>
                 <a th:href = "@{/stem-careers/tags/architecture}" class="addButton">Architecture</a>
                 <a th:href = "@{/stem-careers/tags/business}" class="addButton">Business</a>
@@ -78,6 +80,7 @@
                 <a th:href = "@{/stem-careers/tags/space}" class="addButton">Space</a>
                 <a th:href = "@{/stem-careers/tags/technology-interface}" class="addButton">Technology Interface</a>
             </div>
+        </div>
         </div>
 
     </section>

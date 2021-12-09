@@ -1,6 +1,13 @@
 .titleContainer{
-     width: 80%;
+     width: 100%;
     /*margin-top: 2rem;*/
+}
+
+.keywords{
+    display: grid;
+    gap: 1rem 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin: 3rem 0rem 3rem 0rem;
 }
 
 .gamesPageTitle{
