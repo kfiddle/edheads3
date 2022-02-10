@@ -68,6 +68,11 @@ a{
     border-radius: 1rem;
 }
 
+.singleImage {
+    max-width: 750px;
+    padding: 7.5px
+}
+
 .profileDetails{
     margin-top: 4rem;
 }

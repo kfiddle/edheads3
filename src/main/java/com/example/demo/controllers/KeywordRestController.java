@@ -14,16 +14,15 @@ import java.util.Collection;
 @RestController
 public class KeywordRestController {
 
-
     @Resource
     KeywordRepository keywordRepo;
 
-    @RequestMapping("/fetch-all-keywords")
+    @RequestMapping("/keywords")
     public Collection<Keyword> getAllKeywordsList() {
         return (Collection<Keyword>) keywordRepo.findAll();
     }
 
-    @PostMapping("/add-keyword")
+    @PostMapping("/keywords")
     public Collection<Keyword> addKeywordToDatabase(@RequestBody Keyword keywordToAdd) {
 
         if (!keywordRepo.existsByWord(keywordToAdd.getWord())) {
@@ -32,7 +31,7 @@ public class KeywordRestController {
         return (Collection<Keyword>) keywordRepo.findAll();
     }
 
-    @PostMapping("/delete-keyword")
+    @PostMapping("/keywords/delete")
     public Collection<Keyword> deleteKeywordToDatabase(@RequestBody Keyword keywordToDelete) {
 
         if (keywordRepo.existsById(keywordToDelete.getId())) {

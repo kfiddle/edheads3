@@ -39,11 +39,6 @@ public class GamesRestController {
     GameRepository gameRepo;
 
     //INDEX
-//    @RequestMapping(value="/games")
-//    public Collection<Game> getAllGames(Model model) {
-//        return (Collection<Game>) gameRepo.findAll();
-//    }
-
     @RequestMapping(value="/games")
     public ModelAndView getAllGames(Model model) {
         String role = getLoggedInUserRole();
@@ -79,22 +74,6 @@ public class GamesRestController {
     }
 
     //NEW (submit)
-//    @PostMapping("/games")
-//    public String addGame(@ModelAttribute Game gameToAdd) throws IOException {
-//        String role = getLoggedInUserRole();
-//
-//        Game newGame = new Game(
-//                gameToAdd.getGameTitle(),
-//                gameToAdd.getGameDescription(),
-//                gameToAdd.getTargetGradeRange(),
-//                gameToAdd.getGameLink(),
-//                gameToAdd.getLaunchLink()
-//        );
-//
-//        gameRepo.save(newGame);
-//        return "/games/games-index"; //(Collection<Game>) gameRepo.findAll();
-//    }
-
     @PostMapping("/games")
     public String addGame(@ModelAttribute("game") Game game, @RequestParam MultipartFile gameImage, @RequestParam MultipartFile playImage) {
 
