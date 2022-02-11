@@ -1,43 +1,112 @@
 package com.example.demo.controllers;
 
-
+import com.example.demo.models.CustomUserDetails;
 import com.example.demo.models.Keyword;
 import com.example.demo.repositories.KeywordRepository;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.util.Collection;
 
-@RestController
+@Controller
 public class KeywordRestController {
 
     @Resource
     KeywordRepository keywordRepo;
 
+    //INDEX
     @RequestMapping("/keywords")
-    public Collection<Keyword> getAllKeywordsList() {
-        return (Collection<Keyword>) keywordRepo.findAll();
+    public ModelAndView getAllKeywordsList(Model model) {
+        Collection<Keyword> keywords = (Collection<Keyword>)keywordRepo.findByOrderByDisplayValueAsc();
+        ModelAndView mv = new ModelAndView("careers/careers-keywords");//setting view name here
+        mv.addObject("keywords", keywords);
+        return mv;
     }
 
+    @RequestMapping(value="/stem-careers/tags")
+    public ModelAndView getStemKeywordsPage(Model model) {
+        Collection<Keyword> keywords = (Collection<Keyword>)keywordRepo.findByOrderByDisplayValueAsc();
+        ModelAndView mv = new ModelAndView("keywords");//setting view name here
+        mv.addObject("keywords", keywords);
+        return mv;
+    }
+
+    //NEW (form)
+    @RequestMapping("/keywords/new")
+    public String showNewKeywordForm(Model model) {
+        model.addAttribute("keyword", new Keyword());
+        return "/careers/careers-keyword-add";
+    }
+
+    //NEW (submit)
     @PostMapping("/keywords")
-    public Collection<Keyword> addKeywordToDatabase(@RequestBody Keyword keywordToAdd) {
+    public String addKeywordToDatabase(@ModelAttribute Keyword keyword) {
 
-        if (!keywordRepo.existsByWord(keywordToAdd.getWord())) {
+        Keyword keywordToAdd = new Keyword();
+
+        String keywordString = keyword.getDisplayValue();
+
+        keywordString = keywordString.replaceAll(", ", ",");
+        keywordString = keywordString.replaceAll(" ", "-");
+        keywordString = keywordString.toLowerCase();
+
+        keywordToAdd.setDisplayValue(keyword.getDisplayValue());
+        keywordToAdd.setCodeValue(keywordString);
+
+        String role = getLoggedInUserRole();
+        int privileges = getLoggedInUserPrivileges();
+
+        if(role.equalsIgnoreCase("Admin") || (privileges >= 5)) {
             keywordRepo.save(keywordToAdd);
+            return "redirect:/keywords";
+        } else {
+            return "redirect:/not-allowed";
         }
-        return (Collection<Keyword>) keywordRepo.findAll();
     }
 
-    @PostMapping("/keywords/delete")
-    public Collection<Keyword> deleteKeywordToDatabase(@RequestBody Keyword keywordToDelete) {
+    @PostMapping("/keywords/{id}/delete")
+    public String deleteKeywordToDatabase(@PathVariable("id") Long id) {
 
-        if (keywordRepo.existsById(keywordToDelete.getId())) {
-            keywordRepo.deleteById(keywordToDelete.getId());
+        String role = getLoggedInUserRole();
+        int privileges = getLoggedInUserPrivileges();
+
+        if(role.equalsIgnoreCase("Admin") || (privileges >= 5)) {
+            if (keywordRepo.existsById(id)) {
+                keywordRepo.deleteById(id);
+            }
+            return "redirect:/keywords";
+        } else {
+            return "redirect:/not-allowed";
         }
-        return (Collection<Keyword>) keywordRepo.findAll();
+    }
+
+    /*
+     **********************
+     * HELPER METHODS
+     **********************
+     */
+    public String getLoggedInUserRole() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String role = "";
+        if (principal instanceof CustomUserDetails) {
+            role = ((CustomUserDetails)principal).getRole();
+        } else {
+            role = principal.toString();
+        }
+        return role;
+    }
+
+    public int getLoggedInUserPrivileges() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        int privileges = 1;
+        if (principal instanceof CustomUserDetails) {
+            privileges = ((CustomUserDetails)principal).getPrivileges();
+        }
+        return privileges;
     }
 
 }

@@ -75,22 +75,8 @@
                 <h1>STEM Professions</h1>
             </div>
         <div class="titleContainer">
-            <div class="keywords">
-                <a th:href = "@{/stem-careers/tags/aerospace}" class="addButton">Aerospace</a>
-                <a th:href = "@{/stem-careers/tags/architecture}" class="addButton">Architecture</a>
-                <a th:href = "@{/stem-careers/tags/business}" class="addButton">Business</a>
-                <a th:href = "@{/stem-careers/tags/construction}" class="addButton">Construction</a>
-                <a th:href = "@{/stem-careers/tags/efficiency}" class="addButton">Efficiency</a>
-                <a th:href = "@{/stem-careers/tags/engineering}" class="addButton">Engineering</a>
-                <a th:href = "@{/stem-careers/tags/finance}" class="addButton">Finance</a>
-                <a th:href = "@{/stem-careers/tags/forces}" class="addButton">Forces</a>
-                <a th:href = "@{/stem-careers/tags/information-technology}" class="addButton">Information Technology</a>
-                <a th:href = "@{/stem-careers/tags/modeling}" class="addButton">Modeling</a>
-                <a th:href = "@{/stem-careers/tags/motion}" class="addButton">Motion</a>
-                <a th:href = "@{/stem-careers/tags/programming-and-coding}" class="addButton">Programming and Coding</a>
-                <a th:href = "@{/stem-careers/tags/prototype}" class="addButton">Prototype</a>
-                <a th:href = "@{/stem-careers/tags/space}" class="addButton">Space</a>
-                <a th:href = "@{/stem-careers/tags/technology-interface}" class="addButton">Technology Interface</a>
+            <div th:each="tag : ${keywords}" class="keywords">
+                <a th:href="@{/stem-careers/tags/{word}(word=${tag.codeValue})}" th:text="${tag.displayValue}" class="addButton"></a>
             </div>
         </div>
         </div>

@@ -47,7 +47,7 @@ public class UsersRestController {
             mv.addObject("careers", professionals);
             return mv;
         } else {
-            ModelAndView mv = new ModelAndView("login");
+            ModelAndView mv = new ModelAndView("not-allowed");
             return mv;
         }
     }
@@ -74,12 +74,6 @@ public class UsersRestController {
         ModelAndView mv = new ModelAndView("careers/careers-index");//setting view name here
         mv.addObject("careers", professionals);
         return mv;
-    }
-
-    //INDEX (filter approvedByAdmin, return by keyword)
-    @RequestMapping(value="/stem-careers/tags")
-    public String getKeywordsPage() {
-        return "keywords";
     }
 
     //INDEX (filter approvedByAdmin, return by keyword)
@@ -128,7 +122,7 @@ public class UsersRestController {
             );
             return "redirect:/stem-careers/admin";
         } else {
-            return "redirect:/login";
+            return "redirect:/not-allowed";
         }
     }
 
@@ -147,7 +141,7 @@ public class UsersRestController {
             );
             return "redirect:/stem-careers/admin";
         } else {
-            return "redirect:/login";
+            return "redirect:/not-allowed";
         }
     }
 
@@ -166,7 +160,7 @@ public class UsersRestController {
             );
             return "redirect:/stem-careers/admin";
         } else {
-            return "redirect:/login";
+            return "redirect:/not-allowed";
         }
     }
 
@@ -185,7 +179,7 @@ public class UsersRestController {
             );
             return "redirect:/stem-careers/admin";
         } else {
-            return "redirect:/login";
+            return "redirect:/not-allowed";
         }
     }
 
@@ -248,7 +242,7 @@ public class UsersRestController {
             return "redirect:/user";
 
         } else {
-            return "redirect:/login";
+            return "redirect:/not-allowed";
         }
     }
 
@@ -265,7 +259,7 @@ public class UsersRestController {
             }
             return "redirect:/stem-careers/admin";
         } else {
-            return "redirect:/login";
+            return "redirect:/not-allowed";
         }
     }
 
@@ -298,7 +292,7 @@ public class UsersRestController {
                mv.addObject("profileInd", profileInd);
                return mv;
            } else {
-               return new ModelAndView("login");
+               return new ModelAndView("not-allowed");
            }
         } else if (role.equalsIgnoreCase("Teacher")) {
            if (id != null) {
@@ -307,7 +301,7 @@ public class UsersRestController {
                mv.addObject("user", user);
                return mv;
            } else {
-               return new ModelAndView("login");
+               return new ModelAndView("not-allowed");
            }
        } else if (role.equalsIgnoreCase("Admin")) {
            if (id != null) {
@@ -316,10 +310,10 @@ public class UsersRestController {
                mv.addObject("user", user);
                return mv;
            } else {
-               return new ModelAndView("login");
+               return new ModelAndView("not-allowed");
            }
        } else {
-           return new ModelAndView("login");
+           return new ModelAndView("not-allowed");
        }
 
     }

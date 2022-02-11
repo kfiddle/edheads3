@@ -29,6 +29,11 @@ public class BasicsController {
         return "welcome";
     }
 
+    @RequestMapping("/not-allowed")
+    public String pageViewNotAllowed() {
+        return "not-allowed";
+    }
+
     @RequestMapping("/about-us")
     public String displayAboutUsPage() {
 
