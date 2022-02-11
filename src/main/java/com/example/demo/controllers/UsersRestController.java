@@ -36,6 +36,21 @@ public class UsersRestController {
      */
 
     //INDEX (all, admin only)
+    @RequestMapping(value="/admin")
+    public ModelAndView getAdminDashboard(Model model) {
+        String role = getLoggedInUserRole();
+        int privileges = getLoggedInUserPrivileges();
+
+        if(role.equalsIgnoreCase("Admin") || (privileges >= 5)) {
+            ModelAndView mv = new ModelAndView("admin/admin-dashboard");//setting view name here
+            return mv;
+        } else {
+            ModelAndView mv = new ModelAndView("not-allowed");
+            return mv;
+        }
+    }
+
+    //INDEX (all, admin only)
     @RequestMapping(value="/stem-careers/admin")
     public ModelAndView getAllCareers(Model model) {
         String role = getLoggedInUserRole();
@@ -44,6 +59,23 @@ public class UsersRestController {
         if(role.equalsIgnoreCase("Admin") || (privileges >= 5)) {
             Collection<User> professionals = (Collection<User>) userRepo.findAllByRoleOrderByDateCreated("Professional");
             ModelAndView mv = new ModelAndView("careers/careers-admin");//setting view name here
+            mv.addObject("careers", professionals);
+            return mv;
+        } else {
+            ModelAndView mv = new ModelAndView("not-allowed");
+            return mv;
+        }
+    }
+
+    //INDEX (all, admin only)
+    @RequestMapping(value="/teachers/admin")
+    public ModelAndView getAllTeachers(Model model) {
+        String role = getLoggedInUserRole();
+        int privileges = getLoggedInUserPrivileges();
+
+        if(role.equalsIgnoreCase("Admin") || (privileges >= 5)) {
+            Collection<User> professionals = (Collection<User>) userRepo.findAllByRoleOrderByDateCreated("Teacher");
+            ModelAndView mv = new ModelAndView("admin/teachers-admin");//setting view name here
             mv.addObject("careers", professionals);
             return mv;
         } else {

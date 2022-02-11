@@ -19,12 +19,20 @@ public class KeywordRestController {
     KeywordRepository keywordRepo;
 
     //INDEX
-    @RequestMapping("/keywords")
+    @RequestMapping("/keywords/admin")
     public ModelAndView getAllKeywordsList(Model model) {
-        Collection<Keyword> keywords = (Collection<Keyword>)keywordRepo.findByOrderByDisplayValueAsc();
-        ModelAndView mv = new ModelAndView("careers/careers-keywords");//setting view name here
-        mv.addObject("keywords", keywords);
-        return mv;
+        String role = getLoggedInUserRole();
+        int privileges = getLoggedInUserPrivileges();
+
+        if(role.equalsIgnoreCase("Admin") || (privileges >= 5)) {
+            Collection<Keyword> keywords = (Collection<Keyword>)keywordRepo.findByOrderByDisplayValueAsc();
+            ModelAndView mv = new ModelAndView("careers/careers-keywords");//setting view name here
+            mv.addObject("keywords", keywords);
+            return mv;
+        } else {
+            ModelAndView mv = new ModelAndView("not-allowed");
+            return mv;
+        }
     }
 
     @RequestMapping(value="/stem-careers/tags")
@@ -38,8 +46,16 @@ public class KeywordRestController {
     //NEW (form)
     @RequestMapping("/keywords/new")
     public String showNewKeywordForm(Model model) {
-        model.addAttribute("keyword", new Keyword());
-        return "/careers/careers-keyword-add";
+
+        String role = getLoggedInUserRole();
+        int privileges = getLoggedInUserPrivileges();
+
+        if(role.equalsIgnoreCase("Admin") || (privileges >= 5)) {
+            model.addAttribute("keyword", new Keyword());
+            return "/careers/careers-keyword-add";
+        } else {
+            return "not-allowed";
+        }
     }
 
     //NEW (submit)
@@ -62,7 +78,7 @@ public class KeywordRestController {
 
         if(role.equalsIgnoreCase("Admin") || (privileges >= 5)) {
             keywordRepo.save(keywordToAdd);
-            return "redirect:/keywords";
+            return "redirect:/keywords/admin";
         } else {
             return "redirect:/not-allowed";
         }
@@ -78,7 +94,7 @@ public class KeywordRestController {
             if (keywordRepo.existsById(id)) {
                 keywordRepo.deleteById(id);
             }
-            return "redirect:/keywords";
+            return "redirect:/keywords/admin";
         } else {
             return "redirect:/not-allowed";
         }
